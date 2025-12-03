@@ -14,7 +14,7 @@ Forma parte del **Flujo Oficial**.
 
 | Nº | Ticket                                          | Estado | Rama | Bloques | Dependencias        | Fecha |
 |----|-------------------------------------------------|--------|------|---------|---------------------|-------|
-| 1  | Setup inicial del proyecto                      | 🟨     | -    | A/B     | Ninguna             | -     |
+| 1  | Setup inicial del proyecto                      | 🟩     | feature/ticket-1-setup-inicial | A/B | Ninguna| 03/12  |
 | 2  | Sistema visual (paleta, tipografías, variables) | 🟦     | -    | A/B     | 1                   | -     |
 | 3  | Sección Hero                                    | 🟦     | -    | A/B/C   | 2                   | -     |
 | 4  | Sección Sobre mí                                | 🟦     | -    | A/B/C   | 2                   | -     |

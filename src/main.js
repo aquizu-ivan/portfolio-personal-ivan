@@ -1,12 +1,15 @@
 import './styles/base.css'
 import './styles/layout.css'
 import './styles/components.css'
+import { domReady } from './js/ui/domReady.js'
 
-const app = document.querySelector('#app')
+domReady(() => {
+  const app = document.querySelector('#app')
 
-app.innerHTML = `
-  <main class="app-shell">
-    <h1>Portfolio de Iván — setup inicial OK</h1>
-    <p>Este es un placeholder inicial para comprobar el build.</p>
-  </main>
-`
+  app.innerHTML = `
+    <main id="main-content" class="app-shell" role="main">
+      <h1>Portfolio de Iv&aacute;n - setup inicial OK</h1>
+      <p>Este es un placeholder inicial para comprobar el build y la estructura base.</p>
+    </main>
+  `
+})
