@@ -4,10 +4,10 @@
   position: absolute;
   left: -9999px;
   top: 0;
-  padding: 0.75rem 1rem;
-  background-color: #00a676;
-  color: #0d0d0d;
-  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   z-index: 1000;
 }
@@ -15,5 +15,83 @@
 .skip-link:focus-visible {
   left: 1rem;
   top: 1rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  box-shadow: none;
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background-color: var(--color-accent-primary);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background-color: var(--color-surface);
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* TODO: Variantes futuras (.card--compact, etc.) */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-subtle);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.pill--accent {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-accent-primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent-secondary);
+  outline-offset: 2px;
 }
