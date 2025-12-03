@@ -17,7 +17,7 @@ Forma parte del **Flujo Oficial**.
 | 1  | Setup inicial del proyecto                      | 🟩     | feature/ticket-1-setup-inicial | A/B | Ninguna| 03/12  |
 | 2  | Sistema visual (paleta, tipografías, variables) | 🟩     | feature/ticket-2-sistema-visual| A/B | 1 |  03/12|
 | 3  | Sección Hero                                    | 🟩     | feature/ticket-3-hero  | A/B/C   | 2 | 03/12 |
-| 4  | Sección Sobre mí                                | 🟦     | -    | A/B/C   | 2                   | -     |
+| 4  | Sección Sobre mí                                | 🟩     | feature/ticket-4-sobre-mi | A/B/C | 2| 03/12     |
 | 5  | Proyectos destacados                            | 🟦     | -    | A/B/C   | 2                   | -     |
 | 6  | Servicios / Lo que ofrezco                      | 🟦     | -    | A/B     | 2                   | -     |
 | 7  | Cómo trabajo (timeline)                         | 🟦     | -    | A/B     | 2                   | -     |
