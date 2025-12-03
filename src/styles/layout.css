@@ -53,3 +53,8 @@
   color: var(--color-text-muted);
   max-width: 60ch;
 }
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-inverse);
+}
