@@ -2,20 +2,25 @@
 
 .app-shell {
   min-height: 100vh;
-  max-width: 960px;
+  max-width: var(--layout-max-width);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  padding: var(--space-xl) var(--space-md);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .app-shell h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-family: var(--font-family-heading);
+  font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-2xl));
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
 }
 
 .app-shell p {
   max-width: 60ch;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
 }

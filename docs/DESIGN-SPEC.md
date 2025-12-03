@@ -2,7 +2,7 @@ Define todas las decisiones visuales del proyecto a nivel UI.
 
 ---
 
-## 🎨 Paleta de colores (oficial)
+## Paleta de colores (oficial)
 
 - Fondo principal (secciones oscuras): `#0D0D0D`
 - Fondo claro (secciones alternativas): `#F2F2F2`
@@ -10,20 +10,20 @@ Define todas las decisiones visuales del proyecto a nivel UI.
 - Texto en fondo claro: `#0D0D0D`
 - Acento verde (principal): `#00A676`
 - Acento naranja (secundario): `#FF8A3D`
-- Grises de apoyo: se derivan según necesidad (borders, líneas, etc.)
+- Grises de apoyo: se derivan segun necesidad (borders, lineas, etc.)
 
 ---
 
-## 🔤 Tipografías
+## Tipografias
 
-- **Inter** para textos en general (body, párrafos, labels).
-- **Montserrat** para títulos, subtítulos y elementos destacados.
+- **Inter** para textos en general (body, parrafos, labels).
+- **Montserrat** para titulos, subtitulos y elementos destacados.
 
-*(Se podrán ajustar según disponibilidad y performance, pero esta es la base oficial.)*
+*(Se podrian ajustar segun disponibilidad y performance, pero esta es la base oficial.)*
 
 ---
 
-## 📐 Espaciado
+## Espaciado
 
 - Base: `1rem`
 - Secciones verticales: `4rem` arriba y abajo (mobile puede ser un poco menos).
@@ -31,18 +31,18 @@ Define todas las decisiones visuales del proyecto a nivel UI.
 
 ---
 
-## 🧱 Componentes UI base
+## Componentes UI base
 
 ### Cards
 - Fondo ligeramente elevado sobre el fondo principal.
 - Borde suave (radio moderado).
-- Sombra mínima para dar profundidad sin ruido visual.
-- Hover: ligera elevación + ajuste de color de borde o fondo.
+- Sombra minima para dar profundidad sin ruido visual.
+- Hover: ligera elevacion + ajuste de color de borde o fondo.
 
 ### Botones
 - Bordes redondeados.
 - Usan colores de acento (verde principal, naranja para acciones secundarias).
-- Transición suave en hover (color, sombra, escala ligera).
+- Transicion suave en hover (color, sombra, escala ligera).
 
 ### Inputs
 - Borde sutil y consistente.
@@ -51,20 +51,36 @@ Define todas las decisiones visuales del proyecto a nivel UI.
 
 ---
 
-## 🖼 Animaciones y microinteracciones (a futuro)
+## Animaciones y microinteracciones (a futuro)
 
 - Fade-in suave al hacer scroll para secciones clave.
-- Smooth scroll en la navegación al hacer clic en links de la one-page.
+- Smooth scroll en la navegacion al hacer clic en links de la one-page.
 - Hover suave en cards y botones (sin animaciones agresivas).
 
 ---
 
-## 📱 Responsive
+## Responsive
 
 - Enfoque **mobile-first**.
 - Breakpoints de referencia:
-  - `480px` — móviles pequeños.
-  - `768px` — tablets / móviles grandes en horizontal.
-  - `1024px` — desktop.
+  - `480px` -> moviles pequenos.
+  - `768px` -> tablets / moviles grandes en horizontal.
+  - `1024px` -> desktop.
 
-La maquetación fino-responsiva se trabajará en tickets específicos (Responsive fino y Animaciones).
+La maquetacion fino-responsiva se trabajara en tickets especificos (Responsive fino y Animaciones).
+
+---
+
+## Variables principales (tokens)
+
+- `--color-bg-main`: fondo principal oscuro del sitio.
+- `--color-accent-primary`: verde principal para links y acciones.
+- `--color-accent-secondary`: naranja de apoyo para estados o llamados secundarios.
+- `--color-text-main` y `--color-text-muted`: texto principal y descripciones sobre fondos oscuros.
+- `--font-family-base` y `--font-family-heading`: tipografia de texto y titulos.
+- `--font-size-base`: tamano base para parrafos.
+- `--line-height-base`: altura de linea global para legibilidad.
+- `--space-md` y `--space-xl`: espaciado base para paddings/gaps y bloques grandes.
+- `--layout-max-width`: ancho maximo del contenido principal.
+- `--radius-pill`: radios redondeados para elementos como la skip link o pill buttons.
+- `--shadow-soft`: sombra suave para elevar cards o superficies.

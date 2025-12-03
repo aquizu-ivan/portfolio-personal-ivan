@@ -4,10 +4,10 @@
   position: absolute;
   left: -9999px;
   top: 0;
-  padding: 0.75rem 1rem;
-  background-color: #00a676;
-  color: #0d0d0d;
-  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   z-index: 1000;
 }
@@ -15,5 +15,5 @@
 .skip-link:focus-visible {
   left: 1rem;
   top: 1rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
