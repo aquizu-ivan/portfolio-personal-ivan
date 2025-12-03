@@ -84,3 +84,13 @@ La maquetacion fino-responsiva se trabajara en tickets especificos (Responsive f
 - `--layout-max-width`: ancho maximo del contenido principal.
 - `--radius-pill`: radios redondeados para elementos como la skip link o pill buttons.
 - `--shadow-soft`: sombra suave para elevar cards o superficies.
+
+---
+
+## Patrones de seccion y componentes base
+
+- `.section` centra el contenido, respeta el ancho maximo y aplica espaciado vertical consistente para cada bloque de la one-page.
+- `.section__title` y `.section__subtitle` usan la escala tipografica definida (heading vs. texto secundario) y limitan el ancho de las descripciones.
+- Botones: `.btn` es la base; `.btn--primary` es verde relleno para acciones principales y `.btn--secondary` es bordeado para acciones secundarias.
+- Cards: usan fondo `color-surface`, sombra suave y radios amplios; pensadas para agrupar informacion de proyectos/servicios.
+- Pills: etiquetas pequeñas para tags o tecnologias; `.pill--accent` usa el acento verde.
