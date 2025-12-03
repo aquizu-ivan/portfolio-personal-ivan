@@ -2,6 +2,7 @@ import './styles/base.css'
 import './styles/layout.css'
 import './styles/components.css'
 import './styles/sections/hero.css'
+import './styles/sections/about.css'
 import { domReady } from './js/ui/domReady.js'
 
 domReady(() => {
@@ -48,6 +49,50 @@ domReady(() => {
             <div class="card hero__photo-placeholder">
               <!-- TODO: Reemplazar con foto o ilustracion real -->
             </div>
+          </div>
+        </section>
+
+        <section id="about" class="section about">
+          <header class="section__header">
+            <h2 class="section__title">Sobre mi</h2>
+            <p class="section__subtitle">
+              Soy Ivan, desarrollador front-end orientado a claridad, prolijidad y estructura.
+              Mi enfoque combina sistemas, procesos ordenados y atencion profunda al detalle.
+            </p>
+          </header>
+
+          <div class="about__pillars">
+            <article class="card about__pillar">
+              <p class="pill about__pillar-tag">Claridad</p>
+              <h3 class="about__pillar-title">Comunicacion y objetivos claros</h3>
+              <p class="about__pillar-text">
+                Me aseguro de que cada pantalla, seccion y mensaje se entienda a la primera lectura.
+              </p>
+            </article>
+
+            <article class="card about__pillar">
+              <p class="pill about__pillar-tag">Detalle</p>
+              <h3 class="about__pillar-title">Cuidado por la forma y el fondo</h3>
+              <p class="about__pillar-text">
+                Trabajo tanto el detalle visual como la estructura interna del codigo que lo soporta.
+              </p>
+            </article>
+
+            <article class="card about__pillar">
+              <p class="pill about__pillar-tag">Vision de sistema</p>
+              <h3 class="about__pillar-title">Pienso en terminos de procesos</h3>
+              <p class="about__pillar-text">
+                No miro solo cada pantalla aislada: diseno flujos completos y decisiones consistentes.
+              </p>
+            </article>
+
+            <article class="card about__pillar">
+              <p class="pill about__pillar-tag">Mejora continua</p>
+              <h3 class="about__pillar-title">Iteracion y aprendizaje constante</h3>
+              <p class="about__pillar-text">
+                Uso cada proyecto para mejorar procesos, estructura y calidad del resultado final.
+              </p>
+            </article>
           </div>
         </section>
       </main>

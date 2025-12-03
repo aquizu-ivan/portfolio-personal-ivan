@@ -1,1 +1,35 @@
-/* TODO: Estilos de la sección sobre mí (bio, skills, foto). */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__pillar {
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.about__pillar-tag {
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.about__pillar-title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.about__pillar-text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
+  max-width: 50ch;
+}
