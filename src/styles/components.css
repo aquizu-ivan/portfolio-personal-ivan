@@ -67,6 +67,20 @@
   border-bottom: 2px solid var(--color-accent-primary);
 }
 
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .site-nav__list {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: flex-start;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
