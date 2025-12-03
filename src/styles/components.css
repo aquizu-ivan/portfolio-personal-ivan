@@ -1,0 +1,19 @@
+/* TODO: Definir estilos de componentes reutilizables (botones, tarjetas, badges, etc.). */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.75rem 1rem;
+  background-color: #00a676;
+  color: #0d0d0d;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus-visible {
+  left: 1rem;
+  top: 1rem;
+  border-radius: 999px;
+}
