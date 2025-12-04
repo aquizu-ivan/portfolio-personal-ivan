@@ -40,3 +40,51 @@
   color: var(--color-text-muted);
   max-width: 60ch;
 }
+
+@media (min-width: 768px) {
+  .process__steps {
+    position: relative;
+    padding-left: calc(var(--space-lg) + var(--space-sm));
+  }
+
+  .process__steps::before {
+    content: '';
+    position: absolute;
+    left: var(--space-sm);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border-subtle);
+  }
+
+  .process-step {
+    position: relative;
+    padding-left: calc(var(--space-lg) + var(--space-sm));
+  }
+
+  .process-step__title {
+    align-items: center;
+  }
+
+  .process-step__index {
+    position: absolute;
+    left: var(--space-sm);
+    top: 0;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-lg);
+    height: var(--space-lg);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process__steps {
+    gap: var(--space-lg);
+  }
+}
