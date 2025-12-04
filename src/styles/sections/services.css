@@ -1,1 +1,35 @@
-/* TODO: Estilos de la sección de servicios. */
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.services__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.service-card {
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.service-card__tag {
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.service-card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.service-card__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
