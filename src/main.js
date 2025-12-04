@@ -4,6 +4,7 @@ import './styles/components.css'
 import './styles/sections/hero.css'
 import './styles/sections/about.css'
 import './styles/sections/projects.css'
+import './styles/sections/services.css'
 import { domReady } from './js/ui/domReady.js'
 
 domReady(() => {
@@ -171,6 +172,73 @@ domReady(() => {
               </div>
             </article>
           </div>
+        </section>
+
+        <section
+          id="services"
+          class="section services"
+          aria-labelledby="services-title"
+        >
+          <header class="section__header">
+            <h2 id="services-title" class="section__title">Servicios</h2>
+            <p class="section__subtitle">
+              Desarrollo interfaces front-end claras y ordenadas, enfocadas en los objetivos de cada proyecto.
+            </p>
+          </header>
+
+          <div class="services__grid">
+            <article class="card service-card">
+              <p class="pill service-card__tag">Sitios web profesionales</p>
+              <h3 class="service-card__title">Sitios claros y modernos</h3>
+              <p class="service-card__text">
+                Diseño y desarrollo sitios completos para tu negocio, con estructura ordenada, contenido claro y navegación simple.
+              </p>
+            </article>
+
+            <article class="card service-card">
+              <p class="pill service-card__tag">E-commerce simple</p>
+              <h3 class="service-card__title">Tiendas enfocadas en la compra</h3>
+              <p class="service-card__text">
+                Armo tiendas con catálogo claro, filtros útiles y carrito simple para que la compra sea fluida desde cualquier dispositivo.
+              </p>
+            </article>
+
+            <article class="card service-card">
+              <p class="pill service-card__tag">Catálogos con filtros</p>
+              <h3 class="service-card__title">Listados dinámicos y ordenados</h3>
+              <p class="service-card__text">
+                Creo grillas de productos, cursos o contenidos con filtros en vivo y búsquedas que ayudan a encontrar rápido lo importante.
+              </p>
+            </article>
+
+            <article class="card service-card">
+              <p class="pill service-card__tag">Dashboards front-end</p>
+              <h3 class="service-card__title">Datos mostrados de forma clara</h3>
+              <p class="service-card__text">
+                Diseño pantallas para ver métricas y datos de forma simple, priorizando legibilidad y jerarquía visual.
+              </p>
+            </article>
+
+            <article class="card service-card">
+              <p class="pill service-card__tag">Web institucional / landing</p>
+              <h3 class="service-card__title">Páginas para comunicar valor</h3>
+              <p class="service-card__text">
+                Armo landings e institucionales que presentan tu negocio o servicio con contenido limpio y foco en el objetivo.
+              </p>
+            </article>
+
+            <article class="card service-card">
+              <p class="pill service-card__tag">Mapas interactivos</p>
+              <h3 class="service-card__title">Experiencias visuales guiadas</h3>
+              <p class="service-card__text">
+                Desarrollo mapas e interfaces interactivas donde la persona puede explorar información de forma visual, guiada y ordenada.
+              </p>
+            </article>
+          </div>
+
+          <p class="services__note">
+            Me adapto al proyecto según el objetivo, el alcance y la complejidad de cada caso.
+          </p>
         </section>
       </main>
     </div>

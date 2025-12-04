@@ -18,8 +18,8 @@ Forma parte del **Flujo Oficial**.
 | 2  | Sistema visual (paleta, tipografías, variables) | 🟩     | feature/ticket-2-sistema-visual| A/B | 1 |  03/12|
 | 3  | Sección Hero                                    | 🟩     | feature/ticket-3-hero  | A/B/C   | 2 | 03/12 |
 | 4  | Sección Sobre mí                                | 🟩     | feature/ticket-4-sobre-mi | A/B/C | 2| 03/12     |
-| 5  | Proyectos destacados                            | 🟩     | feature/ticket-5-proyectos-destacados | A/B/C   | 2 | 03/12 |
-| 6  | Servicios / Lo que ofrezco                      | 🟦     | -    | A/B     | 2                   | -     |
+| 5  | Proyectos destacados                            | 🟩     | feature/ticket-5-proyectos-destacados | A/B/C   | 2 | 04/12  |
+| 6  | Servicios / Lo que ofrezco                      | 🟩     | feature/ticket-6-servicios | A/B/C  | 2      | 04/12 |
 | 7  | Cómo trabajo (timeline)                         | 🟦     | -    | A/B     | 2                   | -     |
 | 8  | Tecnologías                                     | 🟦     | -    | A/B     | 2                   | -     |
 | 9  | Contacto                                        | 🟦     | -    | A/B/C   | 2                   | -     |
