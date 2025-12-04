@@ -1,1 +1,90 @@
-/* TODO: Estilos de la sección de proceso de trabajo. */
+.process {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.process__steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.process-step__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+
+.process-step__index {
+  color: var(--color-accent-primary);
+  margin-right: var(--space-xs);
+}
+
+.process-step__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+@media (min-width: 768px) {
+  .process__steps {
+    position: relative;
+    padding-left: calc(var(--space-lg) + var(--space-sm));
+  }
+
+  .process__steps::before {
+    content: '';
+    position: absolute;
+    left: var(--space-sm);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border-subtle);
+  }
+
+  .process-step {
+    position: relative;
+    padding-left: calc(var(--space-lg) + var(--space-sm));
+  }
+
+  .process-step__title {
+    align-items: center;
+  }
+
+  .process-step__index {
+    position: absolute;
+    left: var(--space-sm);
+    top: 0;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-lg);
+    height: var(--space-lg);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process__steps {
+    gap: var(--space-lg);
+  }
+}
