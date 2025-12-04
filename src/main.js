@@ -5,6 +5,7 @@ import './styles/sections/hero.css'
 import './styles/sections/about.css'
 import './styles/sections/projects.css'
 import './styles/sections/services.css'
+import './styles/sections/process.css'
 import { domReady } from './js/ui/domReady.js'
 
 domReady(() => {
@@ -239,6 +240,58 @@ domReady(() => {
           <p class="services__note">
             Me adapto al proyecto según el objetivo, el alcance y la complejidad de cada caso.
           </p>
+        </section>
+
+        <section
+          id="process"
+          class="section section--alt process"
+          aria-labelledby="process-title"
+        >
+          <header class="section__header">
+            <h2 id="process-title" class="section__title">Cómo trabajo</h2>
+            <p class="section__subtitle">
+              Trabajo por pasos claros para mantener orden, foco y calidad en cada entrega.
+            </p>
+          </header>
+
+          <ol class="process__steps">
+            <li class="process-step">
+              <h3 class="process-step__title"><span class="process-step__index">1.</span>Defino objetivos concretos</h3>
+              <p class="process-step__text">
+                Entiendo el alcance, las metas del negocio y el contexto del usuario para decidir qué construir y por qué.
+              </p>
+            </li>
+            <li class="process-step">
+              <h3 class="process-step__title"><span class="process-step__index">2.</span>Divido en bloques manejables</h3>
+              <p class="process-step__text">
+                Organizo el trabajo en entregas claras y priorizadas para avanzar con visibilidad y evitar sorpresas.
+              </p>
+            </li>
+            <li class="process-step">
+              <h3 class="process-step__title"><span class="process-step__index">3.</span>Desarrollo con orden y estructura</h3>
+              <p class="process-step__text">
+                Implemento con patrones consistentes, componentes reutilizables y código legible.
+              </p>
+            </li>
+            <li class="process-step">
+              <h3 class="process-step__title"><span class="process-step__index">4.</span>Integro, pruebo y ajusto</h3>
+              <p class="process-step__text">
+                Verifico el funcionamiento, integro con lo existente y corrijo detalles antes de seguir avanzando.
+              </p>
+            </li>
+            <li class="process-step">
+              <h3 class="process-step__title"><span class="process-step__index">5.</span>Reviso detalles visuales y accesibilidad</h3>
+              <p class="process-step__text">
+                Ajusto estilo, microcopys y estados interactivos para que la experiencia sea clara y accesible.
+              </p>
+            </li>
+            <li class="process-step">
+              <h3 class="process-step__title"><span class="process-step__index">6.</span>Cierro con commits limpios y PRs profesionales</h3>
+              <p class="process-step__text">
+                Entrego código versionado, documentado y con PRs revisables para facilitar mantenimiento y colaboración.
+              </p>
+            </li>
+          </ol>
         </section>
       </main>
     </div>

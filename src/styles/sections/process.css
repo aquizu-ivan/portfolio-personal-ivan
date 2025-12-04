@@ -1,1 +1,42 @@
-/* TODO: Estilos de la sección de proceso de trabajo. */
+.process {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.process__steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.process-step__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+
+.process-step__index {
+  color: var(--color-accent-primary);
+  margin-right: var(--space-xs);
+}
+
+.process-step__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
