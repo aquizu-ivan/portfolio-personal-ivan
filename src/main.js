@@ -6,6 +6,7 @@ import './styles/sections/about.css'
 import './styles/sections/projects.css'
 import './styles/sections/services.css'
 import './styles/sections/process.css'
+import './styles/sections/tech.css'
 import { domReady } from './js/ui/domReady.js'
 
 domReady(() => {
@@ -20,6 +21,7 @@ domReady(() => {
             <li><a class="site-nav__link site-nav__link--active" href="#hero">Inicio</a></li>
             <li><a class="site-nav__link" href="#projects">Proyectos</a></li>
             <li><a class="site-nav__link" href="#services">Servicios</a></li>
+            <li><a class="site-nav__link" href="#tech">Tecnologías</a></li>
             <li><a class="site-nav__link" href="#contact">Contacto</a></li>
           </ul>
         </nav>
@@ -292,6 +294,32 @@ domReady(() => {
               </p>
             </li>
           </ol>
+        </section>
+
+        <section
+          id="tech"
+          class="section tech"
+          aria-labelledby="tech-title"
+        >
+          <header class="section__header">
+            <h2 id="tech-title" class="section__title">Tecnologías</h2>
+            <p class="section__subtitle">
+              Trabajo con un stack claro y herramientas que encajan bien con proyectos front-end modernos.
+            </p>
+          </header>
+
+          <div class="tech__stack">
+            <span class="pill tech__item">Vite</span>
+            <span class="pill tech__item">JavaScript</span>
+            <span class="pill tech__item">HTML5</span>
+            <span class="pill tech__item">CSS3</span>
+            <span class="pill tech__item">Git</span>
+            <span class="pill tech__item">LocalStorage</span>
+          </div>
+
+          <p class="tech__note">
+            También trabajo con arquitectura multipágina real, responsive por secciones y accesibilidad básica como parte del flujo.
+          </p>
         </section>
       </main>
     </div>

@@ -1,1 +1,41 @@
-/* TODO: Estilos de la sección de stack tecnológico. */
+.tech {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.tech__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.tech__item {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+}
+
+.tech__note {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .tech__stack {
+    gap: var(--space-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech__stack {
+    gap: var(--space-lg);
+  }
+
+  .tech__note {
+    max-width: 50ch;
+    margin-top: var(--space-lg);
+  }
+}
