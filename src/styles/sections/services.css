@@ -54,3 +54,11 @@
     gap: var(--space-xl);
   }
 }
+
+.services__note {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-top: var(--space-md);
+}
