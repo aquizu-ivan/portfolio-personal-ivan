@@ -13,7 +13,7 @@ domReady(() => {
     <div class="app-shell">
       <header class="site-header">
         <div class="site-header__logo">I AQUIZU</div>
-        <nav class="site-nav" aria-label="Navegacion principal">
+        <nav class="site-nav" aria-label="Navegación principal">
           <ul class="site-nav__list">
             <li><a class="site-nav__link site-nav__link--active" href="#hero">Inicio</a></li>
             <li><a class="site-nav__link" href="#projects">Proyectos</a></li>
@@ -118,15 +118,14 @@ domReady(() => {
               <p class="pill project-card__tag">Proyecto principal</p>
               <h3 class="project-card__title">Naturaleza Argentina</h3>
               <p class="project-card__description">
-                App multipágina para explorar caminatas y actividades en la naturaleza argentina,
-                con filtros, mapa interactivo y carrito sin backend.
+                App multipágina para explorar caminatas y actividades en la naturaleza argentina, con filtros en vivo, mapa interactivo y carrito sin backend.
               </p>
               <p class="project-card__meta">
-                Arquitectura multipágina • Mapa interactivo • Filtros en vivo • Clima por ciudad • Accesibilidad básica
+                Arquitectura multipágina • Mapa interactivo • Filtros en vivo • Clima por ciudad • Accesibilidad y responsive
               </p>
               <div class="project-card__actions">
-                <a href="#" class="btn btn--primary">Ver demo</a>
-                <a href="#" class="btn btn--secondary">Ver código</a>
+                <a href="#" class="btn btn--primary" aria-label="Ver demo de Naturaleza Argentina">Ver demo</a>
+                <a href="#" class="btn btn--secondary" aria-label="Ver código de Naturaleza Argentina">Ver código</a>
               </div>
             </article>
 
@@ -134,13 +133,13 @@ domReady(() => {
               <p class="pill project-card__tag">Portfolio</p>
               <h3 class="project-card__title">Portfolio personal</h3>
               <p class="project-card__description">
-                One-page minimalista con tema oscuro, tokens de diseño y secciones pensadas para conversión y trabajo freelance.
+                One-page minimalista con tema oscuro, sistema de diseño por tokens y secciones pensadas para mostrar trabajo freelance.
               </p>
               <p class="project-card__meta">
-                Vite • JavaScript vanilla • Tokens CSS • Accesibilidad base • Responsive por secciones
+                Vite • JavaScript vanilla • Tokens CSS • Accesibilidad base • Diseño orientado a conversión
               </p>
               <div class="project-card__actions">
-                <a href="#hero" class="btn btn--secondary">Ver esta página</a>
+                <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de portfolio personal">Ver esta página</a>
               </div>
             </article>
 
@@ -148,13 +147,13 @@ domReady(() => {
               <p class="pill project-card__tag">En diseño</p>
               <h3 class="project-card__title">Mini e-commerce técnico</h3>
               <p class="project-card__description">
-                Tienda enfocada en experiencia de usuario clara, filtros útiles y carrito simple pensado para productos técnicos.
+                Mini e-commerce pensado para productos técnicos, con catálogo claro, filtros útiles y carrito simple.
               </p>
               <p class="project-card__meta">
-                Catálogo con filtros • Carrito en localStorage • UI limpia orientada a conversión
+                Filtros por categoría • Carrito en localStorage • UI limpia orientada a compra
               </p>
               <div class="project-card__actions">
-                <a href="#" class="btn btn--secondary">Ver detalles</a>
+                <a href="#" class="btn btn--secondary" aria-label="Ver detalles del mini e-commerce técnico">Ver detalles</a>
               </div>
             </article>
 
@@ -162,13 +161,13 @@ domReady(() => {
               <p class="pill project-card__tag">Landing</p>
               <h3 class="project-card__title">Web institucional simple</h3>
               <p class="project-card__description">
-                Landing page profesional para presentar un negocio o servicio con estructura clara y contenido ordenado.
+                Landing institucional para presentar un negocio o servicio con estructura limpia y contenido ordenado.
               </p>
               <p class="project-card__meta">
-                Estructura clara • Secciones enfocadas • Copy limpio • Buen punto de partida para clientes
+                Estructura clara • Secciones enfocadas en objetivos • Copy limpio para comunicar valor
               </p>
               <div class="project-card__actions">
-                <a href="#" class="btn btn--secondary">Ver detalles</a>
+                <a href="#" class="btn btn--secondary" aria-label="Ver detalles de la web institucional simple">Ver detalles</a>
               </div>
             </article>
           </div>
