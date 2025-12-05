@@ -7,6 +7,7 @@ import './styles/sections/projects.css'
 import './styles/sections/services.css'
 import './styles/sections/process.css'
 import './styles/sections/tech.css'
+import './styles/sections/contact.css'
 import { domReady } from './js/ui/domReady.js'
 
 function renderFooter() {
@@ -40,6 +41,39 @@ function renderFooter() {
             <p>Portfolio creado con HTML, CSS y JavaScript.</p>
           </div>
         </footer>
+  `
+}
+
+function renderContactSection() {
+  return `
+        <section id="contact" class="section section--contact">
+          <header class="section__header">
+            <h2 class="section__title">Contacto</h2>
+            <p class="section__subtitle">
+              Si tu proyecto necesita un sistema visual contemplativo, ordenado y con identidad propia, podemos hablar.
+            </p>
+          </header>
+
+          <div class="section__body contact">
+            <form class="contact-form" novalidate>
+              <label for="contact-name">Nombre</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" />
+
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" />
+
+              <label for="contact-message">Mensaje</label>
+              <textarea id="contact-message" name="message" rows="4"></textarea>
+
+              <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+            </form>
+
+            <p class="contact__alt">
+              Tambien podes escribirme directamente a
+              <a href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>.
+            </p>
+          </div>
+        </section>
   `
 }
 domReady(() => {
@@ -351,6 +385,7 @@ domReady(() => {
             También trabajo con arquitectura multipágina real, responsive por secciones y accesibilidad básica como parte del flujo.
           </p>
         </section>
+        ${renderContactSection()}
         ${renderFooter()}
       </main>
     </div>
