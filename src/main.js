@@ -9,6 +9,40 @@ import './styles/sections/process.css'
 import './styles/sections/tech.css'
 import { domReady } from './js/ui/domReady.js'
 
+function renderFooter() {
+  return `
+        <footer class="site-footer">
+          <div class="site-footer__inner">
+            <div class="site-footer__brand">
+              <p class="site-footer__title">IAQUIZU</p>
+              <p class="site-footer__role">IA-Extended Visual Systems Architect</p>
+              <p class="site-footer__tagline">Sistemas visuales contemplativos y entidades digitales vivas.</p>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Enlaces de pie de página">
+              <a href="#about">Sobre mí</a>
+              <a href="#projects">Obras</a>
+              <a href="#services">Servicios</a>
+              <a href="#process">Cómo trabajo</a>
+              <a href="#tech">Tecnologías</a>
+              <a href="#contact">Contacto</a>
+            </nav>
+
+            <div class="site-footer__contact">
+              <p class="site-footer__contact-label">Contacto</p>
+              <a class="site-footer__contact-link" href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>
+              <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones específicas.</p>
+            </div>
+          </div>
+
+          <div class="site-footer__bottom">
+            <p>&copy; 2025 IAQUIZU. Todos los derechos reservados.</p>
+            <p>Portfolio creado con HTML, CSS y JavaScript.</p>
+          </div>
+        </footer>
+  `
+}
+
 domReady(() => {
   const app = document.querySelector('#app')
 
@@ -318,6 +352,7 @@ domReady(() => {
             También trabajo con arquitectura multipágina real, responsive por secciones y accesibilidad básica como parte del flujo.
           </p>
         </section>
+        ${renderFooter()}
       </main>
     </div>
   `
