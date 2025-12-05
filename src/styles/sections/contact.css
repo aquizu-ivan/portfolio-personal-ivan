@@ -1,27 +1,90 @@
 /* Contact section */
 
+.section--contact {
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+}
+
+.section--contact .section__header {
+  max-width: 720px;
+  margin: 0 auto;
+  gap: var(--space-sm);
+}
+
+.section__body.contact {
+  max-width: 720px;
+  margin: var(--space-lg) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .contact-form label {
   font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: var(--space-sm);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border-subtle);
-  background-color: var(--color-surface);
+  background-color: var(--color-bg-main);
   color: var(--color-text-main);
+  line-height: var(--line-height-base);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.contact-form .btn {
+  margin-top: var(--space-sm);
+  align-self: flex-start;
 }
 
 .contact__alt {
   margin-top: var(--space-md);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
+}
+
+.contact__alt a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.contact__alt a:hover {
+  color: var(--color-accent-secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.contact__alt a:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .section--contact {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .section__body.contact {
+    margin-top: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .contact__alt {
+    text-align: left;
+  }
 }
