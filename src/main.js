@@ -11,7 +11,7 @@ import { domReady } from './js/ui/domReady.js'
 
 function renderFooter() {
   return `
-        <footer class="site-footer">
+        <footer class="site-footer" role="contentinfo">
           <div class="site-footer__inner">
             <div class="site-footer__brand">
               <p class="site-footer__title">IAQUIZU</p>
@@ -19,19 +19,19 @@ function renderFooter() {
               <p class="site-footer__tagline">Sistemas visuales contemplativos y entidades digitales vivas.</p>
             </div>
 
-            <nav class="site-footer__nav" aria-label="Enlaces de pie de página">
-              <a href="#about">Sobre mí</a>
+            <nav class="site-footer__nav" aria-label="Enlaces de pie de pagina">
+              <a href="#about">Sobre mi</a>
               <a href="#projects">Obras</a>
               <a href="#services">Servicios</a>
-              <a href="#process">Cómo trabajo</a>
-              <a href="#tech">Tecnologías</a>
+              <a href="#process">Como trabajo</a>
+              <a href="#tech">Tecnologias</a>
               <a href="#contact">Contacto</a>
             </nav>
 
             <div class="site-footer__contact">
               <p class="site-footer__contact-label">Contacto</p>
               <a class="site-footer__contact-link" href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>
-              <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones específicas.</p>
+              <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones especificas.</p>
             </div>
           </div>
 
@@ -42,7 +42,6 @@ function renderFooter() {
         </footer>
   `
 }
-
 domReady(() => {
   const app = document.querySelector('#app')
 

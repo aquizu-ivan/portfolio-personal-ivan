@@ -206,7 +206,10 @@ button:focus-visible,
 .site-footer__nav a:focus-visible,
 .site-footer__contact-link:focus-visible {
   outline: 2px solid var(--color-accent-primary);
-  outline-offset: 3px;
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .site-footer__brand {
@@ -230,7 +233,8 @@ button:focus-visible,
 
 .site-footer__tagline {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text-main);
+  opacity: 0.85;
   line-height: var(--line-height-base);
 }
 
@@ -261,7 +265,8 @@ button:focus-visible,
 
 .site-footer__availability {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text-main);
+  opacity: 0.8;
   line-height: var(--line-height-base);
 }
 
