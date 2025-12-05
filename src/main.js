@@ -9,6 +9,7 @@ import './styles/sections/process.css'
 import './styles/sections/tech.css'
 import './styles/sections/contact.css'
 import { domReady } from './js/ui/domReady.js'
+import { initNavbar } from './js/ui/navbar.js'
 
 function renderFooter() {
   return `
@@ -390,4 +391,6 @@ domReady(() => {
       </main>
     </div>
   `
+
+  initNavbar()
 })

@@ -65,6 +65,7 @@
 .site-nav__link--active {
   color: var(--color-accent-primary);
   border-bottom: 2px solid var(--color-accent-primary);
+  padding-bottom: var(--space-xs);
 }
 
 @media (max-width: 640px) {
