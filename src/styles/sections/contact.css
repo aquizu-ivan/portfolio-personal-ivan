@@ -25,6 +25,12 @@
   gap: var(--space-md);
 }
 
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
 .contact-form label {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
@@ -49,6 +55,20 @@
 .contact-form .btn {
   margin-top: var(--space-sm);
   align-self: flex-start;
+}
+
+.contact-form__error {
+  min-height: 1.2em;
+  margin-top: var(--space-2xs, 0.15rem);
+  color: var(--color-accent-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.contact-form__success {
+  margin-top: var(--space-md);
+  color: var(--color-accent-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 }
 
 .contact__alt {

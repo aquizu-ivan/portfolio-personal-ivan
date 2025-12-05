@@ -10,6 +10,7 @@ import './styles/sections/tech.css'
 import './styles/sections/contact.css'
 import { domReady } from './js/ui/domReady.js'
 import { initNavbar } from './js/ui/navbar.js'
+import { initContactForm } from './js/ui/contactForm.js'
 
 function renderFooter() {
   return `
@@ -57,16 +58,47 @@ function renderContactSection() {
 
           <div class="section__body contact">
             <form class="contact-form" novalidate>
-              <label for="contact-name">Nombre</label>
-              <input id="contact-name" name="name" type="text" autocomplete="name" />
+              <div class="contact-form__field">
+                <label for="contact-name">Nombre</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  aria-describedby="contact-name-error"
+                />
+                <p class="contact-form__error" id="contact-name-error" aria-live="polite"></p>
+              </div>
 
-              <label for="contact-email">Email</label>
-              <input id="contact-email" name="email" type="email" autocomplete="email" />
+              <div class="contact-form__field">
+                <label for="contact-email">Email</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  aria-describedby="contact-email-error"
+                />
+                <p class="contact-form__error" id="contact-email-error" aria-live="polite"></p>
+              </div>
 
-              <label for="contact-message">Mensaje</label>
-              <textarea id="contact-message" name="message" rows="4"></textarea>
+              <div class="contact-form__field">
+                <label for="contact-message">Mensaje</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="4"
+                  required
+                  aria-describedby="contact-message-error"
+                ></textarea>
+                <p class="contact-form__error" id="contact-message-error" aria-live="polite"></p>
+              </div>
 
               <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+
+              <p class="contact-form__success" id="contact-success" aria-live="polite"></p>
             </form>
 
             <p class="contact__alt">
@@ -393,4 +425,5 @@ domReady(() => {
   `
 
   initNavbar()
+  initContactForm()
 })
