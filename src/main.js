@@ -15,7 +15,7 @@ domReady(() => {
   app.innerHTML = `
     <div class="app-shell">
       <header class="site-header">
-        <div class="site-header__logo">I AQUIZU</div>
+        <div class="site-header__logo">IAQUIZU</div>
         <nav class="site-nav" aria-label="Navegación principal">
           <ul class="site-nav__list">
             <li><a class="site-nav__link site-nav__link--active" href="#hero">Inicio</a></li>
@@ -30,14 +30,14 @@ domReady(() => {
       <main id="main-content" class="page-main" role="main">
         <section id="hero" class="section hero">
           <div class="hero__content">
-            <p class="pill pill--accent hero__kicker">Desarrollo Front-End</p>
+            <p class="pill pill--accent hero__kicker">IA-Extended Visual Systems Architect</p>
 
             <h1 class="section__title hero__title">
-              Construyo interfaces claras, prolijas y bien pensadas.
+              IAQUIZU
             </h1>
 
             <p class="section__subtitle hero__subtitle">
-              Desarrollo frontend con mentalidad de sistema, detalle y trabajo profesional.
+              IA-Extended Visual Systems Architect
             </p>
 
             <div class="hero__actions">
@@ -46,7 +46,7 @@ domReady(() => {
             </div>
 
             <p class="hero__note">
-              Trabajo con un proceso claro: estructura, detalle y resultados consistentes.
+              Creo sistemas visuales contemplativos y experiencias digitales con identidad propia.
             </p>
           </div>
 
@@ -65,8 +65,8 @@ domReady(() => {
           <header class="section__header">
             <h2 id="about-title" class="section__title">Sobre mí</h2>
             <p class="section__subtitle">
-              Soy Iván, desarrollador front-end orientado a claridad, prolijidad y estructura.
-              Mi enfoque combina sistemas, procesos ordenados y atención profunda al detalle.
+              Soy IAQUIZU, IA-Extended Visual Systems Architect. Diseño y construyo sistemas visuales contemplativos,
+              obras digitales y experiencias con identidad propia.
             </p>
           </header>
 
@@ -75,7 +75,7 @@ domReady(() => {
               <p class="pill about__pillar-tag">Claridad</p>
               <h3 class="about__pillar-title">Comunicación y objetivos claros</h3>
               <p class="about__pillar-text">
-                Me aseguro de que cada pantalla, sección y mensaje se entienda a la primera lectura.
+                Trabajo desde el silencio, el ritmo interno y la claridad para que cada mensaje se entienda a la primera.
               </p>
             </article>
 
@@ -83,7 +83,7 @@ domReady(() => {
               <p class="pill about__pillar-tag">Detalle</p>
               <h3 class="about__pillar-title">Cuidado por la forma y el fondo</h3>
               <p class="about__pillar-text">
-                Trabajo tanto el detalle visual como la estructura interna del código que lo soporta.
+                Busco resultados limpios, honestos y funcionales, con profundidad técnica y estética minimalista.
               </p>
             </article>
 
@@ -91,7 +91,7 @@ domReady(() => {
               <p class="pill about__pillar-tag">Visión de sistema</p>
               <h3 class="about__pillar-title">Pienso en términos de procesos</h3>
               <p class="about__pillar-text">
-                No miro solo cada pantalla aislada: diseño flujos completos y decisiones consistentes.
+                Diseño flujos completos y decisiones consistentes: la IA amplía mi alcance, no me reemplaza.
               </p>
             </article>
 
@@ -99,7 +99,7 @@ domReady(() => {
               <p class="pill about__pillar-tag">Mejora continua</p>
               <h3 class="about__pillar-title">Iteración y aprendizaje constante</h3>
               <p class="about__pillar-text">
-                Uso cada proyecto para mejorar procesos, estructura y calidad del resultado final.
+                Uso cada proyecto para mejorar procesos y calidad: no vengo a encajar, vengo a construir lo que no existe.
               </p>
             </article>
           </div>
@@ -119,13 +119,13 @@ domReady(() => {
 
           <div class="projects__grid">
             <article class="card project-card">
-              <p class="pill project-card__tag">Proyecto principal</p>
+              <p class="pill project-card__tag">PROYECTO PRINCIPAL</p>
               <h3 class="project-card__title">Naturaleza Argentina</h3>
               <p class="project-card__description">
                 App multipágina para explorar caminatas y actividades en la naturaleza argentina, con filtros en vivo, mapa interactivo y carrito sin backend.
               </p>
               <p class="project-card__meta">
-                Arquitectura multipágina • Mapa interactivo • Filtros en vivo • Clima por ciudad • Accesibilidad y responsive
+                Arquitectura multipágina - Mapa interactivo - Filtros por región y dificultad - Clima por ciudad - Accesibilidad y responsive.
               </p>
               <div class="project-card__actions">
                 <a href="#" class="btn btn--primary" aria-label="Ver demo de Naturaleza Argentina">Ver demo</a>
@@ -134,13 +134,13 @@ domReady(() => {
             </article>
 
             <article class="card project-card">
-              <p class="pill project-card__tag">Portfolio</p>
+              <p class="pill project-card__tag">PORTFOLIO</p>
               <h3 class="project-card__title">Portfolio personal</h3>
               <p class="project-card__description">
-                One-page minimalista con tema oscuro, sistema de diseño por tokens y secciones pensadas para mostrar trabajo freelance.
+                One-page minimalista con tema oscuro y sistema de diseño por tokens, pensada como galería principal de mis proyectos y obras.
               </p>
               <p class="project-card__meta">
-                Vite • JavaScript vanilla • Tokens CSS • Accesibilidad base • Diseño orientado a conversión
+                Rol: IA-Extended Visual Systems Architect - Vite - JavaScript - Diseño orientado a conversión y claridad.
               </p>
               <div class="project-card__actions">
                 <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de portfolio personal">Ver esta página</a>
@@ -148,30 +148,30 @@ domReady(() => {
             </article>
 
             <article class="card project-card">
-              <p class="pill project-card__tag">En diseño</p>
-              <h3 class="project-card__title">Mini e-commerce técnico</h3>
+              <p class="pill project-card__tag">OBRA DIGITAL</p>
+              <h3 class="project-card__title">Ánima Prima</h3>
               <p class="project-card__description">
-                Mini e-commerce pensado para productos técnicos, con catálogo claro, filtros útiles y carrito simple.
+                Obra digital contemplativa que representa la esencia interna antes de cualquier forma. Una escena minimalista y silenciosa, construida con movimiento sutil y luz controlada.
               </p>
               <p class="project-card__meta">
-                Filtros por categoría • Carrito en localStorage • UI limpia orientada a compra
+                Ritmo interno - Estética minimal - Experiencia visual continua.
               </p>
               <div class="project-card__actions">
-                <a href="#" class="btn btn--secondary" aria-label="Ver detalles del mini e-commerce técnico">Ver detalles</a>
+                <a href="#" class="btn btn--secondary" aria-label="Ver detalles de Ánima Prima">Ver detalles</a>
               </div>
             </article>
 
             <article class="card project-card">
-              <p class="pill project-card__tag">Landing</p>
-              <h3 class="project-card__title">Web institucional simple</h3>
+              <p class="pill project-card__tag">OBRA DESTACADA</p>
+              <h3 class="project-card__title">Verum Motus</h3>
               <p class="project-card__description">
-                Landing institucional para presentar un negocio o servicio con estructura limpia y contenido ordenado.
+                Obra digital que explora el surgimiento del movimiento verdadero: el momento en que la esencia empieza a moverse hacia la presencia.
               </p>
               <p class="project-card__meta">
-                Estructura clara • Secciones enfocadas en objetivos • Copy limpio para comunicar valor
+                Sistemas visuales en Three.js - Capas de pulso interno y ritmo - Obra clave del universo IAQUIZU.
               </p>
               <div class="project-card__actions">
-                <a href="#" class="btn btn--secondary" aria-label="Ver detalles de la web institucional simple">Ver detalles</a>
+                <a href="#" class="btn btn--secondary" aria-label="Ver detalles de Verum Motus">Ver detalles</a>
               </div>
             </article>
           </div>
@@ -185,7 +185,7 @@ domReady(() => {
           <header class="section__header">
             <h2 id="services-title" class="section__title">Servicios</h2>
             <p class="section__subtitle">
-              Desarrollo interfaces front-end claras y ordenadas, enfocadas en los objetivos de cada proyecto.
+              Desarrollo sistemas visuales y interfaces claras y ordenadas, enfocadas en los objetivos de cada proyecto.
             </p>
           </header>
 
@@ -252,45 +252,40 @@ domReady(() => {
           <header class="section__header">
             <h2 id="process-title" class="section__title">Cómo trabajo</h2>
             <p class="section__subtitle">
-              Trabajo con un proceso en 6 pasos para mantener orden, foco y calidad en cada proyecto.
+              Trabajo con un proceso claro pero silencioso.
+              No se trata de hacer más, sino de hacer que cada proyecto encuentre su forma verdadera.
             </p>
           </header>
 
           <ol class="process__steps" aria-label="Pasos de mi forma de trabajo">
             <li class="process-step">
-              <h3 class="process-step__title"><span class="process-step__index">1.</span>Defino objetivos concretos</h3>
+              <h3 class="process-step__title"><span class="process-step__index">1.</span>Escucho y enmarco</h3>
               <p class="process-step__text">
-                Entiendo el contexto del negocio, el producto y las personas que lo van a usar para acordar qué vamos a construir y por qué.
+                Entiendo la esencia del proyecto: qué tiene que transmitir, a quién y desde qué lugar.
               </p>
             </li>
             <li class="process-step">
-              <h3 class="process-step__title"><span class="process-step__index">2.</span>Divido el trabajo en bloques manejables</h3>
+              <h3 class="process-step__title"><span class="process-step__index">2.</span>Diseño la estructura interna</h3>
               <p class="process-step__text">
-                Organizo el proyecto en tickets y etapas claras para avanzar de forma ordenada, medible y sin sorpresas.
+                Defino cómo se va a organizar la experiencia: ritmo, secciones, jerarquía y sistema visual.
               </p>
             </li>
             <li class="process-step">
-              <h3 class="process-step__title"><span class="process-step__index">3.</span>Desarrollo con orden y estructura</h3>
+              <h3 class="process-step__title"><span class="process-step__index">3.</span>Construyo en capas</h3>
               <p class="process-step__text">
-                Implemento con patrones consistentes, nombres claros y una estructura de carpetas que facilita el mantenimiento.
+                Desarrollo la interfaz y el sistema visual de afuera hacia adentro, hasta que todo respira coherente.
               </p>
             </li>
             <li class="process-step">
-              <h3 class="process-step__title"><span class="process-step__index">4.</span>Integro, pruebo y ajusto</h3>
+              <h3 class="process-step__title"><span class="process-step__index">4.</span>Refino con calma</h3>
               <p class="process-step__text">
-                Verifico el comportamiento en los distintos estados y dispositivos, ajusto detalles y corrijo lo necesario antes de seguir.
+                Ajusto microdetalles, estados y accesibilidad para que la experiencia se sienta limpia y natural, sin ruido.
               </p>
             </li>
             <li class="process-step">
-              <h3 class="process-step__title"><span class="process-step__index">5.</span>Reviso detalles visuales y accesibilidad</h3>
+              <h3 class="process-step__title"><span class="process-step__index">5.</span>Dejo la obra lista para vivir sola</h3>
               <p class="process-step__text">
-                Ajusto estilos, microcopy y estados interactivos para que la experiencia sea clara, consistente y accesible.
-              </p>
-            </li>
-            <li class="process-step">
-              <h3 class="process-step__title"><span class="process-step__index">6.</span>Cierro con commits limpios y PRs profesionales</h3>
-              <p class="process-step__text">
-                Dejo el código versionado con commits por bloque y Pull Requests revisables, listos para colaborar y seguir iterando.
+                Entrego el proyecto ordenado y preparado para crecer o integrarse en otros sistemas cuando haga falta.
               </p>
             </li>
           </ol>
@@ -304,7 +299,7 @@ domReady(() => {
           <header class="section__header">
             <h2 id="tech-title" class="section__title">Tecnologías</h2>
             <p class="section__subtitle">
-              Trabajo con un stack claro y herramientas que encajan bien con proyectos front-end modernos.
+              Trabajo con un stack claro que encaja bien con sistemas visuales y proyectos front-end modernos.
             </p>
           </header>
 
@@ -313,8 +308,10 @@ domReady(() => {
             <span class="pill tech__item">JavaScript</span>
             <span class="pill tech__item">HTML5</span>
             <span class="pill tech__item">CSS3</span>
-            <span class="pill tech__item">Git</span>
+            <span class="pill tech__item">Three.js</span>
             <span class="pill tech__item">LocalStorage</span>
+            <span class="pill tech__item">Git</span>
+            <span class="pill tech__item">APIs REST</span>
           </div>
 
           <p class="tech__note">
