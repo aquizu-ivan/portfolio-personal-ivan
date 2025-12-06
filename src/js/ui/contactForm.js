@@ -65,8 +65,8 @@ export function initContactForm() {
     }
 
     form.reset()
-    nameInput.focus()
     successMessage.textContent =
       'Tu mensaje se valido correctamente. Por ahora este formulario no envia datos, pero esta listo para conectarse a un backend.'
+    successMessage.focus()
   })
 }
