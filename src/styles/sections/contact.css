@@ -108,3 +108,27 @@
     text-align: left;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .section--contact .section__header {
+    max-width: 780px;
+  }
+
+  .section__body.contact {
+    max-width: 780px;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+  }
+}
+
+@media (min-width: 1100px) {
+  .section--contact .section__header {
+    max-width: 820px;
+  }
+
+  .section__body.contact {
+    max-width: 820px;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+  }
+}
