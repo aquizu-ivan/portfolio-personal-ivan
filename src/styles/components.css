@@ -54,18 +54,20 @@
   color: var(--color-text-main);
   text-decoration: none;
   font-weight: var(--font-weight-semibold);
-  transition: color 0.2s ease, opacity 0.2s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: var(--space-xs);
+  transition: color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
   color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
 }
 
 .site-nav__link--active {
   color: var(--color-accent-primary);
   border-bottom: 2px solid var(--color-accent-primary);
-  padding-bottom: var(--space-xs);
 }
 
 @media (max-width: 640px) {
@@ -209,20 +211,22 @@ button:focus-visible,
   color: var(--color-text-main);
   text-decoration: none;
   line-height: var(--line-height-base);
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, border-color 0.2s ease;
 }
 
 .site-footer__nav a:hover {
   color: var(--color-accent-primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
+  border-color: var(--color-accent-primary);
 }
 
 .site-footer__nav a:focus-visible,
 .site-footer__contact-link:focus-visible {
-  outline: 2px solid var(--color-accent-primary);
-  outline-offset: 4px;
+  outline: none;
   border-radius: var(--radius-sm);
+  border-color: var(--color-accent-primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -269,13 +273,15 @@ button:focus-visible,
   text-decoration: none;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, border-color 0.2s ease;
 }
 
 .site-footer__contact-link:hover {
   color: var(--color-accent-primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
+  border-color: var(--color-accent-primary);
 }
 
 .site-footer__availability {
