@@ -201,7 +201,7 @@ function renderServicesSection() {
       <header class="section__header js-reveal">
         <h2 id="services-title" class="section__title">Servicios</h2>
         <p class="section__subtitle">
-          Desarrollo sistemas visuales y interfaces claras y ordenadas, enfocadas en los objetivos de cada proyecto.
+          Acompaño a crear obras y sistemas visuales que respiren dentro del universo IAQUIZU, con claridad y ritmo propio.
         </p>
       </header>
 
@@ -210,7 +210,7 @@ function renderServicesSection() {
           <p class="pill service-card__tag">Sitios web profesionales</p>
           <h3 class="service-card__title">Sitios claros y modernos</h3>
           <p class="service-card__text">
-            Diseño y desarrollo sitios completos para tu negocio, con estructura ordenada, contenido claro y navegación simple.
+            Sitios que actúan como portales: estructura ordenada, contenido claro y experiencia que guía sin ruido.
           </p>
         </article>
 
@@ -218,7 +218,7 @@ function renderServicesSection() {
           <p class="pill service-card__tag">E-commerce simple</p>
           <h3 class="service-card__title">Tiendas enfocadas en la compra</h3>
           <p class="service-card__text">
-            Armo tiendas con catálogo claro, filtros útiles y carrito simple para que la compra sea fluida desde cualquier dispositivo.
+            Tiendas con catálogos claros y recorridos silenciosos para que la compra sea fluida y humana.
           </p>
         </article>
 
@@ -226,7 +226,7 @@ function renderServicesSection() {
           <p class="pill service-card__tag">Catálogos con filtros</p>
           <h3 class="service-card__title">Listados dinámicos y ordenados</h3>
           <p class="service-card__text">
-            Creo grillas de productos, cursos o contenidos con filtros en vivo y búsquedas que ayudan a encontrar rápido lo importante.
+            Grillas vivas con filtros y búsquedas que ayudan a encontrar lo esencial sin perder el hilo del recorrido.
           </p>
         </article>
 
@@ -234,7 +234,7 @@ function renderServicesSection() {
           <p class="pill service-card__tag">Dashboards front-end</p>
           <h3 class="service-card__title">Datos mostrados de forma clara</h3>
           <p class="service-card__text">
-            Diseño pantallas para ver métricas y datos de forma simple, priorizando legibilidad y jerarquía visual.
+            Pantallas para datos con jerarquía serena: legibilidad, orden y foco en lo que importa.
           </p>
         </article>
 
@@ -242,7 +242,7 @@ function renderServicesSection() {
           <p class="pill service-card__tag">Web institucional / landing</p>
           <h3 class="service-card__title">Páginas para comunicar valor</h3>
           <p class="service-card__text">
-            Armo landings e institucionales que presentan tu negocio o servicio con contenido limpio y foco en el objetivo.
+            Páginas que presentan tu obra o sistema con contenido limpio y ritmo interno claro.
           </p>
         </article>
 
@@ -250,7 +250,7 @@ function renderServicesSection() {
           <p class="pill service-card__tag">Mapas interactivos</p>
           <h3 class="service-card__title">Experiencias visuales guiadas</h3>
           <p class="service-card__text">
-            Desarrollo mapas e interfaces interactivas donde la persona puede explorar información de forma visual, guiada y ordenada.
+            Mapas y recorridos interactivos donde la persona explora información de forma visual y guiada, sin perder el pulso interno.
           </p>
         </article>
       </div>
@@ -272,8 +272,8 @@ function renderProcessSection() {
       <header class="section__header js-reveal">
         <h2 id="process-title" class="section__title">Cómo trabajo</h2>
         <p class="section__subtitle">
-          Acá ves cómo se mueve el trabajo por dentro. Trabajo con un proceso claro pero silencioso.
-          No se trata de hacer más, sino de hacer que cada proyecto encuentre su forma verdadera.
+          Acá ves cómo se mueve el trabajo por dentro. Es un proceso claro, silencioso y propio del Octavo Arte.
+          No se trata de hacer más, sino de que cada obra encuentre su forma verdadera.
         </p>
       </header>
 
@@ -281,25 +281,25 @@ function renderProcessSection() {
         <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">1.</span>Escucho y enmarco</h3>
           <p class="process-step__text">
-            Entiendo la esencia del proyecto: qué tiene que transmitir, a quién y desde qué lugar.
+            Entiendo la esencia: qué debe transmitir, a quién y desde qué lugar interno.
           </p>
         </li>
         <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">2.</span>Diseño la estructura interna</h3>
           <p class="process-step__text">
-            Defino cómo se va a organizar la experiencia: ritmo, secciones, jerarquía y sistema visual.
+            Defino la estructura: ritmo, secciones, jerarquía y sistema visual que sostienen la obra.
           </p>
         </li>
         <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">3.</span>Construyo en capas</h3>
           <p class="process-step__text">
-            Desarrollo la interfaz y el sistema visual de afuera hacia adentro, hasta que todo respira coherente.
+            Construyo en capas de afuera hacia adentro hasta que todo respira coherente.
           </p>
         </li>
         <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">4.</span>Refino con calma</h3>
           <p class="process-step__text">
-            Ajusto microdetalles, estados y accesibilidad para que la experiencia se sienta limpia y natural, sin ruido.
+            Ajusto microdetalles y accesibilidad para que la experiencia sea limpia y natural, sin ruido.
           </p>
         </li>
         <li class="process-step js-reveal">
@@ -351,7 +351,7 @@ function renderContactSection() {
       <header class="section__header js-reveal">
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">
-          Si sentís que esta obra conecta con lo que querés construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
+          Si la obra resuena con lo que querés construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
         </p>
       </header>
 
