@@ -40,22 +40,22 @@ export function initContactForm() {
     const emailPattern = /^\S+@\S+\.\S+$/
 
     if (!nameInput.value.trim()) {
-      setError(nameInput, nameError, 'Por favor, escribi tu nombre.')
+      setError(nameInput, nameError, 'Por favor, escribí tu nombre.')
       firstInvalid = firstInvalid || nameInput
     }
 
     const emailValue = emailInput.value.trim()
     if (!emailValue) {
-      setError(emailInput, emailError, 'Por favor, escribi tu email.')
+      setError(emailInput, emailError, 'Por favor, escribí tu email.')
       firstInvalid = firstInvalid || emailInput
     } else if (!emailPattern.test(emailValue)) {
-      setError(emailInput, emailError, 'Ingresa un email valido (ejemplo@dominio.com).')
+      setError(emailInput, emailError, 'Ingresá un email válido (ejemplo@dominio.com).')
       firstInvalid = firstInvalid || emailInput
     }
 
     const messageValue = messageInput.value.trim()
     if (!messageValue || messageValue.length < 10) {
-      setError(messageInput, messageError, 'Contame un poco mas sobre tu proyecto (minimo 10 caracteres).')
+      setError(messageInput, messageError, 'Contame un poco más sobre tu proyecto (mínimo 10 caracteres).')
       firstInvalid = firstInvalid || messageInput
     }
 
@@ -66,7 +66,7 @@ export function initContactForm() {
 
     form.reset()
     successMessage.textContent =
-      'Tu mensaje se valido correctamente. Por ahora este formulario no envia datos, pero esta listo para conectarse a un backend.'
+      'Tu mensaje se validó correctamente. Por ahora este formulario no envía datos, pero está listo para conectarse a un backend.'
     successMessage.focus()
   })
 }

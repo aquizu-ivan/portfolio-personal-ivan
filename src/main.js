@@ -1,4 +1,4 @@
-import './styles/base.css'
+﻿import './styles/base.css'
 import './styles/layout.css'
 import './styles/components.css'
 import './styles/sections/hero.css'
@@ -400,11 +400,11 @@ function renderContactSection() {
         </form>
 
         <p class="contact__alt">
-          Tambien podes escribirme directamente a
-          <a href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>.
-        </p>
-      </div>
-    </section>
+        También podés escribirme directamente a
+        <a href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>.
+      </p>
+    </div>
+  </section>
   `
 }
 
@@ -418,19 +418,19 @@ function renderFooter() {
           <p class="site-footer__tagline">Sistemas visuales contemplativos y entidades digitales vivas.</p>
         </div>
 
-        <nav class="site-footer__nav" aria-label="Enlaces de pie de pagina">
-          <a href="#about">Sobre mi</a>
+        <nav class="site-footer__nav" aria-label="Enlaces de pie de página">
+          <a href="#about">Sobre mí</a>
           <a href="#projects">Obras</a>
           <a href="#services">Servicios</a>
           <a href="#process">Como trabajo</a>
-          <a href="#tech">Tecnologias</a>
+          <a href="#tech">Tecnologías</a>
           <a href="#contact">Contacto</a>
         </nav>
 
         <div class="site-footer__contact">
           <p class="site-footer__contact-label">Contacto</p>
           <a class="site-footer__contact-link" href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>
-          <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones especificas.</p>
+          <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones específicas.</p>
         </div>
       </div>
 
