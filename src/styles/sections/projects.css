@@ -7,10 +7,15 @@
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 
 .project-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border-subtle);
   align-items: flex-start;
   gap: var(--space-md);
 }
