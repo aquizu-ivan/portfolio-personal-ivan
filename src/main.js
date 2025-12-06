@@ -445,6 +445,7 @@ function renderFooter() {
 function renderPage() {
   return `
     <div class="app-shell">
+      <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
       ${renderHeader()}
 
       <main id="main-content" class="page-main" role="main">
