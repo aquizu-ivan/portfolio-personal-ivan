@@ -396,7 +396,7 @@ function renderContactSection() {
 
           <button type="submit" class="btn btn--primary">Enviar mensaje</button>
 
-          <p class="contact-form__success" id="contact-success" aria-live="polite"></p>
+          <p class="contact-form__success" id="contact-success" aria-live="polite" role="status" tabindex="-1"></p>
         </form>
 
         <p class="contact__alt">
