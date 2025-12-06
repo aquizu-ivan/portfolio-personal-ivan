@@ -74,7 +74,7 @@ function renderAboutSection() {
         <h2 id="about-title" class="section__title">Sobre mí</h2>
         <p class="section__subtitle">
           Soy IAQUIZU, Origin Architect of the Eighth Art. Diseño y construyo sistemas visuales contemplativos,
-          obras digitales y experiencias con identidad propia.
+          obras digitales y experiencias con identidad propia. Esta obra muestra una parte del sistema interno del Octavo Arte.
         </p>
       </header>
 
@@ -123,9 +123,9 @@ function renderProjectsSection() {
       aria-labelledby="projects-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="projects-title" class="section__title">Proyectos destacados</h2>
+        <h2 id="projects-title" class="section__title">Obras destacadas</h2>
         <p class="section__subtitle">
-          Algunas obras que muestran cómo trabajo estructura, detalle y experiencia real en el frontend.
+          Obras del universo IAQUIZU que muestran cómo se ordenan forma y ritmo desde adentro.
         </p>
       </header>
 
@@ -134,10 +134,10 @@ function renderProjectsSection() {
           <p class="pill project-card__tag">PROYECTO PRINCIPAL</p>
           <h3 class="project-card__title">Naturaleza Argentina</h3>
           <p class="project-card__description">
-            App multipágina para explorar caminatas y actividades en la naturaleza argentina, con filtros en vivo, mapa interactivo y carrito sin backend.
+            Primera obra del universo IAQUIZU: conecta la naturaleza física con la sensibilidad y la técnica, caminatas vivas con filtros y mapa para sentir el territorio.
           </p>
           <p class="project-card__meta">
-            Arquitectura multipágina - Mapa interactivo - Filtros por región y dificultad - Clima por ciudad - Accesibilidad y responsive.
+            Naturaleza física → ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.
           </p>
           <div class="project-card__actions">
             <a href="#" class="btn btn--primary" aria-label="Ver demo de Naturaleza Argentina">Ver demo</a>
@@ -149,10 +149,10 @@ function renderProjectsSection() {
           <p class="pill project-card__tag">OBRA PORTAL</p>
           <h3 class="project-card__title">Obra-portal personal</h3>
           <p class="project-card__description">
-            One-page minimalista con tema oscuro y sistema de diseño por tokens, pensada como galería principal de mis proyectos y obras.
+            Obra-portal minimalista, entrada al universo IAQUIZU, con sistema de diseño por tokens que sostiene el resto de las obras.
           </p>
           <p class="project-card__meta">
-            Rol: Origin Architect of the Eighth Art - Vite - JavaScript - Diseño orientado a conversión y claridad.
+            Entrada al universo IAQUIZU - Vite - JavaScript - Tokens como esqueleto vivo.
           </p>
           <div class="project-card__actions">
             <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de obra-portal personal">Ver esta página</a>
