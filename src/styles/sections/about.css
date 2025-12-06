@@ -1,18 +1,18 @@
 .about {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 
 .about__pillars {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .about__pillar {
   align-items: flex-start;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .about__pillar-tag {
@@ -31,25 +31,21 @@
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
   color: var(--color-text-muted);
-  max-width: 50ch;
+  max-width: 58ch;
 }
 
 @media (min-width: 768px) {
   .about__pillars {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-lg);
+    gap: var(--space-xl);
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .about__pillars {
-    max-width: var(--layout-max-width);
-    margin: 0 auto;
-    gap: var(--space-xl);
-  }
-
   .about__pillar-text {
-    max-width: 45ch;
+    max-width: 48ch;
   }
 }
