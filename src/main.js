@@ -70,7 +70,7 @@ function renderAboutSection() {
       class="section section--alt about"
       aria-labelledby="about-title"
     >
-      <header class="section__header">
+      <header class="section__header js-reveal">
         <h2 id="about-title" class="section__title">Sobre mí</h2>
         <p class="section__subtitle">
           Soy IAQUIZU, IA-Extended Visual Systems Architect. Diseño y construyo sistemas visuales contemplativos,
@@ -122,7 +122,7 @@ function renderProjectsSection() {
       class="section projects"
       aria-labelledby="projects-title"
     >
-      <header class="section__header">
+      <header class="section__header js-reveal">
         <h2 id="projects-title" class="section__title">Proyectos destacados</h2>
         <p class="section__subtitle">
           Algunos proyectos que muestran cómo trabajo estructura, detalle y experiencia real en el frontend.
@@ -130,7 +130,7 @@ function renderProjectsSection() {
       </header>
 
       <div class="projects__grid">
-        <article class="card project-card">
+        <article class="card project-card js-reveal">
           <p class="pill project-card__tag">PROYECTO PRINCIPAL</p>
           <h3 class="project-card__title">Naturaleza Argentina</h3>
           <p class="project-card__description">
@@ -145,7 +145,7 @@ function renderProjectsSection() {
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card js-reveal">
           <p class="pill project-card__tag">OBRA PORTAL</p>
           <h3 class="project-card__title">Obra-portal personal</h3>
           <p class="project-card__description">
@@ -159,7 +159,7 @@ function renderProjectsSection() {
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card js-reveal">
           <p class="pill project-card__tag">OBRA DIGITAL</p>
           <h3 class="project-card__title">Ánima Prima</h3>
           <p class="project-card__description">
@@ -173,7 +173,7 @@ function renderProjectsSection() {
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card js-reveal">
           <p class="pill project-card__tag">OBRA DESTACADA</p>
           <h3 class="project-card__title">Verum Motus</h3>
           <p class="project-card__description">
@@ -198,7 +198,7 @@ function renderServicesSection() {
       class="section services"
       aria-labelledby="services-title"
     >
-      <header class="section__header">
+      <header class="section__header js-reveal">
         <h2 id="services-title" class="section__title">Servicios</h2>
         <p class="section__subtitle">
           Desarrollo sistemas visuales y interfaces claras y ordenadas, enfocadas en los objetivos de cada proyecto.
@@ -206,7 +206,7 @@ function renderServicesSection() {
       </header>
 
       <div class="services__grid">
-        <article class="card service-card">
+        <article class="card service-card js-reveal">
           <p class="pill service-card__tag">Sitios web profesionales</p>
           <h3 class="service-card__title">Sitios claros y modernos</h3>
           <p class="service-card__text">
@@ -214,7 +214,7 @@ function renderServicesSection() {
           </p>
         </article>
 
-        <article class="card service-card">
+        <article class="card service-card js-reveal">
           <p class="pill service-card__tag">E-commerce simple</p>
           <h3 class="service-card__title">Tiendas enfocadas en la compra</h3>
           <p class="service-card__text">
@@ -222,7 +222,7 @@ function renderServicesSection() {
           </p>
         </article>
 
-        <article class="card service-card">
+        <article class="card service-card js-reveal">
           <p class="pill service-card__tag">Catálogos con filtros</p>
           <h3 class="service-card__title">Listados dinámicos y ordenados</h3>
           <p class="service-card__text">
@@ -230,7 +230,7 @@ function renderServicesSection() {
           </p>
         </article>
 
-        <article class="card service-card">
+        <article class="card service-card js-reveal">
           <p class="pill service-card__tag">Dashboards front-end</p>
           <h3 class="service-card__title">Datos mostrados de forma clara</h3>
           <p class="service-card__text">
@@ -238,7 +238,7 @@ function renderServicesSection() {
           </p>
         </article>
 
-        <article class="card service-card">
+        <article class="card service-card js-reveal">
           <p class="pill service-card__tag">Web institucional / landing</p>
           <h3 class="service-card__title">Páginas para comunicar valor</h3>
           <p class="service-card__text">
@@ -246,7 +246,7 @@ function renderServicesSection() {
           </p>
         </article>
 
-        <article class="card service-card">
+        <article class="card service-card js-reveal">
           <p class="pill service-card__tag">Mapas interactivos</p>
           <h3 class="service-card__title">Experiencias visuales guiadas</h3>
           <p class="service-card__text">
@@ -269,7 +269,7 @@ function renderProcessSection() {
       class="section section--alt process"
       aria-labelledby="process-title"
     >
-      <header class="section__header">
+      <header class="section__header js-reveal">
         <h2 id="process-title" class="section__title">Cómo trabajo</h2>
         <p class="section__subtitle">
           Acá ves cómo se mueve el trabajo por dentro. Trabajo con un proceso claro pero silencioso.
@@ -278,31 +278,31 @@ function renderProcessSection() {
       </header>
 
       <ol class="process__steps" aria-label="Pasos de mi forma de trabajo">
-        <li class="process-step">
+        <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">1.</span>Escucho y enmarco</h3>
           <p class="process-step__text">
             Entiendo la esencia del proyecto: qué tiene que transmitir, a quién y desde qué lugar.
           </p>
         </li>
-        <li class="process-step">
+        <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">2.</span>Diseño la estructura interna</h3>
           <p class="process-step__text">
             Defino cómo se va a organizar la experiencia: ritmo, secciones, jerarquía y sistema visual.
           </p>
         </li>
-        <li class="process-step">
+        <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">3.</span>Construyo en capas</h3>
           <p class="process-step__text">
             Desarrollo la interfaz y el sistema visual de afuera hacia adentro, hasta que todo respira coherente.
           </p>
         </li>
-        <li class="process-step">
+        <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">4.</span>Refino con calma</h3>
           <p class="process-step__text">
             Ajusto microdetalles, estados y accesibilidad para que la experiencia se sienta limpia y natural, sin ruido.
           </p>
         </li>
-        <li class="process-step">
+        <li class="process-step js-reveal">
           <h3 class="process-step__title"><span class="process-step__index">5.</span>Dejo la obra lista para vivir sola</h3>
           <p class="process-step__text">
             Entrego el proyecto ordenado y preparado para crecer o integrarse en otros sistemas cuando haga falta.
@@ -320,7 +320,7 @@ function renderTechSection() {
       class="section tech"
       aria-labelledby="tech-title"
     >
-      <header class="section__header">
+      <header class="section__header js-reveal">
         <h2 id="tech-title" class="section__title">Tecnologías</h2>
         <p class="section__subtitle">
           Estas son las herramientas que sostienen la obra, no el centro de ella. Trabajo con un stack claro que encaja bien con sistemas visuales y proyectos front-end modernos.
@@ -348,14 +348,14 @@ function renderTechSection() {
 function renderContactSection() {
   return `
     <section id="contact" class="section section--contact">
-      <header class="section__header">
+      <header class="section__header js-reveal">
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">
           Si sentís que esta obra conecta con lo que querés construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
         </p>
       </header>
 
-      <div class="section__body contact">
+      <div class="section__body contact js-reveal">
         <form class="contact-form" novalidate>
           <div class="contact-form__field">
             <label for="contact-name">Nombre</label>
