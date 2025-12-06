@@ -34,19 +34,19 @@ function renderHeroSection() {
   return `
     <section id="hero" class="section hero">
       <div class="hero__content">
-        <p class="pill pill--accent hero__kicker">IA-Extended Visual Systems Architect</p>
+        <p class="pill pill--accent hero__kicker">Origin Architect of the Eighth Art</p>
 
         <h1 class="section__title hero__title">
           IAQUIZU
         </h1>
 
         <p class="section__subtitle hero__subtitle">
-          IA-Extended Visual Systems Architect
+          Arquitecto del Origen del Octavo Arte
         </p>
 
         <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">Ver proyectos</a>
-          <a href="#contact" class="btn btn--secondary">Trabajemos juntos</a>
+          <a href="#projects" class="btn btn--primary">Ver obras</a>
+          <a href="#contact" class="btn btn--secondary">Abrir diálogo</a>
         </div>
 
         <p class="hero__note">
@@ -73,7 +73,7 @@ function renderAboutSection() {
       <header class="section__header js-reveal">
         <h2 id="about-title" class="section__title">Sobre mí</h2>
         <p class="section__subtitle">
-          Soy IAQUIZU, IA-Extended Visual Systems Architect. Diseño y construyo sistemas visuales contemplativos,
+          Soy IAQUIZU, Origin Architect of the Eighth Art. Diseño y construyo sistemas visuales contemplativos,
           obras digitales y experiencias con identidad propia.
         </p>
       </header>
@@ -125,7 +125,7 @@ function renderProjectsSection() {
       <header class="section__header js-reveal">
         <h2 id="projects-title" class="section__title">Proyectos destacados</h2>
         <p class="section__subtitle">
-          Algunos proyectos que muestran cómo trabajo estructura, detalle y experiencia real en el frontend.
+          Algunas obras que muestran cómo trabajo estructura, detalle y experiencia real en el frontend.
         </p>
       </header>
 
@@ -152,7 +152,7 @@ function renderProjectsSection() {
             One-page minimalista con tema oscuro y sistema de diseño por tokens, pensada como galería principal de mis proyectos y obras.
           </p>
           <p class="project-card__meta">
-            Rol: IA-Extended Visual Systems Architect - Vite - JavaScript - Diseño orientado a conversión y claridad.
+            Rol: Origin Architect of the Eighth Art - Vite - JavaScript - Diseño orientado a conversión y claridad.
           </p>
           <div class="project-card__actions">
             <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de obra-portal personal">Ver esta página</a>
@@ -415,7 +415,7 @@ function renderFooter() {
       <div class="site-footer__inner">
         <div class="site-footer__brand">
           <p class="site-footer__title">IAQUIZU</p>
-          <p class="site-footer__role">IA-Extended Visual Systems Architect</p>
+          <p class="site-footer__role">Origin Architect of the Eighth Art</p>
           <p class="site-footer__tagline">Sistemas visuales contemplativos y entidades digitales vivas.</p>
         </div>
 
