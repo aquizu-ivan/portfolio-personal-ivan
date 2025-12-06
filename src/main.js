@@ -55,7 +55,7 @@ function renderHeroSection() {
 
       <div class="hero__media">
         <div class="card hero__photo-placeholder">
-          <!-- TODO: Reemplazar con foto o ilustracion real -->
+          <!-- TODO: Reemplazar con foto o ilustración real -->
         </div>
       </div>
     </section>
@@ -145,8 +145,8 @@ function renderProjectsSection() {
         </article>
 
         <article class="card project-card">
-          <p class="pill project-card__tag">PORTFOLIO</p>
-          <h3 class="project-card__title">Portfolio personal</h3>
+          <p class="pill project-card__tag">OBRA PORTAL</p>
+          <h3 class="project-card__title">Obra-portal personal</h3>
           <p class="project-card__description">
             One-page minimalista con tema oscuro y sistema de diseño por tokens, pensada como galería principal de mis proyectos y obras.
           </p>
@@ -154,7 +154,7 @@ function renderProjectsSection() {
             Rol: IA-Extended Visual Systems Architect - Vite - JavaScript - Diseño orientado a conversión y claridad.
           </p>
           <div class="project-card__actions">
-            <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de portfolio personal">Ver esta página</a>
+            <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de obra-portal personal">Ver esta página</a>
           </div>
         </article>
 
@@ -271,7 +271,7 @@ function renderProcessSection() {
       <header class="section__header">
         <h2 id="process-title" class="section__title">Cómo trabajo</h2>
         <p class="section__subtitle">
-          Trabajo con un proceso claro pero silencioso.
+          Acá ves cómo se mueve el trabajo por dentro. Trabajo con un proceso claro pero silencioso.
           No se trata de hacer más, sino de hacer que cada proyecto encuentre su forma verdadera.
         </p>
       </header>
@@ -322,7 +322,7 @@ function renderTechSection() {
       <header class="section__header">
         <h2 id="tech-title" class="section__title">Tecnologías</h2>
         <p class="section__subtitle">
-          Trabajo con un stack claro que encaja bien con sistemas visuales y proyectos front-end modernos.
+          Estas son las herramientas que sostienen la obra, no el centro de ella. Trabajo con un stack claro que encaja bien con sistemas visuales y proyectos front-end modernos.
         </p>
       </header>
 
@@ -350,7 +350,7 @@ function renderContactSection() {
       <header class="section__header">
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">
-          Si tu proyecto necesita un sistema visual contemplativo, ordenado y con identidad propia, podemos hablar.
+          Si sentís que esta obra conecta con lo que querés construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
         </p>
       </header>
 
@@ -400,7 +400,7 @@ function renderContactSection() {
         </form>
 
         <p class="contact__alt">
-          Tambien podes escribirme directamente a
+          También podés escribirme directamente a
           <a href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>.
         </p>
       </div>
@@ -418,25 +418,25 @@ function renderFooter() {
           <p class="site-footer__tagline">Sistemas visuales contemplativos y entidades digitales vivas.</p>
         </div>
 
-        <nav class="site-footer__nav" aria-label="Enlaces de pie de pagina">
-          <a href="#about">Sobre mi</a>
+        <nav class="site-footer__nav" aria-label="Enlaces de pie de página">
+          <a href="#about">Sobre mí</a>
           <a href="#projects">Obras</a>
           <a href="#services">Servicios</a>
-          <a href="#process">Como trabajo</a>
-          <a href="#tech">Tecnologias</a>
+          <a href="#process">Cómo trabajo</a>
+          <a href="#tech">Tecnologías</a>
           <a href="#contact">Contacto</a>
         </nav>
 
         <div class="site-footer__contact">
           <p class="site-footer__contact-label">Contacto</p>
           <a class="site-footer__contact-link" href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>
-          <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones especificas.</p>
+          <p class="site-footer__availability">Disponible para proyectos selectos y colaboraciones específicas.</p>
         </div>
       </div>
 
       <div class="site-footer__bottom">
         <p>&copy; 2025 IAQUIZU. Todos los derechos reservados.</p>
-        <p>Portfolio creado con HTML, CSS y JavaScript.</p>
+        <p>Obra creada con HTML, CSS y JavaScript.</p>
       </div>
     </footer>
   `
