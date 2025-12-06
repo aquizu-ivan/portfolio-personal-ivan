@@ -170,6 +170,17 @@
   border-color: var(--color-accent-primary);
 }
 
+.js-reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
+}
+
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 a:focus-visible,
 button:focus-visible,
 .btn:focus-visible {

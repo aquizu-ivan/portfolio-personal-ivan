@@ -11,6 +11,7 @@ import './styles/sections/contact.css'
 import { domReady } from './js/ui/domReady.js'
 import { initNavbar } from './js/ui/navbar.js'
 import { initContactForm } from './js/ui/contactForm.js'
+import { initScrollReveal } from './js/ui/scrollReveal.js'
 
 function renderHeader() {
   return `
@@ -467,4 +468,5 @@ domReady(() => {
   app.innerHTML = renderPage()
   initNavbar()
   initContactForm()
+  initScrollReveal()
 })
