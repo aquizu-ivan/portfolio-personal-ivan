@@ -7,7 +7,7 @@
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .project-card {

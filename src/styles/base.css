@@ -70,7 +70,18 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent-secondary);
+  color: color-mix(in srgb, var(--color-accent-primary) 85%, #ffffff 15%);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.pill:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 166, 118, 0.35);
+  border-radius: var(--radius-sm);
 }
 
 img {
