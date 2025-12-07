@@ -34,7 +34,8 @@
   font-family: var(--font-family-heading);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-heading);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
 }
 
 .about__pillar-text {
