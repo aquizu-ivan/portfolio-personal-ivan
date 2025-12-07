@@ -6,7 +6,7 @@ export function renderTechSection() {
       aria-labelledby="tech-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="tech-title" class="section__title">Tecnolog¡as</h2>
+        <h2 id="tech-title" class="section__title">Tecnologías</h2>
         <p class="section__subtitle">
           Estas son las herramientas que sostienen la obra, no el centro de ella. Trabajo con un stack claro que encaja bien con sistemas visuales y proyectos front-end modernos.
         </p>
@@ -24,7 +24,7 @@ export function renderTechSection() {
       </div>
 
       <p class="tech__note">
-        Tambi‚n trabajo con arquitectura multip gina real, responsive por secciones y accesibilidad b sica como parte del flujo.
+        También trabajo con arquitectura multipágina real, responsive por secciones y accesibilidad básica como parte del flujo.
       </p>
     </section>
   `

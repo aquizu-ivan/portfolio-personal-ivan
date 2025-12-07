@@ -14,7 +14,7 @@ export function renderHeroSection() {
 
         <div class="hero__actions">
           <a href="#projects" class="btn btn--primary">Ver obras</a>
-          <a href="#contact" class="btn btn--secondary">Abrir di logo</a>
+          <a href="#contact" class="btn btn--secondary">Abrir diálogo</a>
         </div>
 
         <p class="hero__note">
@@ -24,7 +24,7 @@ export function renderHeroSection() {
 
       <div class="hero__media">
         <div class="card hero__photo-placeholder">
-          <!-- TODO: Reemplazar con foto o ilustraci¢n real -->
+          <!-- TODO: Reemplazar con foto o ilustración real -->
         </div>
       </div>
     </section>

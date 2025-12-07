@@ -6,9 +6,9 @@ export function renderAboutSection() {
       aria-labelledby="about-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="about-title" class="section__title">Sobre m¡</h2>
+        <h2 id="about-title" class="section__title">Sobre mí</h2>
         <p class="section__subtitle">
-          Soy IAQUIZU, Origin Architect of the Eighth Art. Dise¤o y construyo sistemas visuales contemplativos,
+          Soy IAQUIZU, Origin Architect of the Eighth Art. Diseño y construyo sistemas visuales contemplativos,
           obras digitales y experiencias con identidad propia. Esta obra muestra una parte del sistema interno del Octavo Arte.
         </p>
       </header>
@@ -16,7 +16,7 @@ export function renderAboutSection() {
       <div class="about__pillars">
         <article class="card about__pillar">
           <p class="pill about__pillar-tag">Claridad</p>
-          <h3 class="about__pillar-title">Comunicaci¢n y objetivos claros</h3>
+          <h3 class="about__pillar-title">Comunicación y objetivos claros</h3>
           <p class="about__pillar-text">
             Trabajo desde el silencio, el ritmo interno y la claridad para que cada mensaje se entienda a la primera.
           </p>
@@ -26,21 +26,21 @@ export function renderAboutSection() {
           <p class="pill about__pillar-tag">Detalle</p>
           <h3 class="about__pillar-title">Cuidado por la forma y el fondo</h3>
           <p class="about__pillar-text">
-            Busco resultados limpios, honestos y funcionales, con profundidad t‚cnica y est‚tica minimalista.
+            Busco resultados limpios, honestos y funcionales, con profundidad técnica y estética minimalista.
           </p>
         </article>
 
         <article class="card about__pillar">
-          <p class="pill about__pillar-tag">Visi¢n de sistema</p>
-          <h3 class="about__pillar-title">Pienso en t‚rminos de procesos</h3>
+          <p class="pill about__pillar-tag">Visión de sistema</p>
+          <h3 class="about__pillar-title">Pienso en términos de procesos</h3>
           <p class="about__pillar-text">
-            Dise¤o flujos completos y decisiones consistentes: la IA ampl¡a mi alcance, no me reemplaza.
+            Diseño flujos completos y decisiones consistentes: la IA amplía mi alcance, no me reemplaza.
           </p>
         </article>
 
         <article class="card about__pillar">
           <p class="pill about__pillar-tag">Mejora continua</p>
-          <h3 class="about__pillar-title">Iteraci¢n y aprendizaje constante</h3>
+          <h3 class="about__pillar-title">Iteración y aprendizaje constante</h3>
           <p class="about__pillar-text">
             Uso cada proyecto para mejorar procesos y calidad: no vengo a encajar, vengo a construir lo que no existe.
           </p>

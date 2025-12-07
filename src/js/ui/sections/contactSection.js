@@ -4,7 +4,7 @@ export function renderContactSection() {
       <header class="section__header js-reveal">
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">
-          Si la obra resuena con lo que quer‚s construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
+          Si la obra resuena con lo que querés construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
         </p>
       </header>
 
@@ -54,7 +54,7 @@ export function renderContactSection() {
         </form>
 
         <p class="contact__alt">
-          Tambi‚n pod‚s escribirme directamente a
+          También podés escribirme directamente a
           <a href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>.
         </p>
       </div>

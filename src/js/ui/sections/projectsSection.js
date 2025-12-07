@@ -35,7 +35,7 @@ export function renderProjectsSection() {
       <header class="section__header js-reveal">
         <h2 id="projects-title" class="section__title">Obras destacadas</h2>
         <p class="section__subtitle">
-          Obras del universo IAQUIZU que muestran c¢mo se ordenan forma y ritmo desde adentro.
+          Obras del universo IAQUIZU que muestran cómo se ordenan forma y ritmo desde adentro.
         </p>
       </header>
 

@@ -34,7 +34,7 @@ export function renderServicesSection() {
       </div>
 
       <p class="services__note">
-        Me adapto al proyecto seg£n el objetivo, el alcance y la complejidad de cada caso.
+        Me adapto al proyecto según el objetivo, el alcance y la complejidad de cada caso.
       </p>
     </section>
   `
