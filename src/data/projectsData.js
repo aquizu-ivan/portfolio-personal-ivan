@@ -12,7 +12,7 @@ export const projectsData = [
     tag: 'PRIMERA OBRA DEL UNIVERSO IAQUIZU',
     title: 'Naturaleza Argentina',
     description: `Primera obra del universo IAQUIZU: conecta la naturaleza física con la sensibilidad y la técnica, caminatas vivas con filtros y mapa para sentir el territorio.`,
-    meta: `Naturaleza física → ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.`,
+    meta: `Naturaleza física — ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.`,
     actions: [
       { label: 'Ver demo', href: '#', variant: 'btn--primary', ariaLabel: 'Ver demo de Naturaleza Argentina' },
       { label: 'Ver código', href: '#', variant: 'btn--secondary', ariaLabel: 'Ver código de Naturaleza Argentina' },
