@@ -40,22 +40,33 @@ export function initContactForm() {
     const emailPattern = /^\S+@\S+\.\S+$/
 
     if (!nameInput.value.trim()) {
-      setError(nameInput, nameError, 'Por favor, escribí tu nombre.')
+      setError(nameInput, nameError, 'Por favor, escribí tu nombre para saber cómo dirigirme a vos.')
       firstInvalid = firstInvalid || nameInput
     }
 
     const emailValue = emailInput.value.trim()
     if (!emailValue) {
-      setError(emailInput, emailError, 'Por favor, escribí tu email.')
+      setError(emailInput, emailError, 'Necesito un correo para poder responderte. Escribí una dirección de email.')
       firstInvalid = firstInvalid || emailInput
     } else if (!emailPattern.test(emailValue)) {
-      setError(emailInput, emailError, 'Ingresá un email válido (ejemplo@dominio.com).')
+      setError(emailInput, emailError, 'El email no parece válido. Revisá que tenga el formato nombre@ejemplo.com.')
       firstInvalid = firstInvalid || emailInput
     }
 
     const messageValue = messageInput.value.trim()
-    if (!messageValue || messageValue.length < 10) {
-      setError(messageInput, messageError, 'Contame un poco más sobre tu proyecto (mínimo 10 caracteres).')
+    if (!messageValue) {
+      setError(
+        messageInput,
+        messageError,
+        'Contame algo de lo que querés construir o explorar. No dejes este campo vacío.'
+      )
+      firstInvalid = firstInvalid || messageInput
+    } else if (messageValue.length < 10) {
+      setError(
+        messageInput,
+        messageError,
+        'Escribí un poco más para que pueda entender mejor qué tenés en mente (mínimo 10 caracteres).'
+      )
       firstInvalid = firstInvalid || messageInput
     }
 
@@ -66,7 +77,7 @@ export function initContactForm() {
 
     form.reset()
     successMessage.textContent =
-      'Tu mensaje se validó correctamente. Por ahora este formulario no envía datos, pero está listo para conectarse a un backend.'
+      'Tu mensaje se validó correctamente. Por ahora este formulario no envía datos, pero está listo para conectarse a un backend cuando sea necesario.'
     successMessage.focus()
   })
 }
