@@ -1,4 +1,4 @@
-import './styles/base.css'
+﻿import './styles/base.css'
 import './styles/layout.css'
 import './styles/components.css'
 import './styles/sections/hero.css'
@@ -12,6 +12,9 @@ import { domReady } from './js/ui/domReady.js'
 import { initNavbar } from './js/ui/navbar.js'
 import { initContactForm } from './js/ui/contactForm.js'
 import { initScrollReveal } from './js/ui/scrollReveal.js'
+import { projectsData } from './data/projectsData.js'
+import { servicesData } from './data/servicesData.js'
+import { processData } from './data/processData.js'
 
 function renderHeader() {
   return `
@@ -116,6 +119,31 @@ function renderAboutSection() {
 }
 
 function renderProjectsSection() {
+  const projectsList = projectsData
+    .map(
+      (project) => `
+        <article class="card project-card js-reveal">
+          <p class="pill project-card__tag">${project.tag}</p>
+          <h3 class="project-card__title">${project.title}</h3>
+          <p class="project-card__description">
+            ${project.description}
+          </p>
+          <p class="project-card__meta">
+            ${project.meta}
+          </p>
+          <div class="project-card__actions">
+            ${project.actions
+              .map(
+                (action) =>
+                  `<a href="${action.href}" class="btn ${action.variant}" aria-label="${action.ariaLabel}">${action.label}</a>`
+              )
+              .join('')}
+          </div>
+        </article>
+      `
+    )
+    .join('')
+
   return `
     <section
       id="projects"
@@ -130,68 +158,27 @@ function renderProjectsSection() {
       </header>
 
       <div class="projects__grid">
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">PROYECTO PRINCIPAL</p>
-          <h3 class="project-card__title">Naturaleza Argentina</h3>
-          <p class="project-card__description">
-            Primera obra del universo IAQUIZU: conecta la naturaleza física con la sensibilidad y la técnica, caminatas vivas con filtros y mapa para sentir el territorio.
-          </p>
-          <p class="project-card__meta">
-            Naturaleza física → ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.
-          </p>
-          <div class="project-card__actions">
-            <a href="#" class="btn btn--primary" aria-label="Ver demo de Naturaleza Argentina">Ver demo</a>
-            <a href="#" class="btn btn--secondary" aria-label="Ver código de Naturaleza Argentina">Ver código</a>
-          </div>
-        </article>
-
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">OBRA PORTAL</p>
-          <h3 class="project-card__title">Obra-portal personal</h3>
-          <p class="project-card__description">
-            Obra-portal minimalista, entrada al universo IAQUIZU, con sistema de diseño por tokens que sostiene el resto de las obras.
-          </p>
-          <p class="project-card__meta">
-            Entrada al universo IAQUIZU - Vite - JavaScript - Tokens como esqueleto vivo.
-          </p>
-          <div class="project-card__actions">
-            <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de obra-portal personal">Ver esta página</a>
-          </div>
-        </article>
-
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">OBRA DIGITAL</p>
-          <h3 class="project-card__title">Ánima Prima</h3>
-          <p class="project-card__description">
-            Obra digital contemplativa que representa la esencia interna antes de cualquier forma. Una escena minimalista y silenciosa, construida con movimiento sutil y luz controlada.
-          </p>
-          <p class="project-card__meta">
-            Ritmo interno - Estética minimal - Experiencia visual continua.
-          </p>
-          <div class="project-card__actions">
-            <a href="#" class="btn btn--secondary" aria-label="Ver detalles de Ánima Prima">Ver detalles</a>
-          </div>
-        </article>
-
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">OBRA DESTACADA</p>
-          <h3 class="project-card__title">Verum Motus</h3>
-          <p class="project-card__description">
-            Obra digital que explora el surgimiento del movimiento verdadero: el momento en que la esencia empieza a moverse hacia la presencia.
-          </p>
-          <p class="project-card__meta">
-            Sistemas visuales en Three.js - Capas de pulso interno y ritmo - Obra clave del universo IAQUIZU.
-          </p>
-          <div class="project-card__actions">
-            <a href="#" class="btn btn--secondary" aria-label="Ver detalles de Verum Motus">Ver detalles</a>
-          </div>
-        </article>
+        ${projectsList}
       </div>
     </section>
   `
 }
 
 function renderServicesSection() {
+  const servicesList = servicesData
+    .map(
+      (service) => `
+        <article class="card service-card js-reveal">
+          <p class="pill service-card__tag">${service.tag}</p>
+          <h3 class="service-card__title">${service.title}</h3>
+          <p class="service-card__text">
+            ${service.description}
+          </p>
+        </article>
+      `
+    )
+    .join('')
+
   return `
     <section
       id="services"
@@ -206,53 +193,7 @@ function renderServicesSection() {
       </header>
 
       <div class="services__grid">
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Sitios web profesionales</p>
-          <h3 class="service-card__title">Sitios claros y modernos</h3>
-          <p class="service-card__text">
-            Sitios que actúan como portales: estructura ordenada, contenido claro y experiencia que guía sin ruido.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">E-commerce simple</p>
-          <h3 class="service-card__title">Tiendas enfocadas en la compra</h3>
-          <p class="service-card__text">
-            Tiendas con catálogos claros y recorridos silenciosos para que la compra sea fluida y humana.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Catálogos con filtros</p>
-          <h3 class="service-card__title">Listados dinámicos y ordenados</h3>
-          <p class="service-card__text">
-            Grillas vivas con filtros y búsquedas que ayudan a encontrar lo esencial sin perder el hilo del recorrido.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Dashboards front-end</p>
-          <h3 class="service-card__title">Datos mostrados de forma clara</h3>
-          <p class="service-card__text">
-            Pantallas para datos con jerarquía serena: legibilidad, orden y foco en lo que importa.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Web institucional / landing</p>
-          <h3 class="service-card__title">Páginas para comunicar valor</h3>
-          <p class="service-card__text">
-            Páginas que presentan tu obra o sistema con contenido limpio y ritmo interno claro.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Mapas interactivos</p>
-          <h3 class="service-card__title">Experiencias visuales guiadas</h3>
-          <p class="service-card__text">
-            Mapas y recorridos interactivos donde la persona explora información de forma visual y guiada, sin perder el pulso interno.
-          </p>
-        </article>
+        ${servicesList}
       </div>
 
       <p class="services__note">
@@ -261,8 +202,20 @@ function renderServicesSection() {
     </section>
   `
 }
-
 function renderProcessSection() {
+  const processSteps = processData
+    .map(
+      (step, index) => `
+        <li class="process-step js-reveal">
+          <h3 class="process-step__title"><span class="process-step__index">${index + 1}.</span>${step.title}</h3>
+          <p class="process-step__text">
+            ${step.description}
+          </p>
+        </li>
+      `
+    )
+    .join('')
+
   return `
     <section
       id="process"
@@ -278,41 +231,11 @@ function renderProcessSection() {
       </header>
 
       <ol class="process__steps" aria-label="Pasos de mi forma de trabajo">
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">1.</span>Escucho y enmarco</h3>
-          <p class="process-step__text">
-            Entiendo la esencia: qué debe transmitir, a quién y desde qué lugar interno.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">2.</span>Diseño la estructura interna</h3>
-          <p class="process-step__text">
-            Defino la estructura: ritmo, secciones, jerarquía y sistema visual que sostienen la obra.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">3.</span>Construyo en capas</h3>
-          <p class="process-step__text">
-            Construyo en capas de afuera hacia adentro hasta que todo respira coherente.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">4.</span>Refino con calma</h3>
-          <p class="process-step__text">
-            Ajusto microdetalles y accesibilidad para que la experiencia sea limpia y natural, sin ruido.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">5.</span>Dejo la obra lista para vivir sola</h3>
-          <p class="process-step__text">
-            Entrego el proyecto ordenado y preparado para crecer o integrarse en otros sistemas cuando haga falta.
-          </p>
-        </li>
+        ${processSteps}
       </ol>
     </section>
   `
 }
-
 function renderTechSection() {
   return `
     <section
@@ -470,3 +393,8 @@ domReady(() => {
   initContactForm()
   initScrollReveal()
 })
+
+
+
+
+
