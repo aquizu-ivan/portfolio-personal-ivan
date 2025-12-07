@@ -8,7 +8,8 @@ export function initScrollReveal() {
     return
   }
 
-  const DELAY_STEP_MS = 60
+  const REVEAL_DELAY_STEP_MS = 60
+  const REVEAL_DELAY_MAX_MS = 360
 
   const sectionGroups = new Map()
   revealElements.forEach((el) => {
@@ -21,8 +22,9 @@ export function initScrollReveal() {
 
   sectionGroups.forEach((elements) => {
     elements.forEach((el, index) => {
-      const delay = index * DELAY_STEP_MS
-      el.style.transitionDelay = `${delay}ms`
+      const rawDelay = index * REVEAL_DELAY_STEP_MS
+      const clampedDelay = Math.min(rawDelay, REVEAL_DELAY_MAX_MS)
+      el.style.transitionDelay = `${clampedDelay}ms`
     })
   })
 

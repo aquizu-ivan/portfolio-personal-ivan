@@ -84,3 +84,10 @@ Accesibilidad integrada
 /src/js/components/: piezas reutilizables (nav, footer, tarjetas, etc.).
 
 /src/js/ui/: utilidades de UI (domReady, manejo de eventos, animaciones, etc.).
+
+## Animaciones de scroll (scrollReveal)
+
+- El Hero permanece estÃ¡tico (no usa `.js-reveal`).
+- Cada secciÃ³n agrupa sus `.js-reveal` y aplica un stagger de 60ms por elemento, con un lÃ­mite mÃ¡ximo de 360ms por secciÃ³n para evitar esperas largas.
+- Cada elemento se revela una sola vez al entrar en vista.
+- `prefers-reduced-motion` o la ausencia de `IntersectionObserver` desactivan animaciones y stagger: todo se marca visible de inmediato.
