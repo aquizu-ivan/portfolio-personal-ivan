@@ -16,7 +16,7 @@
   justify-content: center;
   padding: var(--space-xs) var(--space-md);
   border-radius: var(--radius-pill);
-  border: 1px solid var(--color-border-subtle);
+  border: 1px solid var(--color-text-muted);
   background-color: var(--color-surface);
   color: var(--color-text-main);
   font-size: var(--font-size-sm);
@@ -33,14 +33,14 @@
 .tech__item:focus-visible {
   outline: none;
   border-color: var(--color-accent-primary);
-  box-shadow: 0 0 0 2px rgba(0, 166, 118, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 166, 118, 0.32);
   color: var(--color-accent-primary);
 }
 
 .tech__note {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
-  color: var(--color-text-muted);
+  color: color-mix(in srgb, var(--color-text-main) 65%, var(--color-text-muted));
   max-width: 56ch;
   margin-top: var(--space-md);
 }
