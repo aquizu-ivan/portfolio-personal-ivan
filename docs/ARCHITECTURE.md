@@ -1,10 +1,12 @@
-Este documento describe la estructura oficial del proyecto según el **Flujo Oficial** para el portfolio de IAQUIZU (Iván Aquizu), IA-Extended Visual Systems Architect. La one-page presenta sus sistemas visuales y obras digitales como carta de presentación para clientes y estudios creativos.
+# Obra 2 — Portal IAQUIZU · Arquitectura
+
+One-page data-driven que presenta al Origin Architect of the Eighth Art. No es un portfolio comercial: es el portal de la obra, con secciones orquestadas en JS vanilla y Vite.
 
 ---
 
 ## Estructura de carpetas (estado actual)
 
-```txt
+```
 root
 - index.html
 - package.json
@@ -36,58 +38,42 @@ root
   - js/
     - ui/
       - domReady.js
-    - components/
-      - nav.js
-      - footer.js
+      - navbar.js
+      - contactForm.js
+      - scrollReveal.js
+      - sections/
+        - heroSection.js
+        - aboutSection.js
+        - projectsSection.js
+        - servicesSection.js
+        - processSection.js
+        - techSection.js
+        - contactSection.js
+        - footerSection.js
 ```
 
-## Descripción rápida
+## Orquestación
 
-/src/assets: imágenes, iconos y fuentes organizadas en subcarpetas (img, icons, fonts).
+- `src/main.js`: orquestador. Importa `renderXSection`, compone `renderPage()` y en `domReady` inyecta la página y luego inicializa `initNavbar()`, `initContactForm()` e `initScrollReveal()`.
+- Secciones en `src/js/ui/sections/*`: cada módulo `renderXSection` devuelve el HTML de su bloque (Hero, About, Obras, Formas de trabajar, Proceso, Tech, Contacto, Footer).
+- `src/js/ui/navbar.js`: scroll suave y marcado de sección activa con `IntersectionObserver`.
+- `src/js/ui/contactForm.js`: validación accesible (aria-invalid, aria-describedby, aria-live), foco en primer error y foco en éxito.
+- `src/js/ui/scrollReveal.js`: animación IAQUIZU con `.js-reveal` → `.is-visible`, stagger de 60ms por sección con tope 360ms, reveal único, Hero sin `.js-reveal`, respeta `prefers-reduced-motion` y fallback sin IO (todo visible).
 
-/src/styles: hojas de estilo globales (base.css, layout.css, components.css) y /sections para cada bloque de la one-page (hero, about, projects, services, process, tech, contact).
+## Roles de las secciones
 
-/src/js: utilidades de UI (ui/) y componentes reutilizables (components/).
+- Hero: entrada silenciosa al portal.
+- About (panel claro flotante): cámara interior donde IAQUIZU se presenta.
+- Obras destacadas: piezas del universo (Obra-portal, Naturaleza Argentina, Ánima Prima, Verum Motus).
+- Formas de trabajar: maneras de interactuar con el Octavo Arte.
+- Proceso (Cómo trabajo): flujo interno en panel flotante y pasos secuenciales.
+- Tech: pila tecnológica como soporte de la obra, no como CV.
+- Contacto: canal para abrir proyectos/obras, no “trabajos freelance”.
+- Footer: cierre de identidad.
 
-/src/main.js: punto de entrada que monta el contenedor principal y aplica los estilos base.
+## Principios
 
-/index.html: documento HTML root, enlaza el bundle de Vite y define el contenedor #app.
-
-## Principios arquitectónicos
-
-Separación por responsabilidades
-
-- Estilos en módulos (base, layout, components, sections).
-- JS en módulos y componentes reutilizables (ui, components).
-- HTML con estructura semántica clara y mínima (una sola página con secciones).
-
-Diseño escalable
-
-- Evitar archivos gigantes.
-- Preferir dividir en piezas pequeñas y coherentes.
-
-Evitar duplicación
-
-- Helpers de UI compartidos.
-- Animaciones centralizadas (módulos reutilizables).
-- Variables CSS centralizadas (se definen en el sistema visual).
-
-Accesibilidad integrada
-
-- Estructura semántica por secciones.
-- Manejo de alt, aria-label, role y foco visible en tickets dedicados.
-
-## JS — Organización oficial
-
-/src/main.js: inicialización general de la app (monta la shell principal).
-
-/src/js/components/: piezas reutilizables (nav, footer, tarjetas, etc.).
-
-/src/js/ui/: utilidades de UI (domReady, manejo de eventos, animaciones, etc.).
-
-## Animaciones de scroll (scrollReveal)
-
-- El Hero permanece estÃ¡tico (no usa `.js-reveal`).
-- Cada secciÃ³n agrupa sus `.js-reveal` y aplica un stagger de 60ms por elemento, con un lÃ­mite mÃ¡ximo de 360ms por secciÃ³n para evitar esperas largas.
-- Cada elemento se revela una sola vez al entrar en vista.
-- `prefers-reduced-motion` o la ausencia de `IntersectionObserver` desactivan animaciones y stagger: todo se marca visible de inmediato.
+- Separación por responsabilidades: estilos en `styles/`, render en módulos de sección, UI en `src/js/ui`.
+- Data-driven: secciones de obras/servicios/proceso/tech consumen datos desde `src/data`.
+- Animación integrada: scrollReveal discreto, sin reanimar ni afectar Hero, respetando reduced motion.
+- Accesibilidad integrada: estructura semántica, aria en formulario, focus visible unificado.

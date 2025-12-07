@@ -1,100 +1,44 @@
-﻿GuÃ­a de decisiones visuales para el portfolio de IAQUIZU (IvÃ¡n Aquizu), IA-Extended Visual Systems Architect.
+# Especificación visual — Obra 2 · Portal IAQUIZU
+
+Portal contemplativo del Octavo Arte: base oscura, paneles claros flotantes y ritmo silencioso de secciones (Hero → Obras → Formas de trabajar → Proceso → Tech → Contacto → Footer).
 
 ---
 
-## Paleta de colores (oficial)
+## Paleta y superficies
 
-- Fondo principal (secciones oscuras): `#0D0D0D`
-- Fondo claro (secciones alternativas): `#F2F2F2`
-- Texto principal en fondo oscuro: `#F2F2F2`
-- Texto en fondo claro: `#0D0D0D`
-- Acento verde (principal): `#00A676`
-- Acento naranja (secundario): `#FF8A3D`
-- Grises de apoyo: se derivan segÃºn necesidad (bordes, lÃ­neas, etc.)
+- Fondo principal: oscuro (`--color-bg-main`).
+- Paneles claros flotantes (About, Proceso): `--color-bg-alt`, sombras suaves y radios amplios.
+- Texto: `--color-text-main` en oscuro; `--color-text-inverse` sobre claros; muted para descripciones.
+- Acento IAQUIZU: verde (`--color-accent-primary`) en detalles (números de pasos, pills, links); naranja secundario para apoyo.
 
----
+## Tipografía y jerarquía
 
-## TipografÃ­as
+- Familias: `--font-family-base` para cuerpo; `--font-family-heading` para títulos.
+- Jerarquía: Hero y títulos de sección en escala heading; títulos de cards/pasos más contenidos; cuerpo en tamaños base/SM; pesos suavizados en pasos del Proceso.
+- Anchos de texto controlados (≈60ch) para lectura calmada.
 
-- **Inter** para textos en general (body, pÃ¡rrafos, labels).
-- **Montserrat** para tÃ­tulos, subtÃ­tulos y elementos destacados.
+## Paneles flotantes
 
-*(Se podrÃ­an ajustar segÃºn disponibilidad y performance, pero esta es la base oficial.)*
+- About: tarjeta/panel claro con sombra suave y radio grande; padding amplio.
+- Proceso: panel claro, cards ligeras, títulos suavizados; secuencia visual sin nodos llamativos.
 
----
+## Espaciado y ritmo
 
-## Espaciado
+- Secciones con padding vertical unificado (`calc(var(--space-xl) + var(--space-md))`), gaps consistentes.
+- Header/subtítulo/contenido con separación breve entre encabezados y mayor respiro hacia el cuerpo.
+- Grillas (Obras, Formas de trabajar, Tech) con gaps coherentes entre secciones y breakpoints.
 
-- Base: `1rem`
-- Secciones verticales: `4rem` arriba y abajo (mobile puede ser un poco menos).
-- Grillas y layouts: `gap` base de `1.5rem`.
+## Interacción IAQUIZU
 
----
+- Botones/pills: hover/active sutiles dentro de la paleta; sin escalados; sombras ligeras; focus-visible con halo de acento.
+- Enlaces: color IAQUIZU, hover con leve aclarado + subrayado discreto; focus-visible con halo compartido.
 
-## Componentes UI base
+## Movimiento
 
-### Cards
-- Fondo ligeramente elevado sobre el fondo principal.
-- Borde suave (radio moderado).
-- Sombra mÃ­nima para dar profundidad sin ruido visual.
-- Hover: ligera elevaciÃ³n + ajuste de color de borde o fondo.
-
-### Botones
-- Bordes redondeados.
-- Usan colores de acento (verde principal, naranja para acciones secundarias).
-- TransiciÃ³n suave en hover (color, sombra, escala ligera).
-
-### Inputs
-- Borde sutil y consistente.
-- Fondo que contraste lo justo con el contexto.
-- `:focus-visible` muy claro (borde o sombra verde/naranja) para accesibilidad.
-
----
-
-## Animaciones y microinteracciones (a futuro)
-
-- Fade-in suave al hacer scroll para secciones clave.
-- Smooth scroll en la navegaciÃ³n al hacer clic en links de la one-page.
-- Hover suave en cards y botones (sin animaciones agresivas).
-
----
+- Hero estático (plano de silencio).
+- ScrollReveal como respiración por sección: stagger 60ms con tope 360ms, reveal único, sin reanimar; `prefers-reduced-motion` o sin IO → todo visible sin animación.
 
 ## Responsive
 
-- Enfoque **mobile-first**.
-- Breakpoints de referencia:
-  - `480px` -> mÃ³viles pequeÃ±os.
-  - `768px` -> tablets / mÃ³viles grandes en horizontal.
-  - `1024px` -> desktop.
-
-La maquetaciÃ³n fino-responsiva se trabajarÃ¡ en tickets especÃ­ficos (Responsive fino y Animaciones).
-
----
-
-## Variables principales (tokens)
-
-- `--color-bg-main`: fondo principal oscuro del sitio.
-- `--color-accent-primary`: verde principal para links y acciones.
-- `--color-accent-secondary`: naranja de apoyo para estados o llamados secundarios.
-- `--color-text-main` y `--color-text-muted`: texto principal y descripciones sobre fondos oscuros.
-- `--font-family-base` y `--font-family-heading`: tipografÃ­a de texto y tÃ­tulos.
-- `--font-size-base`: tamaÃ±o base para pÃ¡rrafos.
-- `--line-height-base`: altura de lÃ­nea global para legibilidad.
-- `--space-md` y `--space-xl`: espaciado base para paddings/gaps y bloques grandes.
-- `--layout-max-width`: ancho mÃ¡ximo del contenido principal.
-- `--radius-pill`: radios redondeados para elementos como la skip link o pill buttons.
-- `--shadow-soft`: sombra suave para elevar cards o superficies.
-
----
-
-## Patrones de secciÃ³n y componentes base
-
-- `.section` centra el contenido, respeta el ancho mÃ¡ximo y aplica espaciado vertical consistente para cada bloque de la one-page.
-- `.section__title` y `.section__subtitle` usan la escala tipogrÃ¡fica definida (heading vs. texto secundario) y limitan el ancho de las descripciones.
-- Botones: `.btn` es la base; `.btn--primary` es verde relleno para acciones principales y `.btn--secondary` es bordeado para acciones secundarias.
-- Cards: usan fondo `color-surface`, sombra suave y radios amplios; pensadas para agrupar informaciÃ³n de proyectos/servicios.
-- Pills: etiquetas pequeÃ±as para tags o tecnologÃ­as; `.pill--accent` usa el acento verde.
-
-
-Movimiento: el scroll reveal respira por seccion con un stagger de 60ms y un tope de 360ms para mantener la fluidez.
-
+- Mobile-first con breakpoints en 768px/1024px/1200px para grillas y paneles flotantes.
+- Contenido centrado y máximo ancho controlado (`--layout-max-width`); About/Proceso mantienen la flotación y aire en todos los tamaños.
