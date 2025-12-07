@@ -1,4 +1,4 @@
-import './styles/base.css'
+﻿import './styles/base.css'
 import './styles/layout.css'
 import './styles/components.css'
 import './styles/sections/hero.css'
@@ -13,6 +13,7 @@ import { initNavbar } from './js/ui/navbar.js'
 import { initContactForm } from './js/ui/contactForm.js'
 import { initScrollReveal } from './js/ui/scrollReveal.js'
 import { projectsData } from './data/projectsData.js'
+import { servicesData } from './data/servicesData.js'
 
 function renderHeader() {
   return `
@@ -163,6 +164,20 @@ function renderProjectsSection() {
 }
 
 function renderServicesSection() {
+  const servicesList = servicesData
+    .map(
+      (service) => `
+        <article class="card service-card js-reveal">
+          <p class="pill service-card__tag">${service.tag}</p>
+          <h3 class="service-card__title">${service.title}</h3>
+          <p class="service-card__text">
+            ${service.description}
+          </p>
+        </article>
+      `
+    )
+    .join('')
+
   return `
     <section
       id="services"
@@ -177,53 +192,7 @@ function renderServicesSection() {
       </header>
 
       <div class="services__grid">
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Sitios web profesionales</p>
-          <h3 class="service-card__title">Sitios claros y modernos</h3>
-          <p class="service-card__text">
-            Sitios que actúan como portales: estructura ordenada, contenido claro y experiencia que guía sin ruido.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">E-commerce simple</p>
-          <h3 class="service-card__title">Tiendas enfocadas en la compra</h3>
-          <p class="service-card__text">
-            Tiendas con catálogos claros y recorridos silenciosos para que la compra sea fluida y humana.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Catálogos con filtros</p>
-          <h3 class="service-card__title">Listados dinámicos y ordenados</h3>
-          <p class="service-card__text">
-            Grillas vivas con filtros y búsquedas que ayudan a encontrar lo esencial sin perder el hilo del recorrido.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Dashboards front-end</p>
-          <h3 class="service-card__title">Datos mostrados de forma clara</h3>
-          <p class="service-card__text">
-            Pantallas para datos con jerarquía serena: legibilidad, orden y foco en lo que importa.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Web institucional / landing</p>
-          <h3 class="service-card__title">Páginas para comunicar valor</h3>
-          <p class="service-card__text">
-            Páginas que presentan tu obra o sistema con contenido limpio y ritmo interno claro.
-          </p>
-        </article>
-
-        <article class="card service-card js-reveal">
-          <p class="pill service-card__tag">Mapas interactivos</p>
-          <h3 class="service-card__title">Experiencias visuales guiadas</h3>
-          <p class="service-card__text">
-            Mapas y recorridos interactivos donde la persona explora información de forma visual y guiada, sin perder el pulso interno.
-          </p>
-        </article>
+        ${servicesList}
       </div>
 
       <p class="services__note">
@@ -232,7 +201,6 @@ function renderServicesSection() {
     </section>
   `
 }
-
 function renderProcessSection() {
   return `
     <section
@@ -441,3 +409,6 @@ domReady(() => {
   initContactForm()
   initScrollReveal()
 })
+
+
+
