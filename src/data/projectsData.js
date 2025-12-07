@@ -1,21 +1,21 @@
 export const projectsData = [
   {
-    tag: 'PROYECTO PRINCIPAL',
-    title: 'Naturaleza Argentina',
-    description: `Primera obra del universo IAQUIZU: conecta la naturaleza física con la sensibilidad y la técnica, caminatas vivas con filtros y mapa para sentir el territorio.`,
-    meta: `Naturaleza física → ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.`,
-    actions: [
-      { label: 'Ver demo', href: '#', variant: 'btn--primary', ariaLabel: 'Ver demo de Naturaleza Argentina' },
-      { label: 'Ver código', href: '#', variant: 'btn--secondary', ariaLabel: 'Ver código de Naturaleza Argentina' },
-    ],
-  },
-  {
     tag: 'OBRA PORTAL',
     title: 'Obra-portal personal',
     description: `Obra-portal minimalista, entrada al universo IAQUIZU, con sistema de diseño por tokens que sostiene el resto de las obras.`,
     meta: `Entrada al universo IAQUIZU - Vite - JavaScript - Tokens como esqueleto vivo.`,
     actions: [
       { label: 'Ver esta página', href: '#hero', variant: 'btn--secondary', ariaLabel: 'Ver esta página de obra-portal personal' },
+    ],
+  },
+  {
+    tag: 'PRIMERA OBRA DEL UNIVERSO IAQUIZU',
+    title: 'Naturaleza Argentina',
+    description: `Primera obra del universo IAQUIZU: conecta la naturaleza física con la sensibilidad y la técnica, caminatas vivas con filtros y mapa para sentir el territorio.`,
+    meta: `Naturaleza física → ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.`,
+    actions: [
+      { label: 'Ver demo', href: '#', variant: 'btn--primary', ariaLabel: 'Ver demo de Naturaleza Argentina' },
+      { label: 'Ver código', href: '#', variant: 'btn--secondary', ariaLabel: 'Ver código de Naturaleza Argentina' },
     ],
   },
   {
