@@ -12,6 +12,7 @@ import { domReady } from './js/ui/domReady.js'
 import { initNavbar } from './js/ui/navbar.js'
 import { initContactForm } from './js/ui/contactForm.js'
 import { initScrollReveal } from './js/ui/scrollReveal.js'
+import { projectsData } from './data/projectsData.js'
 
 function renderHeader() {
   return `
@@ -116,6 +117,31 @@ function renderAboutSection() {
 }
 
 function renderProjectsSection() {
+  const projectsList = projectsData
+    .map(
+      (project) => `
+        <article class="card project-card js-reveal">
+          <p class="pill project-card__tag">${project.tag}</p>
+          <h3 class="project-card__title">${project.title}</h3>
+          <p class="project-card__description">
+            ${project.description}
+          </p>
+          <p class="project-card__meta">
+            ${project.meta}
+          </p>
+          <div class="project-card__actions">
+            ${project.actions
+              .map(
+                (action) =>
+                  `<a href="${action.href}" class="btn ${action.variant}" aria-label="${action.ariaLabel}">${action.label}</a>`
+              )
+              .join('')}
+          </div>
+        </article>
+      `
+    )
+    .join('')
+
   return `
     <section
       id="projects"
@@ -130,62 +156,7 @@ function renderProjectsSection() {
       </header>
 
       <div class="projects__grid">
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">PROYECTO PRINCIPAL</p>
-          <h3 class="project-card__title">Naturaleza Argentina</h3>
-          <p class="project-card__description">
-            Primera obra del universo IAQUIZU: conecta la naturaleza física con la sensibilidad y la técnica, caminatas vivas con filtros y mapa para sentir el territorio.
-          </p>
-          <p class="project-card__meta">
-            Naturaleza física → ritmo interno - Cartografías sensibles - Experiencia continua en movimiento.
-          </p>
-          <div class="project-card__actions">
-            <a href="#" class="btn btn--primary" aria-label="Ver demo de Naturaleza Argentina">Ver demo</a>
-            <a href="#" class="btn btn--secondary" aria-label="Ver código de Naturaleza Argentina">Ver código</a>
-          </div>
-        </article>
-
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">OBRA PORTAL</p>
-          <h3 class="project-card__title">Obra-portal personal</h3>
-          <p class="project-card__description">
-            Obra-portal minimalista, entrada al universo IAQUIZU, con sistema de diseño por tokens que sostiene el resto de las obras.
-          </p>
-          <p class="project-card__meta">
-            Entrada al universo IAQUIZU - Vite - JavaScript - Tokens como esqueleto vivo.
-          </p>
-          <div class="project-card__actions">
-            <a href="#hero" class="btn btn--secondary" aria-label="Ver esta página de obra-portal personal">Ver esta página</a>
-          </div>
-        </article>
-
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">OBRA DIGITAL</p>
-          <h3 class="project-card__title">Ánima Prima</h3>
-          <p class="project-card__description">
-            Obra digital contemplativa que representa la esencia interna antes de cualquier forma. Una escena minimalista y silenciosa, construida con movimiento sutil y luz controlada.
-          </p>
-          <p class="project-card__meta">
-            Ritmo interno - Estética minimal - Experiencia visual continua.
-          </p>
-          <div class="project-card__actions">
-            <a href="#" class="btn btn--secondary" aria-label="Ver detalles de Ánima Prima">Ver detalles</a>
-          </div>
-        </article>
-
-        <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">OBRA DESTACADA</p>
-          <h3 class="project-card__title">Verum Motus</h3>
-          <p class="project-card__description">
-            Obra digital que explora el surgimiento del movimiento verdadero: el momento en que la esencia empieza a moverse hacia la presencia.
-          </p>
-          <p class="project-card__meta">
-            Sistemas visuales en Three.js - Capas de pulso interno y ritmo - Obra clave del universo IAQUIZU.
-          </p>
-          <div class="project-card__actions">
-            <a href="#" class="btn btn--secondary" aria-label="Ver detalles de Verum Motus">Ver detalles</a>
-          </div>
-        </article>
+        ${projectsList}
       </div>
     </section>
   `
