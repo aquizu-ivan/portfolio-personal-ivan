@@ -44,7 +44,7 @@ function renderHeroSection() {
         </h1>
 
         <p class="section__subtitle hero__subtitle">
-          Arquitecto del Origen del Octavo Arte
+          Arquitecto Originario del Octavo Arte
         </p>
 
         <div class="hero__actions">
@@ -53,7 +53,7 @@ function renderHeroSection() {
         </div>
 
         <p class="hero__note">
-          Creo sistemas visuales contemplativos y experiencias digitales con identidad propia.
+          Creo sistemas visuales contemplativos y entidades digitales vivas con identidad propia.
         </p>
       </div>
 
