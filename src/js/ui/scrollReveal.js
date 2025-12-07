@@ -8,6 +8,24 @@ export function initScrollReveal() {
     return
   }
 
+  const DELAY_STEP_MS = 60
+
+  const sectionGroups = new Map()
+  revealElements.forEach((el) => {
+    const section = el.closest('.section') || document.body
+    if (!sectionGroups.has(section)) {
+      sectionGroups.set(section, [])
+    }
+    sectionGroups.get(section).push(el)
+  })
+
+  sectionGroups.forEach((elements) => {
+    elements.forEach((el, index) => {
+      const delay = index * DELAY_STEP_MS
+      el.style.transitionDelay = `${delay}ms`
+    })
+  })
+
   const observer = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
