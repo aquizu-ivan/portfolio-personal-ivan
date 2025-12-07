@@ -14,6 +14,7 @@ import { initContactForm } from './js/ui/contactForm.js'
 import { initScrollReveal } from './js/ui/scrollReveal.js'
 import { projectsData } from './data/projectsData.js'
 import { servicesData } from './data/servicesData.js'
+import { processData } from './data/processData.js'
 
 function renderHeader() {
   return `
@@ -202,6 +203,19 @@ function renderServicesSection() {
   `
 }
 function renderProcessSection() {
+  const processSteps = processData
+    .map(
+      (step, index) => `
+        <li class="process-step js-reveal">
+          <h3 class="process-step__title"><span class="process-step__index">${index + 1}.</span>${step.title}</h3>
+          <p class="process-step__text">
+            ${step.description}
+          </p>
+        </li>
+      `
+    )
+    .join('')
+
   return `
     <section
       id="process"
@@ -217,41 +231,11 @@ function renderProcessSection() {
       </header>
 
       <ol class="process__steps" aria-label="Pasos de mi forma de trabajo">
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">1.</span>Escucho y enmarco</h3>
-          <p class="process-step__text">
-            Entiendo la esencia: qué debe transmitir, a quién y desde qué lugar interno.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">2.</span>Diseño la estructura interna</h3>
-          <p class="process-step__text">
-            Defino la estructura: ritmo, secciones, jerarquía y sistema visual que sostienen la obra.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">3.</span>Construyo en capas</h3>
-          <p class="process-step__text">
-            Construyo en capas de afuera hacia adentro hasta que todo respira coherente.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">4.</span>Refino con calma</h3>
-          <p class="process-step__text">
-            Ajusto microdetalles y accesibilidad para que la experiencia sea limpia y natural, sin ruido.
-          </p>
-        </li>
-        <li class="process-step js-reveal">
-          <h3 class="process-step__title"><span class="process-step__index">5.</span>Dejo la obra lista para vivir sola</h3>
-          <p class="process-step__text">
-            Entrego el proyecto ordenado y preparado para crecer o integrarse en otros sistemas cuando haga falta.
-          </p>
-        </li>
+        ${processSteps}
       </ol>
     </section>
   `
 }
-
 function renderTechSection() {
   return `
     <section
@@ -409,6 +393,8 @@ domReady(() => {
   initContactForm()
   initScrollReveal()
 })
+
+
 
 
 
