@@ -186,9 +186,10 @@ function renderServicesSection() {
       aria-labelledby="services-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="services-title" class="section__title">Servicios</h2>
+        <h2 id="services-title" class="section__title">Formas de trabajar con el Octavo Arte</h2>
         <p class="section__subtitle">
-          Acompaño a crear obras y sistemas visuales que respiren dentro del universo IAQUIZU, con claridad y ritmo propio.
+          No es una lista de servicios.
+          Son distintas maneras de dejar que el sistema IAQUIZU se abra en tu proyecto.
         </p>
       </header>
 
@@ -202,6 +203,7 @@ function renderServicesSection() {
     </section>
   `
 }
+
 function renderProcessSection() {
   const processSteps = processData
     .map(
@@ -345,7 +347,7 @@ function renderFooter() {
         <nav class="site-footer__nav" aria-label="Enlaces de pie de página">
           <a href="#about">Sobre mí</a>
           <a href="#projects">Obras</a>
-          <a href="#services">Servicios</a>
+          <a href="#services">Formas de trabajar con el Octavo Arte</a>
           <a href="#process">Cómo trabajo</a>
           <a href="#tech">Tecnologías</a>
           <a href="#contact">Contacto</a>
@@ -393,6 +395,12 @@ domReady(() => {
   initContactForm()
   initScrollReveal()
 })
+
+
+
+
+
+
 
 
 
