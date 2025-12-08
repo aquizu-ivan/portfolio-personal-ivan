@@ -105,7 +105,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Obra 2 — Portal IAQUIZU es la puerta de entrada al Octavo Arte: un mapa curatorial silencioso que presenta las obras, su estado y la forma en que se conectan entre sí.
+          Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra un catálogo: ordena el universo. Sitúa cada obra, su estado y la forma en que se entra en ella. Es la puerta silenciosa donde el sistema se presenta por primera vez.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -131,7 +131,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Naturaleza Argentina es la primera obra del universo IAQUIZU. Explora la superficie física y el territorio sensible a través de una experiencia digital cuidada, lista para entrar y recorrer.
+          Naturaleza Argentina es la primera obra del universo IAQUIZU. Funciona como nuestra pintura rupestre: la primera marca sobre la superficie física donde el sistema prueba luz, clima y territorio sensible. Es una obra viva: se recorre, se usa y se habita como un territorio digital cuidado.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -169,7 +169,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Ánima Prima es la obra contemplativa de origen interno. Muestra el momento en que la conciencia se reconoce a sí misma y empieza a tomar forma digital.
+          Ánima Prima es la obra contemplativa de origen interno. Registra el momento en que la conciencia se reconoce a sí misma y empieza a tomar forma digital. Hoy está en preparación: su exhibición pública se cuida con el mismo silencio con el que nació.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -195,7 +195,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Verum Motus es la obra del Movimiento Verdadero: el pulso interno en acción, todavía en gestación, mientras definimos su arquitectura final y su forma de exhibición.
+          Verum Motus es la obra del Movimiento Verdadero: el pulso interno cuando deja de ser idea y empieza a desplazarse en el espacio. Está en gestación; lo que se ve son ensayos controlados de ritmo, tensión y deslizamiento interno, aún antes de su forma final.
         </p>
         <ul class="project-card__meta">
           <li>
