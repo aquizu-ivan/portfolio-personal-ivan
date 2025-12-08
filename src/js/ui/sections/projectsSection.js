@@ -1,19 +1,5 @@
 import { projectsData } from '../../../data/projectsData.js'
 
-const naturalezaArgentinaProject = projectsData[1]
-const NATURALEZA_ARGENTINA_DEPLOY_URL =
-  naturalezaArgentinaProject?.actions?.[0]?.href ?? '#'
-// Más adelante se usará en el panel de detalles
-const NATURALEZA_ARGENTINA_REPO_URL =
-  naturalezaArgentinaProject?.actions?.[1]?.href ?? '#'
-
-const PROJECT_DETAIL_IDS = [
-  'project-details-portal',
-  'project-details-naturaleza',
-  'project-details-anima',
-  'project-details-verum',
-]
-
 const buildButton = ({
   label,
   variant,
@@ -44,86 +30,53 @@ const buildLink = ({ label, href, variant, className, ariaLabel, target, rel }) 
   return `<a href="${safeHref}" class="${classList}"${targetAttr}${relAttr}${ariaLabelAttr}>${label}</a>`
 }
 
-const renderProjectActions = (project, index, detailPanelId) => {
-  if (index === 0) {
-    return buildButton({
-      label: 'Ver detalles',
-      variant: 'btn--ghost',
-      className: 'project-card__details',
-      ariaLabel: 'Ver detalles de Obra-portal personal',
-      ariaControls: detailPanelId,
-      ariaExpanded: 'false',
-    })
+const getProjectDetailsId = (project) => `project-details-${project.id}`
+
+const renderProjectActions = (project, detailPanelId) => {
+  const actions = []
+
+  if (project.liveUrl) {
+    actions.push(
+      buildLink({
+        label: 'Entrar en la obra',
+        href: project.liveUrl,
+        variant: 'btn--primary',
+        className: 'project-card__entry',
+        ariaLabel: `Entrar en la obra ${project.title}`,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      })
+    )
   }
 
-  if (index === 1) {
-    const entryAction = buildLink({
-      label: 'Entrar en la obra',
-      href: NATURALEZA_ARGENTINA_DEPLOY_URL,
-      variant: 'btn--primary',
-      className: 'project-card__entry',
-      ariaLabel: 'Entrar en la obra Naturaleza Argentina',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    })
-
-    const detailsAction = buildButton({
-      label: 'Ver detalles',
-      variant: 'btn--ghost',
-      className: 'project-card__details',
-      ariaLabel: 'Ver detalles de Naturaleza Argentina',
-      ariaControls: detailPanelId,
-      ariaExpanded: 'false',
-    })
-
-    return `${entryAction}${detailsAction}`
+  if (project.hasDetails !== false && detailPanelId) {
+    actions.push(
+      buildButton({
+        label: 'Ver detalles',
+        variant: 'btn--ghost',
+        className: 'project-card__details',
+        ariaLabel: `Ver detalles de ${project.title}`,
+        ariaControls: detailPanelId,
+        ariaExpanded: 'false',
+      })
+    )
   }
 
-  if (index === 2) {
-    const detailsAction = buildButton({
-      label: 'Ver detalles',
-      variant: 'btn--ghost',
-      className: 'project-card__details',
-      ariaLabel: 'Ver detalles de Ánima Prima',
-      ariaControls: detailPanelId,
-      ariaExpanded: 'false',
-    })
-
-    const statusAction = buildButton({
-      label: 'En preparación',
-      variant: 'btn--ghost',
-      className: 'project-card__status',
-      disabled: true,
-      ariaDisabled: true,
-    })
-
-    return `${detailsAction}${statusAction}`
+  if (project.state === 'en-preparacion' || project.state === 'en-gestacion') {
+    actions.push(
+      buildButton({
+        label: project.stateLabel,
+        variant: 'btn--ghost',
+        className: 'project-card__status',
+        disabled: true,
+        ariaDisabled: true,
+      })
+    )
   }
 
-  if (index === 3) {
-    const detailsAction = buildButton({
-      label: 'Ver detalles',
-      variant: 'btn--ghost',
-      className: 'project-card__details',
-      ariaLabel: 'Ver detalles de Verum Motus',
-      ariaControls: detailPanelId,
-      ariaExpanded: 'false',
-    })
-
-    const statusAction = buildButton({
-      label: 'En gestación',
-      variant: 'btn--ghost',
-      className: 'project-card__status',
-      disabled: true,
-      ariaDisabled: true,
-    })
-
-    return `${detailsAction}${statusAction}`
-  }
-
-  return (
-    project.actions
-      ?.map((action) =>
+  if (!actions.length && project.actions?.length) {
+    return project.actions
+      .map((action) =>
         buildLink({
           label: action.label,
           href: action.href,
@@ -131,12 +84,18 @@ const renderProjectActions = (project, index, detailPanelId) => {
           ariaLabel: action.ariaLabel,
         })
       )
-      .join('') || ''
-  )
+      .join('')
+  }
+
+  return actions.join('')
 }
 
-const renderProjectDetailsPanel = (project, index, detailPanelId) => {
-  if (index === 0) {
+const renderProjectDetailsPanel = (project, detailPanelId) => {
+  if (project.hasDetails === false || !detailPanelId) {
+    return ''
+  }
+
+  if (project.id === 'portal-iaquizu') {
     return `
       <div
         class="project-card__details-panel"
@@ -151,18 +110,18 @@ const renderProjectDetailsPanel = (project, index, detailPanelId) => {
         <ul class="project-card__meta">
           <li>
             <span class="project-card__meta-label">Rol:</span>
-            <span class="project-card__meta-value">Obra-portal del Octavo Arte IAQUIZU</span>
+            <span class="project-card__meta-value">${project.role}</span>
           </li>
           <li>
             <span class="project-card__meta-label">Estado:</span>
-            <span class="project-card__meta-value">Activa</span>
+            <span class="project-card__meta-value">${project.stateLabel}</span>
           </li>
         </ul>
       </div>
     `
   }
 
-  if (index === 1) {
+  if (project.id === 'naturaleza-argentina') {
     return `
       <div
         class="project-card__details-panel"
@@ -177,26 +136,30 @@ const renderProjectDetailsPanel = (project, index, detailPanelId) => {
         <ul class="project-card__meta">
           <li>
             <span class="project-card__meta-label">Rol:</span>
-            <span class="project-card__meta-value">Obra 1 — superficie física y territorio sensible</span>
+            <span class="project-card__meta-value">${project.role}</span>
           </li>
           <li>
             <span class="project-card__meta-label">Estado:</span>
-            <span class="project-card__meta-value">Activa (obra viva)</span>
+            <span class="project-card__meta-value">${project.stateLabel}</span>
           </li>
         </ul>
-        <a
-          href="${NATURALEZA_ARGENTINA_REPO_URL}"
+        ${
+          project.repoUrl
+            ? `<a
+          href="${project.repoUrl}"
           class="project-card__meta-link"
           target="_blank"
           rel="noopener noreferrer"
         >
           Ver código en GitHub
-        </a>
+        </a>`
+            : ''
+        }
       </div>
     `
   }
 
-  if (index === 2) {
+  if (project.id === 'anima-prima') {
     return `
       <div
         class="project-card__details-panel"
@@ -211,18 +174,18 @@ const renderProjectDetailsPanel = (project, index, detailPanelId) => {
         <ul class="project-card__meta">
           <li>
             <span class="project-card__meta-label">Rol:</span>
-            <span class="project-card__meta-value">Obra contemplativa de origen</span>
+            <span class="project-card__meta-value">${project.role}</span>
           </li>
           <li>
             <span class="project-card__meta-label">Estado:</span>
-            <span class="project-card__meta-value">En preparación para exhibición pública</span>
+            <span class="project-card__meta-value">${project.stateLabel}</span>
           </li>
         </ul>
       </div>
     `
   }
 
-  if (index === 3) {
+  if (project.id === 'verum-motus') {
     return `
       <div
         class="project-card__details-panel"
@@ -237,11 +200,11 @@ const renderProjectDetailsPanel = (project, index, detailPanelId) => {
         <ul class="project-card__meta">
           <li>
             <span class="project-card__meta-label">Rol:</span>
-            <span class="project-card__meta-value">Obra del Movimiento Verdadero</span>
+            <span class="project-card__meta-value">${project.role}</span>
           </li>
           <li>
             <span class="project-card__meta-label">Estado:</span>
-            <span class="project-card__meta-value">En gestación</span>
+            <span class="project-card__meta-value">${project.stateLabel}</span>
           </li>
         </ul>
       </div>
@@ -276,8 +239,9 @@ const initProjectDetails = (sectionElement) => {
 
 export function renderProjectsSection() {
   const projectsList = projectsData
-    .map((project, index) => {
-      const detailPanelId = PROJECT_DETAIL_IDS[index]
+    .map((project) => {
+      const hasDetails = project.hasDetails !== false
+      const detailPanelId = hasDetails && project.id ? getProjectDetailsId(project) : null
 
       return `
         <article class="card project-card js-reveal">
@@ -290,9 +254,9 @@ export function renderProjectsSection() {
             ${project.meta}
           </p>
           <div class="project-card__actions">
-            ${renderProjectActions(project, index, detailPanelId)}
+            ${renderProjectActions(project, detailPanelId)}
           </div>
-          ${renderProjectDetailsPanel(project, index, detailPanelId)}
+          ${renderProjectDetailsPanel(project, detailPanelId)}
         </article>
       `
     })
