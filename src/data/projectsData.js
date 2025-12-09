@@ -57,7 +57,7 @@ export const projectsData = [
     meta: `Sistemas visuales en Three.js - Capas de pulso interno y ritmo - Obra clave del universo IAQUIZU.`,
     role: 'Obra del Movimiento Verdadero',
     state: 'en-gestacion',
-    stateLabel: 'En gestación',
+    stateLabel: 'Versión viva v1',
     liveUrl: 'https://aquizu-ivan.github.io/verum-motus/',
     repoUrl: null,
     hasDetails: true,
