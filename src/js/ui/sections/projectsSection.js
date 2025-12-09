@@ -42,7 +42,7 @@ const renderProjectActions = (project, detailPanelId) => {
         href: project.liveUrl,
         variant: 'btn--primary',
         className: 'project-card__entry',
-        ariaLabel: `Entrar en la obra ${project.title}`,
+        ariaLabel: `Entrar en ${project.title}`,
         target: '_blank',
         rel: 'noopener noreferrer',
       })

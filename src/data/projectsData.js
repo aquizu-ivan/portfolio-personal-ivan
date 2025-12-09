@@ -41,8 +41,8 @@ export const projectsData = [
     meta: `Ritmo interno - Estética minimal - Experiencia visual continua.`,
     role: 'Obra contemplativa de origen',
     state: 'en-preparacion',
-    stateLabel: 'En preparación',
-    liveUrl: null,
+    stateLabel: 'Versión viva v1',
+    liveUrl: 'https://aquizu-ivan.github.io/anima-prima/',
     repoUrl: null,
     hasDetails: true,
     actions: [
