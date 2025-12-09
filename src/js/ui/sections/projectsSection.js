@@ -117,6 +117,19 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
             <span class="project-card__meta-value">${project.stateLabel}</span>
           </li>
         </ul>
+        ${
+          project.liveUrl
+            ? `<a
+          href="${project.liveUrl}"
+          class="project-card__meta-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir ${project.title} en una pestaña nueva"
+        >
+          Abrir Verum Motus
+        </a>`
+            : ''
+        }
       </div>
     `
   }

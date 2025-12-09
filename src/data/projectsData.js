@@ -1,3 +1,4 @@
+// Obra data: liveUrl points to the deployed piece; update per obra when publishing.
 export const projectsData = [
   {
     id: 'portal-iaquizu',
@@ -56,8 +57,8 @@ export const projectsData = [
     meta: `Sistemas visuales en Three.js - Capas de pulso interno y ritmo - Obra clave del universo IAQUIZU.`,
     role: 'Obra del Movimiento Verdadero',
     state: 'en-gestacion',
-    stateLabel: 'En gestación',
-    liveUrl: null,
+    stateLabel: 'Versión viva v1',
+    liveUrl: 'https://aquizu-ivan.github.io/verum-motus/',
     repoUrl: null,
     hasDetails: true,
     actions: [
