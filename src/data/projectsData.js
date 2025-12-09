@@ -1,3 +1,4 @@
+// Obra data: liveUrl points to the deployed piece; update per obra when publishing.
 export const projectsData = [
   {
     id: 'portal-iaquizu',
@@ -57,7 +58,7 @@ export const projectsData = [
     role: 'Obra del Movimiento Verdadero',
     state: 'en-gestacion',
     stateLabel: 'En gestación',
-    liveUrl: null,
+    liveUrl: 'https://aquizu-ivan.github.io/verum-motus/',
     repoUrl: null,
     hasDetails: true,
     actions: [
