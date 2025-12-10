@@ -32,6 +32,25 @@ const buildLink = ({ label, href, variant, className, ariaLabel, target, rel }) 
 
 const getProjectDetailsId = (project) => `project-details-${project.id}`
 
+const renderProjectTag = (tag) => {
+  const [indexLine, titleLine] = (tag || '').split('\n')
+
+  if (titleLine) {
+    return `
+      <p class="pill project-card__tag">
+        <span class="project-card__tag-line project-card__tag-line--index">${indexLine}</span>
+        <span class="project-card__tag-line project-card__tag-line--title">${titleLine}</span>
+      </p>
+    `
+  }
+
+  return `
+    <p class="pill project-card__tag">
+      <span class="project-card__tag-line project-card__tag-line--title">${indexLine}</span>
+    </p>
+  `
+}
+
 const renderProjectActions = (project, detailPanelId) => {
   const actions = []
 
@@ -258,7 +277,7 @@ export function renderProjectsSection() {
 
       return `
         <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">${project.tag}</p>
+          ${renderProjectTag(project.tag)}
           <h3 class="project-card__title">${project.title}</h3>
           <p class="project-card__description">
             ${project.description}

@@ -21,13 +21,30 @@
 }
 
 .project-card__tag {
-  display: inline-block;
-  padding: 0.45rem 1.8rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.8rem;
   margin-bottom: var(--space-sm);
   text-align: center;
-  white-space: pre-line;
-  line-height: 1.15;
+  gap: 0.15rem;
+}
+
+.project-card__tag-line {
+  display: block;
   text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.project-card__tag-line--index {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.project-card__tag-line--title {
+  font-size: 0.78rem;
+  opacity: 0.95;
 }
 
 .project-card__title {
