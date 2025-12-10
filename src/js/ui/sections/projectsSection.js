@@ -124,7 +124,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra un catálogo de proyectos: ordena el universo y marca el estado de cada obra en silencio.
+          Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra una lista: abre el mapa de obras, tiempos y estados en silencio.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -227,7 +227,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Verum Motus es la obra donde el Movimiento Verdadero se hace visible. Lo que se ve no es una demo de efectos: es un motor vivo en escena, con un pulso central y un halo que respira alrededor.
+          Verum Motus es la obra donde el Movimiento Verdadero se hace visible. Lo que se ve es una exhibición viva en esta etapa: un motor interno con un pulso central y un halo que respira alrededor.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -304,7 +304,7 @@ export function renderProjectsSection() {
         <h2 id="projects-title" class="section__title">Obras destacadas</h2>
         <p class="section__subtitle">
           Obras del universo IAQUIZU en distintos estados de vida.<br />
-          Desde acá se ve cómo el Octavo Arte se vuelve materia digital.
+          Desde aquí se ve cómo el Octavo Arte se vuelve materia digital.
         </p>
       </header>
 
