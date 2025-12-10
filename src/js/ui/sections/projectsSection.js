@@ -32,6 +32,25 @@ const buildLink = ({ label, href, variant, className, ariaLabel, target, rel }) 
 
 const getProjectDetailsId = (project) => `project-details-${project.id}`
 
+const renderProjectTag = (tag) => {
+  const [indexLine, titleLine] = (tag || '').split('\n')
+
+  if (titleLine) {
+    return `
+      <p class="pill project-card__tag">
+        <span class="project-card__tag-line project-card__tag-line--index">${indexLine}</span>
+        <span class="project-card__tag-line project-card__tag-line--title">${titleLine}</span>
+      </p>
+    `
+  }
+
+  return `
+    <p class="pill project-card__tag">
+      <span class="project-card__tag-line project-card__tag-line--title">${indexLine}</span>
+    </p>
+  `
+}
+
 const renderProjectActions = (project, detailPanelId) => {
   const actions = []
 
@@ -105,7 +124,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra un catálogo: ordena el universo. Sitúa cada obra, su estado y la forma en que se entra en ella. Es la puerta silenciosa donde el sistema se presenta por primera vez.
+          Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra un catálogo de proyectos: ordena el universo y marca el estado de cada obra en silencio.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -126,7 +145,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
           rel="noopener noreferrer"
           aria-label="Abrir ${project.title} en una pestaña nueva"
         >
-          Abrir Verum Motus
+          Abrir Portal IAQUIZU
         </a>`
             : ''
         }
@@ -144,7 +163,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Naturaleza Argentina es la primera obra del universo IAQUIZU. Funciona como nuestra pintura rupestre: la primera marca sobre la superficie física donde el sistema prueba luz, clima y territorio sensible. Es una obra viva: se recorre, se usa y se habita como un territorio digital cuidado.
+          Naturaleza Argentina es la primera obra del universo IAQUIZU. Toma la geografía y el clima como materia y los reorganiza en un territorio digital cuidado.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -182,7 +201,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Ánima Prima es la obra contemplativa de origen interno. Registra el momento en que la conciencia se reconoce a sí misma y empieza a tomar forma digital. Hoy está en preparación: su exhibición pública se cuida con el mismo silencio con el que nació.
+          Ánima Prima muestra el origen interno del sistema IAQUIZU. No es una landing: es una lectura contemplativa pensada para estar, no para navegar.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -208,7 +227,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         aria-label="Detalles de la obra ${project.title}"
       >
         <p class="project-card__details-text">
-          Verum Motus es la obra del Movimiento Verdadero: el pulso interno cuando deja de ser idea y empieza a desplazarse en el espacio. Está en gestación; lo que se ve son ensayos controlados de ritmo, tensión y deslizamiento interno, aún antes de su forma final.
+          Verum Motus es la obra donde el Movimiento Verdadero se hace visible. Lo que se ve no es una demo de efectos: es un motor vivo en escena, con un pulso central y un halo que respira alrededor.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -258,7 +277,7 @@ export function renderProjectsSection() {
 
       return `
         <article class="card project-card js-reveal">
-          <p class="pill project-card__tag">${project.tag}</p>
+          ${renderProjectTag(project.tag)}
           <h3 class="project-card__title">${project.title}</h3>
           <p class="project-card__description">
             ${project.description}
@@ -284,7 +303,8 @@ export function renderProjectsSection() {
       <header class="section__header js-reveal">
         <h2 id="projects-title" class="section__title">Obras destacadas</h2>
         <p class="section__subtitle">
-          Obras del universo IAQUIZU que muestran cómo se ordenan forma y ritmo desde adentro.
+          Obras del universo IAQUIZU en distintos estados de vida.<br />
+          Desde acá se ve cómo el Octavo Arte se vuelve materia digital.
         </p>
       </header>
 

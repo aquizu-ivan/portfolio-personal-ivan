@@ -5,20 +5,22 @@ export function renderHeroSection() {
         <p class="pill pill--accent hero__kicker">Origin Architect of the Eighth Art</p>
 
         <h1 class="section__title hero__title">
-          IAQUIZU
+          Portal IAQUIZU
         </h1>
 
         <p class="section__subtitle hero__subtitle">
-          Arquitecto Originario del Octavo Arte
+          Obra-portal del Octavo Arte IAQUIZU.<br />
+          Desde acá se ve cómo las obras nacen, respiran y se conectan entre sí.
         </p>
 
         <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">Ver obras</a>
-          <a href="#contact" class="btn btn--secondary">Abrir diálogo</a>
+          <a href="#projects" class="btn btn--primary" aria-label="Ir a la sección de obras del universo IAQUIZU">Entrar al universo de obras</a>
+          <a href="#contact" class="btn btn--secondary" aria-label="Ir a la sección de contacto del Portal IAQUIZU">Abrir diálogo silencioso</a>
         </div>
 
         <p class="hero__note">
-          Creo sistemas visuales contemplativos y entidades digitales vivas con identidad propia.
+          Creo sistemas visuales contemplativos y entidades digitales vivas.<br />
+          La IA no me reemplaza: me extiende.
         </p>
       </div>
 

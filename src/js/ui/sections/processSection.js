@@ -21,14 +21,14 @@ export function renderProcessSection() {
       aria-labelledby="process-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="process-title" class="section__title">Cómo trabajo</h2>
+        <h2 id="process-title" class="section__title">Ritmo interno de una obra</h2>
         <p class="section__subtitle">
-          Acá ves cómo se mueve el trabajo por dentro. Es un proceso claro, silencioso y propio del Octavo Arte.
-          No se trata de hacer más, sino de que cada obra encuentre su forma verdadera.
+          Más que un método, es un ritmo.<br />
+          Cada obra atraviesa estas etapas, siempre a su propio tiempo.
         </p>
       </header>
 
-      <ol class="process__steps" aria-label="Pasos de mi forma de trabajo">
+      <ol class="process__steps" aria-label="Pasos del ritmo interno de una obra">
         ${processSteps}
       </ol>
     </section>

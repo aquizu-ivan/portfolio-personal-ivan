@@ -6,9 +6,10 @@ export function renderTechSection() {
       aria-labelledby="tech-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="tech-title" class="section__title">Tecnologías</h2>
+        <h2 id="tech-title" class="section__title">Soportes técnicos</h2>
         <p class="section__subtitle">
-          Estas son las herramientas que sostienen la obra, no el centro de ella. Trabajo con un stack claro que encaja bien con sistemas visuales y proyectos front-end modernos.
+          El Octavo Arte necesita un cuerpo técnico para existir en pantalla.<br />
+          Estas son algunas de las herramientas que sostienen las obras IAQUIZU.
         </p>
       </header>
 
@@ -24,7 +25,8 @@ export function renderTechSection() {
       </div>
 
       <p class="tech__note">
-        También trabajo con arquitectura multipágina real, responsive por secciones y accesibilidad básica como parte del flujo.
+        No es un listado de tecnologías para un CV:<br />
+        es el tejido técnico que permite que las obras sean estables, habitables y exhibibles.
       </p>
     </section>
   `

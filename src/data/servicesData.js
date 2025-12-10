@@ -1,38 +1,38 @@
 export const servicesData = [
   {
     tag: 'PORTALES VIVOS',
-    title: 'Obras-portal y sitios que respiran',
+    title: 'Obras-portal y espacios de entrada',
     description:
-      'Sitios que no se sienten como páginas sueltas, sino como la piel externa de un sistema. Portales que ordenan información, ritmo y jerarquía para que cada sección tenga un peso claro y nada sobre. Ideales cuando un proyecto necesita una presencia digital limpia, coherente y con identidad propia.',
+      'Obras que funcionan como puerta de entrada: no son sitios corporativos, sino superficies silenciosas donde el universo se presenta.',
   },
   {
-    tag: 'ENTIDADES VIVAS',
+    tag: 'OBRAS CONTEMPLATIVAS',
     title: 'Obras contemplativas y sistemas internos',
     description:
-      'Experiencias digitales silenciosas, como Ánima Prima o Verum Motus, donde lo importante no es “navegar”, sino estar. Interfaces mínimas que muestran movimiento interno, estados y transiciones sin ruido visual. Pensadas para proyectos que necesitan una pieza central de contemplación, no un catálogo.',
+      'Piezas digitales pensadas para estar, no para hacer clic. El foco está en la presencia, el ritmo y la respiración interna.',
   },
   {
-    tag: 'MAPAS INTERNOS',
-    title: 'Cartografías, recorridos y sistemas visuales',
+    tag: 'CARTOGRAFÍAS VISUALES',
+    title: 'Cartografías y recorridos',
     description:
-      'Mapas que muestran cómo se organiza un mundo: procesos, flujos, territorios físicos o conceptuales. Estructuro capas, conexiones y puntos clave para que un sistema complejo se pueda leer con calma. Útil cuando hay mucho contenido o muchas partes móviles y hace falta un orden invisible pero firme.',
+      'Mapas donde se lee cómo se organiza un mundo: territorios, rutas, estados. No muestran todo, muestran lo que importa.',
   },
   {
-    tag: 'TIENDAS CON RITMO',
-    title: 'Catálogos y e-commerce con identidad interna',
+    tag: 'CATÁLOGOS CON IDENTIDAD',
+    title: 'Catálogos con vida interna',
     description:
-      'Tiendas y catálogos donde cada producto se siente parte de una entidad, no de una lista fría. Diseño estructuras, fichas y recorridos que respetan el ritmo del usuario y la lógica del proyecto. Pensado para proyectos que quieren vender, sí, pero sin perder silencio, orden y estética propia.',
+      'Sistemas de piezas o productos donde la lógica interna está cuidada. Se puede vender sin perder la calma, el silencio y la identidad.',
   },
   {
-    tag: 'ENVOLVER OBRAS EXISTENTES',
-    title: 'Reordenar y dar piel nueva a sistemas vivos',
+    tag: 'REORDENAR SISTEMAS',
+    title: 'Dar nueva piel a sistemas vivos',
     description:
-      'Cuando algo ya existe pero está disperso, desordenado o sin forma clara, puedo envolverlo. Tomo lo que ya hay (sitios, piezas, apps) y diseño una estructura visual que lo contenga sin romperlo. Es una forma de llevar el Octavo Arte a proyectos en marcha, sin empezar todo desde cero.',
+      'Cuando algo ya existe pero su forma no lo acompaña, se reordena: se limpia la estructura, se afina el ritmo y se le da una piel nueva.',
   },
   {
-    tag: 'DIRECCIÓN DEL OCTAVO ARTE',
+    tag: 'ACOMPAÑAMIENTO',
     title: 'Acompañamiento conceptual y arquitectura interna',
     description:
-      'No siempre hace falta construir todo yo; a veces la obra ya tiene equipo y solo necesita dirección. Acompaño decisiones visuales, de ritmo y de estructura para que el proyecto mantenga coherencia interna. El foco está en sostener el orden, la identidad y el movimiento verdadero, más que en sumar capas de diseño.',
+      'Hay momentos en que no hay que construir todo: alcanza con ajustar la arquitectura interna, el lenguaje y las decisiones clave.',
   },
 ]
