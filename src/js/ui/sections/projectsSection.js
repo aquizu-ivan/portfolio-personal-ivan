@@ -114,6 +114,8 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
     return ''
   }
 
+  const detailTitleId = `${detailPanelId}-title`
+
   if (project.id === 'portal-iaquizu') {
     return `
       <div
@@ -121,8 +123,9 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         id="${detailPanelId}"
         hidden
         role="region"
-        aria-label="Detalles de la obra ${project.title}"
+        aria-labelledby="${detailTitleId}"
       >
+        <h3 id="${detailTitleId}" class="project-card__details-title">${project.title}</h3>
         <p class="project-card__details-text">
           Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra una lista: abre el mapa de obras, tiempos y estados en silencio.
         </p>
@@ -160,8 +163,9 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         id="${detailPanelId}"
         hidden
         role="region"
-        aria-label="Detalles de la obra ${project.title}"
+        aria-labelledby="${detailTitleId}"
       >
+        <h3 id="${detailTitleId}" class="project-card__details-title">${project.title}</h3>
         <p class="project-card__details-text">
           Naturaleza Argentina es la primera obra del universo IAQUIZU. Toma la geografía y el clima como materia y los reorganiza en un territorio digital cuidado.
         </p>
@@ -198,8 +202,9 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         id="${detailPanelId}"
         hidden
         role="region"
-        aria-label="Detalles de la obra ${project.title}"
+        aria-labelledby="${detailTitleId}"
       >
+        <h3 id="${detailTitleId}" class="project-card__details-title">${project.title}</h3>
         <p class="project-card__details-text">
           Ánima Prima muestra el origen interno del sistema IAQUIZU. No es una landing: es una lectura contemplativa pensada para estar, no para navegar.
         </p>
@@ -224,8 +229,9 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
         id="${detailPanelId}"
         hidden
         role="region"
-        aria-label="Detalles de la obra ${project.title}"
+        aria-labelledby="${detailTitleId}"
       >
+        <h3 id="${detailTitleId}" class="project-card__details-title">${project.title}</h3>
         <p class="project-card__details-text">
           Verum Motus es la obra donde el Movimiento Verdadero se hace visible. Lo que se ve es una exhibición viva en esta etapa: un motor interno con un pulso central y un halo que respira alrededor.
         </p>

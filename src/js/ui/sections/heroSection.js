@@ -10,7 +10,7 @@ export function renderHeroSection() {
 
         <p class="section__subtitle hero__subtitle">
           Obra-portal del Octavo Arte IAQUIZU.<br />
-          Desde acá se ve cómo las obras nacen, respiran y se conectan entre sí.
+          Desde aquí se ve cómo las obras nacen, respiran y se conectan entre sí.
         </p>
 
         <div class="hero__actions">
