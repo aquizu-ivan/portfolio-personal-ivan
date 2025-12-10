@@ -13,7 +13,7 @@ export function renderFooter() {
           <a href="#projects">Obras</a>
           <a href="#services">Modos de apertura</a>
           <a href="#process">Ritmo interno</a>
-          <a href="#tech">Soportes tゼcnicos</a>
+          <a href="#tech">Soportes técnicos</a>
           <a href="#contact">Contacto</a>
         </nav>
 
