@@ -7,6 +7,9 @@
   --color-text-inverse: #0d0d0d;
   --color-accent-primary: #00a676;
   --color-accent-secondary: #ff8a3d;
+  --color-accent: #00b378;
+  --color-accent-strong: #00a16b;
+  --color-on-accent: #f4f7f7;
   --color-border-subtle: #1f2933;
 
   --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
