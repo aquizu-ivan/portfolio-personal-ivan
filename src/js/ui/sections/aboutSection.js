@@ -46,7 +46,7 @@ export function renderAboutSection() {
           <p class="pill about__pillar-tag">Mejora continua</p>
           <h3 class="about__pillar-title">Evolución silenciosa</h3>
           <p class="about__pillar-text">
-            Las obras no se “terminan”: maduran.<br />
+            Las obras no se terminan: maduran.<br />
             El Portal va registrando esa evolución sin ruido, a medida que el Octavo Arte se expande.
           </p>
         </article>
