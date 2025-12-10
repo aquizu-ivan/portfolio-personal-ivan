@@ -8,12 +8,12 @@ export function renderFooter() {
           <p class="site-footer__tagline">Obra-portal del Octavo Arte IAQUIZU.</p>
         </div>
 
-        <nav class="site-footer__nav" aria-label="Enlaces de pie de página">
+        <nav class="site-footer__nav" aria-label="Navegación secundaria del Portal IAQUIZU">
           <a href="#about">Sobre el portal</a>
           <a href="#projects">Obras</a>
           <a href="#services">Modos de apertura</a>
           <a href="#process">Ritmo interno</a>
-          <a href="#tech">Soportes técnicos</a>
+          <a href="#tech">Soportes tゼcnicos</a>
           <a href="#contact">Contacto</a>
         </nav>
 
