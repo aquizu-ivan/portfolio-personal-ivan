@@ -22,10 +22,10 @@ export function renderServicesSection() {
       aria-labelledby="services-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="services-title" class="section__title">Formas de trabajar con el Octavo Arte</h2>
+        <h2 id="services-title" class="section__title">Modos de apertura del Octavo Arte</h2>
         <p class="section__subtitle">
-          No es una lista de servicios.
-          Son distintas maneras de dejar que el sistema IAQUIZU se abra en tu proyecto.
+          No es una lista de servicios.<br />
+          Son distintas maneras de abrir el sistema IAQUIZU en obras, espacios y contextos reales.
         </p>
       </header>
 
@@ -34,7 +34,8 @@ export function renderServicesSection() {
       </div>
 
       <p class="services__note">
-        Me adapto al proyecto según el objetivo, el alcance y la complejidad de cada caso.
+        Cada modo se ajusta al tiempo, la profundidad y el contexto.<br />
+        No se trata de volumen de trabajo, sino de precisión en la aparición.
       </p>
     </section>
   `

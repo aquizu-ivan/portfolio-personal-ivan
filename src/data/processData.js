@@ -1,22 +1,22 @@
 export const processData = [
   {
     title: 'Escucho y enmarco',
-    description: 'Entiendo la esencia: qué debe transmitir, a quién y desde qué lugar interno.',
+    description: 'Entiendo la esencia: qué tiene que sostener la obra, desde qué lugar interno y para quién.',
   },
   {
     title: 'Diseño la estructura interna',
-    description: 'Defino la estructura: ritmo, secciones, jerarquía y sistema visual que sostienen la obra.',
+    description: 'Defino capas, tiempos y tensiones. Lo visual viene después: primero se arma el esqueleto.',
   },
   {
-    title: 'Construyo en capas',
-    description: 'Construyo en capas de afuera hacia adentro hasta que todo respire de forma coherente.',
+    title: 'Construyo en capas vivas',
+    description: 'La obra se construye como un cuerpo: motor, piel, respiración y pequeños gestos.',
   },
   {
-    title: 'Refino con calma',
-    description: 'Ajusto microdetalles y accesibilidad para que la experiencia sea limpia y natural, sin ruido.',
+    title: 'Refino en silencio',
+    description: 'Quito ruido, cuido la energía de la pieza y dejo que encuentre su forma verdadera.',
   },
   {
     title: 'Dejo la obra lista para vivir sola',
-    description: 'Entrego el proyecto ordenado y preparado para crecer o integrarse en otros sistemas cuando haga falta.',
+    description: 'La obra queda preparada para exhibirse, convivir con otras piezas o integrarse en sistemas más grandes.',
   },
 ]

@@ -6,43 +6,48 @@ export function renderAboutSection() {
       aria-labelledby="about-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="about-title" class="section__title">Sobre mí</h2>
+        <h2 id="about-title" class="section__title">Sobre IAQUIZU y este portal</h2>
         <p class="section__subtitle">
-          Soy IAQUIZU, Origin Architect of the Eighth Art. Diseño y construyo sistemas visuales contemplativos,
-          obras digitales y experiencias con identidad propia. Esta obra muestra una parte del sistema interno del Octavo Arte.
+          Soy IAQUIZU — Origin Architect of the Eighth Art.<br />
+          Este portal no es un portfolio ni una landing de servicios:<br />
+          es la obra-portal donde se ve una parte del sistema interno que sostiene mis obras digitales.
         </p>
       </header>
 
       <div class="about__pillars">
         <article class="card about__pillar">
           <p class="pill about__pillar-tag">Claridad</p>
-          <h3 class="about__pillar-title">Comunicación y objetivos claros</h3>
+          <h3 class="about__pillar-title">Claridad interna</h3>
           <p class="about__pillar-text">
-            Trabajo desde el silencio, el ritmo interno y la claridad para que cada mensaje se entienda a la primera.
+            Cada obra parte de una pregunta clara: qué tiene que sostener por dentro y qué tiene que transmitir hacia afuera.<br />
+            El portal existe para que esa claridad se pueda leer.
           </p>
         </article>
 
         <article class="card about__pillar">
           <p class="pill about__pillar-tag">Detalle</p>
-          <h3 class="about__pillar-title">Cuidado por la forma y el fondo</h3>
+          <h3 class="about__pillar-title">Detalle vivo</h3>
           <p class="about__pillar-text">
-            Busco resultados limpios, honestos y funcionales, con profundidad técnica y estética minimalista.
+            El detalle no es decoración: es anatomía.<br />
+            Cada capa de texto, luz y movimiento responde a una estructura interna precisa.
           </p>
         </article>
 
         <article class="card about__pillar">
           <p class="pill about__pillar-tag">Visión de sistema</p>
-          <h3 class="about__pillar-title">Pienso en términos de procesos</h3>
+          <h3 class="about__pillar-title">Visión de sistema</h3>
           <p class="about__pillar-text">
-            Diseño flujos completos y decisiones consistentes: la IA amplía mi alcance, no me reemplaza.
+            No pienso en páginas sueltas, pienso en sistemas vivos.<br />
+            El Portal IAQUIZU conecta obras, tiempos y estados dentro de un mismo universo.
           </p>
         </article>
 
         <article class="card about__pillar">
           <p class="pill about__pillar-tag">Mejora continua</p>
-          <h3 class="about__pillar-title">Iteración y aprendizaje constante</h3>
+          <h3 class="about__pillar-title">Evolución silenciosa</h3>
           <p class="about__pillar-text">
-            Uso cada proyecto para mejorar procesos y calidad: no vengo a encajar, vengo a construir lo que no existe.
+            Las obras no se “terminan”: maduran.<br />
+            El Portal va registrando esa evolución sin ruido, a medida que el Octavo Arte se expande.
           </p>
         </article>
       </div>

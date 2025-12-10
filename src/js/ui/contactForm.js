@@ -40,13 +40,13 @@ export function initContactForm() {
     const emailPattern = /^\S+@\S+\.\S+$/
 
     if (!nameInput.value.trim()) {
-      setError(nameInput, nameError, 'Por favor, escribí tu nombre para saber cómo dirigirme a vos.')
+      setError(nameInput, nameError, 'Escribí tu nombre para saber cómo dirigirme a vos.')
       firstInvalid = firstInvalid || nameInput
     }
 
     const emailValue = emailInput.value.trim()
     if (!emailValue) {
-      setError(emailInput, emailError, 'Necesito un correo para poder responderte. Escribí una dirección de email.')
+      setError(emailInput, emailError, 'Necesito un correo para poder responderte.')
       firstInvalid = firstInvalid || emailInput
     } else if (!emailPattern.test(emailValue)) {
       setError(emailInput, emailError, 'El email no parece válido. Revisá que tenga el formato nombre@ejemplo.com.')
@@ -55,18 +55,10 @@ export function initContactForm() {
 
     const messageValue = messageInput.value.trim()
     if (!messageValue) {
-      setError(
-        messageInput,
-        messageError,
-        'Contame algo de lo que querés construir o explorar. No dejes este campo vacío.'
-      )
+      setError(messageInput, messageError, 'Contame, aunque sea en pocas líneas, qué querés explorar o abrir.')
       firstInvalid = firstInvalid || messageInput
     } else if (messageValue.length < 10) {
-      setError(
-        messageInput,
-        messageError,
-        'Escribí un poco más para que pueda entender mejor qué tenés en mente (mínimo 10 caracteres).'
-      )
+      setError(messageInput, messageError, 'Podés escribir un poco más para que entienda mejor qué necesitás.')
       firstInvalid = firstInvalid || messageInput
     }
 
@@ -77,7 +69,7 @@ export function initContactForm() {
 
     form.reset()
     successMessage.textContent =
-      'Tu mensaje se validó correctamente. Por ahora este formulario no envía datos, pero está listo para conectarse a un backend cuando sea necesario.'
+      'El mensaje pasó todas las verificaciones internas.\nPor ahora este formulario no envía datos, pero está listo para conectarse a un canal real cuando sea el momento.'
     successMessage.focus()
   })
 }

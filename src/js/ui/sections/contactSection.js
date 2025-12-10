@@ -4,11 +4,16 @@ export function renderContactSection() {
       <header class="section__header js-reveal">
         <h2 class="section__title">Contacto</h2>
         <p class="section__subtitle">
-          Si la obra resuena con lo que querés construir, escribime. Podemos hablar cuando tenga sentido, sin apuro.
+          Si alguna parte del universo IAQUIZU resuena con lo que querés abrir, podemos conversar en silencio primero y en palabras después.
         </p>
       </header>
 
       <div class="section__body contact js-reveal">
+        <p class="contact__intro">
+          Podés contarme qué tipo de obra, espacio o contexto tenés en mente.<br />
+          No hace falta tener la idea cerrada; alcanza con la intuición correcta.
+        </p>
+
         <form class="contact-form" novalidate>
           <div class="contact-form__field">
             <label for="contact-name">Nombre</label>
