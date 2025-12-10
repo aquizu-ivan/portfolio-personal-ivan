@@ -21,7 +21,12 @@
 }
 
 .project-card__tag {
+  display: inline-block;
+  padding: 0.45rem 1.8rem;
   margin-bottom: var(--space-sm);
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 

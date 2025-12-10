@@ -18,7 +18,7 @@ export const projectsData = [
   },
   {
     id: 'naturaleza-argentina',
-    tag: 'OBRA 1 — TERRITORIO',
+    tag: 'OBRA 1\nTERRITORIO',
     title: 'Naturaleza Argentina',
     description: `Obra viva donde recorrés caminatas, clima y territorio de Argentina como un paisaje digital habitable.`,
     meta: `Superficie física + ritmo interno — caminatas, clima y mapa en un mismo territorio sensible.`,
@@ -35,7 +35,7 @@ export const projectsData = [
   },
   {
     id: 'anima-prima',
-    tag: 'OBRA 3 — ORIGEN INTERNO',
+    tag: 'OBRA 3\nORIGEN INTERNO',
     title: 'Ánima Prima',
     description: `Obra contemplativa en una sola pantalla, donde el manifiesto y el origen del sistema se leen sin distracciones.`,
     meta: `Ritmo interno — manifiesto visible — lectura silenciosa continua.`,
@@ -51,7 +51,7 @@ export const projectsData = [
   },
   {
     id: 'verum-motus',
-    tag: 'OBRA 4 — MOVIMIENTO VERDADERO',
+    tag: 'OBRA 4\nMOVIMIENTO VERDADERO',
     title: 'Verum Motus',
     description: `Obra viva del Movimiento Verdadero: pulso interno y halo de luz respirando en escena.`,
     meta: `Motor vivo en Three.js — capas de pulso y halo — preludio del Corazón IAQUIZU.`,
