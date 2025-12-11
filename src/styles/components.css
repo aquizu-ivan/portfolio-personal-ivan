@@ -56,13 +56,34 @@
   font-weight: var(--font-weight-semibold);
   border-bottom: 2px solid transparent;
   padding-bottom: var(--space-xs);
-  transition: color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  transition:
+    color 0.18s ease,
+    opacity 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
 }
 
-.site-nav__link:hover,
-.site-nav__link:focus-visible {
-  color: color-mix(in srgb, var(--color-text-main) 70%, var(--color-accent-secondary) 30%);
-  border-color: rgba(201, 155, 74, 0.4);
+.site-nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent-soft-bg);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-nav__link:not(.site-nav__link--active):hover,
+.site-nav__link:not(.site-nav__link--active):focus-visible {
+  color: var(--color-accent-secondary);
+  border-color: transparent;
+  transform: translateY(-1px);
 }
 
 .site-nav__link:focus-visible {
@@ -74,6 +95,16 @@
 .site-nav__link--active {
   color: var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
+}
+
+.site-nav__link:not(.site-nav__link--active):hover::after,
+.site-nav__link:not(.site-nav__link--active):focus-visible::after {
+  transform: scaleX(1);
+  opacity: 0.9;
+}
+
+.site-nav__link--active::after {
+  opacity: 0;
 }
 
 @media (max-width: 640px) {
@@ -162,6 +193,25 @@
   background: color-mix(in srgb, var(--color-accent-soft-bg) 75%, #000000 25%);
   border-color: var(--color-accent-secondary);
   box-shadow: 0 6px 18px rgba(201, 155, 74, 0.12);
+}
+
+.btn--ghost {
+  background: transparent;
+  border: none;
+  color: var(--color-accent);
+  padding: 0;
+  box-shadow: none;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  color: #e1b965;
+  background: transparent;
+  text-decoration: underline;
+  outline: none;
+  box-shadow: none;
 }
 
 .btn:disabled,
