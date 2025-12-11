@@ -68,8 +68,29 @@
 
 .project-card__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+.project-card .project-card__details {
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+.project-card__status {
+  display: block;
+  margin-top: 0.2rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.9em;
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  box-shadow: none;
+  cursor: default;
+  opacity: 1;
 }
 
 .project-card__details-panel {
