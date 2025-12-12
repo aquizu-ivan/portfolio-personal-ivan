@@ -21,13 +21,38 @@ const buildButton = ({
 }
 
 const buildLink = ({ label, href, variant, className, ariaLabel, target, rel }) => {
+  if (!href) return ''
+
   const classList = ['btn', variant, className].filter(Boolean).join(' ')
   const ariaLabelAttr = ariaLabel ? ` aria-label="${ariaLabel}"` : ''
   const targetAttr = target ? ` target="${target}"` : ''
   const relAttr = rel ? ` rel="${rel}"` : ''
-  const safeHref = href || '#'
 
-  return `<a href="${safeHref}" class="${classList}"${targetAttr}${relAttr}${ariaLabelAttr}>${label}</a>`
+  return `<a href="${href}" class="${classList}"${targetAttr}${relAttr}${ariaLabelAttr}>${label}</a>`
+}
+
+const getProjectCardClassNames = (project) => {
+  const classes = ['card', 'project-card', 'js-reveal']
+
+  if (project.layoutArea) {
+    classes.push(`project-card--${project.layoutArea}`)
+  }
+
+  if (project.variant) {
+    classes.push(`project-card--${project.variant}`)
+  }
+
+  return classes.join(' ')
+}
+
+const getProjectActionsClassNames = (project) => {
+  const classes = ['project-card__actions']
+
+  if (project.variant === 'wide') {
+    classes.push('project-card__actions--centered')
+  }
+
+  return classes.join(' ')
 }
 
 const getProjectDetailsId = (project) => `project-details-${project.id}`
@@ -52,7 +77,48 @@ const renderProjectTag = (tag) => {
 }
 
 const renderProjectActions = (project, detailPanelId) => {
+  const isPortal = project.id === 'portal-iaquizu'
+  const isVida = project.id === 'vida'
   const actions = []
+
+  if (isPortal) {
+    if (project.hasDetails !== false && detailPanelId) {
+      actions.push(
+        buildButton({
+          label: 'Ver detalles',
+          variant: 'btn--ghost',
+          className: 'project-card__details',
+          ariaLabel: `Ver detalles de ${project.title}`,
+          ariaControls: detailPanelId,
+          ariaExpanded: 'false',
+        })
+      )
+    }
+
+    return actions.join('')
+  }
+
+  if (isVida) {
+    if (project.liveUrl) {
+      return buildLink({
+        label: 'Entrar',
+        href: project.liveUrl,
+        variant: 'btn--primary',
+        className: 'project-card__cta project-card__cta--vida',
+        ariaLabel: `Entrar a ${project.title}`,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      })
+    }
+
+    return buildButton({
+      label: 'En gestación',
+      variant: 'btn--ghost',
+      className: 'project-card__status project-card__status--vida',
+      disabled: true,
+      ariaDisabled: true,
+    })
+  }
 
   if (project.liveUrl) {
     actions.push(
@@ -62,6 +128,20 @@ const renderProjectActions = (project, detailPanelId) => {
         variant: 'btn--primary',
         className: 'project-card__entry',
         ariaLabel: `Entrar en ${project.title}`,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      })
+    )
+  }
+
+  if (project.repoUrl) {
+    actions.push(
+      buildLink({
+        label: 'Ver código',
+        href: project.repoUrl,
+        variant: 'btn--secondary',
+        className: 'project-card__code',
+        ariaLabel: `Ver código de ${project.title}`,
         target: '_blank',
         rel: 'noopener noreferrer',
       })
@@ -81,7 +161,7 @@ const renderProjectActions = (project, detailPanelId) => {
     )
   }
 
-  if (project.state === 'en-preparacion' || project.state === 'en-gestacion') {
+  if (!project.liveUrl && (project.state === 'en-preparacion' || project.state === 'en-gestacion') && project.stateLabel) {
     actions.push(
       buildButton({
         label: project.stateLabel,
@@ -127,7 +207,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
       >
         <h3 id="${detailTitleId}" class="project-card__details-title">${project.title}</h3>
         <p class="project-card__details-text">
-          Portal IAQUIZU es la obra-portal del Octavo Arte. No muestra una lista: abre el mapa de obras, tiempos y estados en silencio.
+          Portal IAQUIZU es la obra-portal del Octavo Arte. Abre el mapa de obras, tiempos y estados en silencio.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -206,7 +286,7 @@ const renderProjectDetailsPanel = (project, detailPanelId) => {
       >
         <h3 id="${detailTitleId}" class="project-card__details-title">${project.title}</h3>
         <p class="project-card__details-text">
-          Ánima Prima muestra el origen interno del sistema IAQUIZU. No es una landing: es una lectura contemplativa pensada para estar, no para navegar.
+          Ánima Prima muestra el origen interno del sistema IAQUIZU. Es una lectura contemplativa en una sola pantalla, pensada para estar más que para navegar.
         </p>
         <ul class="project-card__meta">
           <li>
@@ -280,18 +360,27 @@ export function renderProjectsSection() {
     .map((project) => {
       const hasDetails = project.hasDetails !== false
       const detailPanelId = hasDetails && project.id ? getProjectDetailsId(project) : null
+      const cardClassName = getProjectCardClassNames(project)
+      const actionsClassName = getProjectActionsClassNames(project)
+      const titleMarkup =
+        project.id === 'vida'
+          ? `<div class="spiraHeader">
+              <h3 class="project-card__title spiraTitle">${project.title}</h3>
+              <div class="spiraSigil" aria-hidden="true">◇▸◈◂◇</div>
+            </div>`
+          : `<h3 class="project-card__title">${project.title}</h3>`
 
       return `
-        <article class="card project-card js-reveal">
+        <article class="${cardClassName}">
           ${renderProjectTag(project.tag)}
-          <h3 class="project-card__title">${project.title}</h3>
+          ${titleMarkup}
           <p class="project-card__description">
             ${project.description}
           </p>
           <p class="project-card__meta">
             ${project.meta}
           </p>
-          <div class="project-card__actions">
+          <div class="${actionsClassName}">
             ${renderProjectActions(project, detailPanelId)}
           </div>
           ${renderProjectDetailsPanel(project, detailPanelId)}
