@@ -53,7 +53,8 @@ export function renderContactSection() {
             <p class="contact-form__error" id="contact-message-error" aria-live="polite"></p>
           </div>
 
-          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          <button type="submit" class="btn btn--primary">Abrir correo</button>
+          <p class="contact-form__hint">Se abrirá tu correo con el mensaje pre-cargado.</p>
 
           <p class="contact-form__success" id="contact-success" aria-live="polite" role="status" tabindex="-1"></p>
         </form>
