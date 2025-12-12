@@ -11,7 +11,7 @@ export function renderContactSection() {
       <div class="section__body contact js-reveal">
         <p class="contact__intro">
           Podés contarme qué tipo de obra, espacio o contexto tenés en mente.<br />
-          No hace falta tener la idea cerrada; alcanza con la intuición correcta.
+          La idea puede estar abierta: alcanza con la intuición correcta.
         </p>
 
         <form class="contact-form" novalidate>
@@ -60,7 +60,7 @@ export function renderContactSection() {
 
         <p class="contact__alt">
           También podés escribirme directamente a
-          <a href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>.
+          <a href="mailto:ivanaquizu@gmail.com">ivanaquizu@gmail.com</a>.
         </p>
       </div>
     </section>

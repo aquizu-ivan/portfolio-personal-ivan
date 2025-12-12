@@ -6,6 +6,7 @@ export function renderFooter() {
           <p class="site-footer__title">IAQUIZU</p>
           <p class="site-footer__role">Origin Architect of the Eighth Art</p>
           <p class="site-footer__tagline">Obra-portal del Octavo Arte IAQUIZU.</p>
+          <p class="site-footer__author">Iván Aquizu · IAQUIZU</p>
         </div>
 
         <nav class="site-footer__nav" aria-label="Navegación secundaria del Portal IAQUIZU">
@@ -19,7 +20,7 @@ export function renderFooter() {
 
         <div class="site-footer__contact">
           <p class="site-footer__contact-label">Contacto</p>
-          <a class="site-footer__contact-link" href="mailto:contacto@iaquizu.com">contacto@iaquizu.com</a>
+          <a class="site-footer__contact-link" href="mailto:ivanaquizu@gmail.com">ivanaquizu@gmail.com</a>
           <p class="site-footer__availability">Disponible para abrir obras del Octavo Arte en contextos donde tenga sentido que existan.</p>
         </div>
       </div>

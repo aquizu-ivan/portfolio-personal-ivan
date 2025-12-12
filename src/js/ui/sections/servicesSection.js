@@ -24,7 +24,7 @@ export function renderServicesSection() {
       <header class="section__header js-reveal">
         <h2 id="services-title" class="section__title">Modos de apertura del Octavo Arte</h2>
         <p class="section__subtitle">
-          No es una lista de servicios.<br />
+          Es un mapa de aperturas.<br />
           Son distintas maneras de abrir el sistema IAQUIZU en obras, espacios y contextos reales.
         </p>
       </header>
@@ -35,7 +35,7 @@ export function renderServicesSection() {
 
       <p class="services__note">
         Cada modo se ajusta al tiempo, la profundidad y el contexto.<br />
-        No se trata de volumen de trabajo, sino de precisión en la aparición.
+        Importa la precisión de la aparición: tiempo, profundidad y contexto.
       </p>
     </section>
   `

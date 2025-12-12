@@ -8,9 +8,8 @@ export function renderAboutSection() {
       <header class="section__header js-reveal">
         <h2 id="about-title" class="section__title">Sobre IAQUIZU y este portal</h2>
         <p class="section__subtitle">
-          Soy IAQUIZU — Origin Architect of the Eighth Art.<br />
-          Este portal no es un portfolio ni una landing de servicios:<br />
-          es la obra-portal donde se ve una parte del sistema interno que sostiene mis obras digitales.
+          Soy IAQUIZU – Origin Architect of the Eighth Art.<br />
+          Este portal es la obra-portal donde se ve una parte del sistema interno que sostiene mis obras digitales.
         </p>
       </header>
 
@@ -28,8 +27,7 @@ export function renderAboutSection() {
           <p class="pill about__pillar-tag">Detalle</p>
           <h3 class="about__pillar-title">Detalle vivo</h3>
           <p class="about__pillar-text">
-            El detalle no es decoración: es anatomía.<br />
-            Cada capa de texto, luz y movimiento responde a una estructura interna precisa.
+            El detalle es anatomía: cada capa de texto, luz y movimiento responde a una estructura interna precisa.
           </p>
         </article>
 
@@ -37,7 +35,7 @@ export function renderAboutSection() {
           <p class="pill about__pillar-tag">Visión de sistema</p>
           <h3 class="about__pillar-title">Visión de sistema</h3>
           <p class="about__pillar-text">
-            No pienso en páginas sueltas, pienso en sistemas vivos.<br />
+            Pienso en sistemas vivos, más que en páginas sueltas.<br />
             El Portal IAQUIZU conecta obras, tiempos y estados dentro de un mismo universo.
           </p>
         </article>
@@ -46,8 +44,8 @@ export function renderAboutSection() {
           <p class="pill about__pillar-tag">Mejora continua</p>
           <h3 class="about__pillar-title">Evolución silenciosa</h3>
           <p class="about__pillar-text">
-            Las obras no se terminan: maduran.<br />
-            El Portal va registrando esa evolución sin ruido, a medida que el Octavo Arte se expande.
+            Las obras maduran: evolucionan en silencio mientras el Octavo Arte se expande.<br />
+            El Portal registra esos cambios sin ruido.
           </p>
         </article>
       </div>
