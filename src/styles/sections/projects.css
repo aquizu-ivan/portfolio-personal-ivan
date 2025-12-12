@@ -7,6 +7,7 @@
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: stretch;
   gap: var(--space-lg);
 }
 
@@ -26,9 +27,10 @@
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1.8rem;
-  margin-bottom: var(--space-sm);
+  margin: 0 auto var(--space-sm);
   text-align: center;
   gap: 0.15rem;
+  align-self: center;
 }
 
 .project-card__tag-line {
@@ -69,8 +71,13 @@
 .project-card__actions {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: var(--space-xs);
+  width: 100%;
+}
+
+.project-card__actions .btn {
+  width: 100%;
 }
 
 .project-card .project-card__details {
@@ -131,6 +138,133 @@
   cursor: default;
 }
 
+.project-card__actions--centered {
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.project-card__actions--centered .btn {
+  width: auto;
+}
+
+.project-card--wide {
+  padding: calc(var(--space-lg) * 1.2);
+  gap: var(--space-lg);
+}
+
+.project-card--wide .project-card__title {
+  font-size: var(--font-size-xl);
+}
+
+.project-card--wide .project-card__actions {
+  margin-top: var(--space-md);
+}
+
+.project-card__cta--vida {
+  min-width: 220px;
+  padding: var(--space-md) var(--space-xl);
+}
+
+.project-card__status--vida {
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-subtle);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.project-card--vida {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.32),
+    0 0 32px rgba(201, 155, 74, 0.28);
+}
+
+.project-card--vida::before {
+  content: '';
+  position: absolute;
+  inset: -12%;
+  border-radius: inherit;
+  background: radial-gradient(circle at 78% 18%, rgba(201, 155, 74, 0.42), rgba(201, 155, 74, 0) 52%),
+    radial-gradient(circle at 32% 20%, rgba(103, 140, 188, 0.1), rgba(103, 140, 188, 0) 46%);
+  filter: blur(34px);
+  opacity: 0.78;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-card--vida::after {
+  content: '';
+  position: absolute;
+  inset: 4%;
+  border-radius: inherit;
+  background:
+    radial-gradient(110% 70% at 14% 8%, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0) 55%),
+    radial-gradient(140% 90% at 50% 6%, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.12) 55%, rgba(0, 0, 0, 0) 75%),
+    linear-gradient(145deg, rgba(201, 155, 74, 0.18), rgba(103, 140, 188, 0.08));
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-card--vida > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card--vida .project-card__cta--vida {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 14px 32px rgba(0, 0, 0, 0.35);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 70%, #f4e6c8 30%);
+}
+
+.project-card--vida .project-card__title {
+  text-align: center;
+  position: relative;
+}
+
+.project-card--vida .spiraHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  grid-column: 1 / -1;
+}
+
+.project-card--vida .spiraTitle {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+.project-card--vida .spiraSigil {
+  text-align: center;
+  margin: 8px 0 0;
+  display: block;
+  color: var(--color-accent);
+  opacity: 0.7;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  text-shadow: 0 0 6px rgba(201, 155, 74, 0.28);
+}
+
+.project-card--vida .project-card__title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: var(--space-xs) auto 0;
+  background: linear-gradient(90deg, rgba(201, 155, 74, 0), rgba(201, 155, 74, 0.5), rgba(201, 155, 74, 0));
+  filter: blur(0.4px);
+  opacity: 0.8;
+}
+
 @media (min-width: 768px) {
   .projects__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -148,13 +282,32 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .projects__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      'portal naturaleza anima'
+      'verum vida vida';
     gap: var(--space-xl);
   }
 
-  .project-card:first-child {
-    grid-column: span 2;
+  .project-card--portal {
+    grid-area: portal;
+  }
+
+  .project-card--naturaleza {
+    grid-area: naturaleza;
+  }
+
+  .project-card--anima {
+    grid-area: anima;
+  }
+
+  .project-card--verum {
+    grid-area: verum;
+  }
+
+  .project-card--vida {
+    grid-area: vida;
   }
 }

@@ -25,8 +25,7 @@ export function renderTechSection() {
       </div>
 
       <p class="tech__note">
-        No es un listado de tecnologías para un CV:<br />
-        es el tejido técnico que permite que las obras sean estables, habitables y exhibibles.
+        Es el tejido técnico que permite que las obras sean estables, habitables y exhibibles.
       </p>
     </section>
   `
