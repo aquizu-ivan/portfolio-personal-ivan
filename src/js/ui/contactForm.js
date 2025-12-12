@@ -1,3 +1,15 @@
+const buildMailtoLink = ({ name, email, message }) => {
+  const subject = 'Contacto — IAQUIZU'
+  const body = `Nombre: ${name}\nEmail: ${email}\nMensaje:\n${message}\n\n—\nEnviado desde Portal IAQUIZU`
+
+  const params = new URLSearchParams({
+    subject,
+    body,
+  })
+
+  return `mailto:ivanaquizu@gmail.com?${params.toString()}`
+}
+
 export function initContactForm() {
   const form = document.querySelector('.contact-form')
   if (!form) return
@@ -39,8 +51,9 @@ export function initContactForm() {
     let firstInvalid = null
     const emailPattern = /^\S+@\S+\.\S+$/
 
-    if (!nameInput.value.trim()) {
-      setError(nameInput, nameError, 'Escribí tu nombre para saber cómo dirigirme a vos.')
+    const nameValue = nameInput.value.trim()
+    if (nameValue.length < 2) {
+      setError(nameInput, nameError, 'Escribí tu nombre (mínimo 2 caracteres).')
       firstInvalid = firstInvalid || nameInput
     }
 
@@ -54,11 +67,8 @@ export function initContactForm() {
     }
 
     const messageValue = messageInput.value.trim()
-    if (!messageValue) {
-      setError(messageInput, messageError, 'Contame, aunque sea en pocas líneas, qué querés explorar o abrir.')
-      firstInvalid = firstInvalid || messageInput
-    } else if (messageValue.length < 10) {
-      setError(messageInput, messageError, 'Podés escribir un poco más para que entienda mejor qué necesitás.')
+    if (messageValue.length < 10) {
+      setError(messageInput, messageError, 'Escribí al menos 10 caracteres para entender mejor lo que buscás.')
       firstInvalid = firstInvalid || messageInput
     }
 
@@ -67,9 +77,14 @@ export function initContactForm() {
       return
     }
 
-    form.reset()
-    successMessage.textContent =
-      'El mensaje pasó todas las verificaciones internas.\nPor ahora este formulario no envía datos, pero está listo para conectarse a un canal real cuando sea el momento.'
+    const mailto = buildMailtoLink({
+      name: nameValue,
+      email: emailValue,
+      message: messageValue,
+    })
+
+    successMessage.textContent = 'Abriendo tu correo con el mensaje pre-cargado.'
     successMessage.focus()
+    window.location.href = mailto
   })
 }

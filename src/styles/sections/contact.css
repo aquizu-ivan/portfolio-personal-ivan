@@ -67,6 +67,12 @@
   align-self: flex-start;
 }
 
+.contact-form__hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: -0.2rem;
+}
+
 .contact-form__error {
   min-height: 1.2em;
   margin-top: var(--space-2xs, 0.15rem);
