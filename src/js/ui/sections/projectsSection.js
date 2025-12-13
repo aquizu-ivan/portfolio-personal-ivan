@@ -1,5 +1,8 @@
 import { projectsData } from '../../../data/projectsData.js'
 
+const isExternalUrl = (url) =>
+  typeof url === 'string' && (url.startsWith('https://') || url.startsWith('http://'))
+
 const buildButton = ({
   label,
   variant,
@@ -21,7 +24,7 @@ const buildButton = ({
 }
 
 const buildLink = ({ label, href, variant, className, ariaLabel, target, rel }) => {
-  if (!href) return ''
+  if (!isExternalUrl(href)) return ''
 
   const classList = ['btn', variant, className].filter(Boolean).join(' ')
   const ariaLabelAttr = ariaLabel ? ` aria-label="${ariaLabel}"` : ''
@@ -82,6 +85,20 @@ const renderProjectActions = (project, detailPanelId) => {
   const actions = []
 
   if (isPortal) {
+    if (project.repoUrl) {
+      actions.push(
+        buildLink({
+          label: 'Ver código',
+          href: project.repoUrl,
+          variant: 'btn--secondary',
+          className: 'project-card__code',
+          ariaLabel: `Ver el código de ${project.title} en GitHub (abre en nueva pestaña)`,
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        })
+      )
+    }
+
     if (project.hasDetails !== false && detailPanelId) {
       actions.push(
         buildButton({
@@ -141,7 +158,7 @@ const renderProjectActions = (project, detailPanelId) => {
         href: project.repoUrl,
         variant: 'btn--secondary',
         className: 'project-card__code',
-        ariaLabel: `Ver código de ${project.title}`,
+        ariaLabel: `Ver el código de ${project.title} en GitHub (abre en nueva pestaña)`,
         target: '_blank',
         rel: 'noopener noreferrer',
       })
