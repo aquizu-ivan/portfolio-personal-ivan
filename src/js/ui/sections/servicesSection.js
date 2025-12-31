@@ -1,4 +1,4 @@
-import { servicesData } from '../../../data/servicesData.js'
+﻿import { servicesData } from '../../../data/servicesData.js'
 
 export function renderServicesSection() {
   const servicesList = servicesData
@@ -24,8 +24,8 @@ export function renderServicesSection() {
       <header class="section__header js-reveal">
         <h2 id="services-title" class="section__title">Modos de apertura del Octavo Arte</h2>
         <p class="section__subtitle">
-          Es un mapa de aperturas.<br />
-          Son distintas maneras de abrir el sistema IAQUIZU en obras, espacios y contextos reales.
+          IAQUIZU se abre de dos maneras: como sistema aplicable y como presencia contemplativa.<br />
+          En ambos casos, la obra se demuestra: por experiencia, por estabilidad y por claridad.
         </p>
       </header>
 
@@ -34,9 +34,9 @@ export function renderServicesSection() {
       </div>
 
       <p class="services__note">
-        Cada modo se ajusta al tiempo, la profundidad y el contexto.<br />
-        Importa la precisión de la aparición: tiempo, profundidad y contexto.
+        Cada obra elige su modo según lo que necesita sostener: experiencia, sistema u origen.
       </p>
     </section>
   `
 }
+

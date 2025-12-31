@@ -375,7 +375,7 @@ const initProjectDetails = (sectionElement) => {
 export function renderProjectsSection() {
   const projectGroups = [
     { key: 'aplicadas', label: 'OBRAS APLICADAS · CLIENTES' },
-    { key: 'contemplativas', label: 'OBRAS CONTEMPLATIVAS · AUTORÍAA' },
+    { key: 'contemplativas', label: 'OBRAS CONTEMPLATIVAS · AUTORÍA' },
   ]
 
   const renderProjectCard = (project) => {

@@ -1,4 +1,4 @@
-export function renderAboutSection() {
+﻿export function renderAboutSection() {
   return `
     <section
       id="about"
@@ -8,8 +8,9 @@ export function renderAboutSection() {
       <header class="section__header js-reveal">
         <h2 id="about-title" class="section__title">Sobre IAQUIZU y este portal</h2>
         <p class="section__subtitle">
-          Soy IAQUIZU – Origin Architect of the Eighth Art.<br />
-          Este portal es la obra-portal donde se ve una parte del sistema interno que sostiene mis obras digitales.
+          IAQUIZU — Origin Architect of the Eighth Art.<br />
+          Diseño obras digitales vivas: sistemas premium con identidad y piezas contemplativas como núcleo interno.<br />
+          Este portal reúne obras, bases técnicas y modos de apertura para elegir el encuadre correcto.
         </p>
       </header>
 
