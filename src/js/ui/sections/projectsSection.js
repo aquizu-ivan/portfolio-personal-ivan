@@ -395,6 +395,18 @@ export function renderProjectsSection() {
           ${project.meta}
         </p>`
       : ''
+    const baseMarkup =
+      Array.isArray(project.baseChips) && project.baseChips.length
+        ? `<div class="project-base${project.variant === 'compact' ? ' project-base--compact' : ''}">
+            <span class="project-base__label">${project.baseLabel || 'BASE'}</span>
+            <div class="project-base__chips">
+              ${project.baseChips
+                .slice(0, 3)
+                .map((chip) => `<span class="pill project-base__chip">${chip}</span>`)
+                .join('')}
+            </div>
+          </div>`
+        : ''
 
     return `
       <article class="${cardClassName}">
@@ -404,6 +416,7 @@ export function renderProjectsSection() {
           ${project.description}
         </p>
         ${metaMarkup}
+        ${baseMarkup}
         <div class="${actionsClassName}">
           ${renderProjectActions(project, detailPanelId)}
         </div>
