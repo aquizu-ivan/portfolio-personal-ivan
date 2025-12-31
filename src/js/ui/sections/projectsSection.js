@@ -1,4 +1,4 @@
-import { projectsData } from '../../../data/projectsData.js'
+﻿import { projectsData } from '../../../data/projectsData.js'
 
 const isExternalUrl = (url) =>
   typeof url === 'string' && (url.startsWith('https://') || url.startsWith('http://'))
@@ -81,7 +81,7 @@ const renderProjectTag = (tag) => {
 
 const renderProjectActions = (project, detailPanelId) => {
   const isPortal = project.id === 'portal-iaquizu'
-  const isVida = project.id === 'vida'
+  const isSpiraDemo = project.id === 'spira-demo'
   const actions = []
 
   if (isPortal) {
@@ -115,13 +115,13 @@ const renderProjectActions = (project, detailPanelId) => {
     return actions.join('')
   }
 
-  if (isVida) {
+  if (isSpiraDemo) {
     if (project.liveUrl) {
       return buildLink({
         label: 'Entrar',
         href: project.liveUrl,
         variant: 'btn--primary',
-        className: 'project-card__cta project-card__cta--vida',
+        className: 'project-card__cta',
         ariaLabel: `Entrar a ${project.title}`,
         target: '_blank',
         rel: 'noopener noreferrer',
@@ -140,11 +140,11 @@ const renderProjectActions = (project, detailPanelId) => {
   if (project.liveUrl) {
     actions.push(
       buildLink({
-        label: 'Entrar en la obra',
+        label: 'Ver obra',
         href: project.liveUrl,
         variant: 'btn--primary',
         className: 'project-card__entry',
-        ariaLabel: `Entrar en ${project.title}`,
+        ariaLabel: `Ver obra de ${project.title} (abre en nueva pestaña)`,
         target: '_blank',
         rel: 'noopener noreferrer',
       })
@@ -373,35 +373,55 @@ const initProjectDetails = (sectionElement) => {
 }
 
 export function renderProjectsSection() {
-  const projectsList = projectsData
-    .map((project) => {
-      const hasDetails = project.hasDetails !== false
-      const detailPanelId = hasDetails && project.id ? getProjectDetailsId(project) : null
-      const cardClassName = getProjectCardClassNames(project)
-      const actionsClassName = getProjectActionsClassNames(project)
-      const titleMarkup =
-        project.id === 'vida'
-          ? `<div class="spiraHeader">
-              <h3 class="project-card__title spiraTitle">${project.title}</h3>
-              <div class="spiraSigil" aria-hidden="true">◇▸◈◂◇</div>
-            </div>`
-          : `<h3 class="project-card__title">${project.title}</h3>`
+  const projectGroups = [
+    { key: 'aplicadas', label: 'OBRAS APLICADAS · CLIENTES' },
+    { key: 'contemplativas', label: 'OBRAS CONTEMPLATIVAS · AUTORÍAA' },
+  ]
+
+  const renderProjectCard = (project) => {
+    const hasDetails = project.hasDetails !== false
+    const detailPanelId = hasDetails && project.id ? getProjectDetailsId(project) : null
+    const cardClassName = getProjectCardClassNames(project)
+    const actionsClassName = getProjectActionsClassNames(project)
+    const titleMarkup =
+      project.id === 'spira-demo'
+        ? `<div class="spiraHeader">
+            <h3 class="project-card__title spiraTitle">${project.title}</h3>
+            <div class="spiraSigil" aria-hidden="true">~~~</div>
+          </div>`
+        : `<h3 class="project-card__title">${project.title}</h3>`
+    const metaMarkup = project.meta
+      ? `<p class="project-card__meta">
+          ${project.meta}
+        </p>`
+      : ''
+
+    return `
+      <article class="${cardClassName}">
+        ${renderProjectTag(project.tag)}
+        ${titleMarkup}
+        <p class="project-card__description">
+          ${project.description}
+        </p>
+        ${metaMarkup}
+        <div class="${actionsClassName}">
+          ${renderProjectActions(project, detailPanelId)}
+        </div>
+        ${renderProjectDetailsPanel(project, detailPanelId)}
+      </article>
+    `
+  }
+
+  const projectsList = projectGroups
+    .map((group) => {
+      const groupCards = projectsData
+        .filter((project) => project.group === group.key)
+        .map((project) => renderProjectCard(project))
+        .join('')
 
       return `
-        <article class="${cardClassName}">
-          ${renderProjectTag(project.tag)}
-          ${titleMarkup}
-          <p class="project-card__description">
-            ${project.description}
-          </p>
-          <p class="project-card__meta">
-            ${project.meta}
-          </p>
-          <div class="${actionsClassName}">
-            ${renderProjectActions(project, detailPanelId)}
-          </div>
-          ${renderProjectDetailsPanel(project, detailPanelId)}
-        </article>
+        <p class="projects__group-label">${group.label}</p>
+        ${groupCards}
       `
     })
     .join('')
@@ -413,10 +433,10 @@ export function renderProjectsSection() {
       aria-labelledby="projects-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="projects-title" class="section__title">Obras destacadas</h2>
+        <h2 id="projects-title" class="section__title">Obras del universo IAQUIZU</h2>
         <p class="section__subtitle">
-          Obras del universo IAQUIZU en distintos estados de vida.<br />
-          Desde aquí se ve cómo el Octavo Arte se vuelve materia digital.
+          Obras digitales vivas. Algunas habitan sistemas reales.<br />
+          Otras sostienen el pulso interno del Octavo Arte.
         </p>
       </header>
 
@@ -435,3 +455,5 @@ export function renderProjectsSection() {
 
   return sectionMarkup
 }
+
+

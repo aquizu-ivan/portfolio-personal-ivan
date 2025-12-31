@@ -1,4 +1,4 @@
-export function renderTechSection() {
+﻿export function renderTechSection() {
   return `
     <section
       id="tech"
@@ -6,27 +6,49 @@ export function renderTechSection() {
       aria-labelledby="tech-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="tech-title" class="section__title">Soportes técnicos</h2>
+        <h2 id="tech-title" class="section__title">Soporte técnico y estabilidad del sistema</h2>
         <p class="section__subtitle">
-          El Octavo Arte necesita un cuerpo técnico para existir en pantalla.<br />
-          Estas son algunas de las herramientas que sostienen las obras IAQUIZU.
+          Cada obra se sostiene sobre arquitectura clara, mantenible y observable.
         </p>
       </header>
 
-      <div class="tech__stack">
-        <span class="pill tech__item">Vite</span>
-        <span class="pill tech__item">JavaScript</span>
-        <span class="pill tech__item">HTML5</span>
-        <span class="pill tech__item">CSS3</span>
-        <span class="pill tech__item">Three.js</span>
-        <span class="pill tech__item">LocalStorage</span>
-        <span class="pill tech__item">Git</span>
-        <span class="pill tech__item">APIs REST</span>
-      </div>
+      <div class="tech__blocks">
+        <article class="card tech__block">
+          <h3 class="tech__block-title">Arquitectura</h3>
+          <p class="tech__block-description">
+            Sistemas pensados para durar, no para demostrar.
+          </p>
+          <div class="tech__chips">
+            <span class="pill tech__item">Vite</span>
+            <span class="pill tech__item">JavaScript moderno</span>
+            <span class="pill tech__item">Arquitectura modular</span>
+          </div>
+        </article>
 
-      <p class="tech__note">
-        Es el tejido técnico que permite que las obras sean estables, habitables y exhibibles.
-      </p>
+        <article class="card tech__block">
+          <h3 class="tech__block-title">Estabilidad y control</h3>
+          <p class="tech__block-description">
+            Lo que se construye se puede observar.
+          </p>
+          <div class="tech__chips">
+            <span class="pill tech__item">APIs REST</span>
+            <span class="pill tech__item">Estados &amp; errores</span>
+            <span class="pill tech__item">QA de exhibición</span>
+          </div>
+        </article>
+
+        <article class="card tech__block">
+          <h3 class="tech__block-title">Experiencia y mantenimiento</h3>
+          <p class="tech__block-description">
+            Tecnología al servicio de la calma.
+          </p>
+          <div class="tech__chips">
+            <span class="pill tech__item">CSS performante</span>
+            <span class="pill tech__item">Three.js con criterio</span>
+            <span class="pill tech__item">Git como memoria</span>
+          </div>
+        </article>
+      </div>
     </section>
   `
 }
