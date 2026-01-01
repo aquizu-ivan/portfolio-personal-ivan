@@ -2,14 +2,17 @@ export function renderHeroSection() {
   return `
     <section id="hero" class="section hero">
       <div class="hero__content">
-        <p class="pill pill--accent hero__kicker">Origin Architect of the Eighth Art</p>
+        <p class="hero__kicker hero__eyebrow">
+          <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+          <span class="hero__eyebrow-text">UMBRAL DE OBRAS</span>
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+        </p>
 
         <h1 class="section__title hero__title">
           Portal IAQUIZU
         </h1>
 
         <p class="section__subtitle hero__subtitle">
-          Obra-portal del Octavo Arte IAQUIZU.<br />
           Desde aquí se ve cómo las obras nacen, respiran y se conectan entre sí.
         </p>
 
@@ -23,12 +26,11 @@ export function renderHeroSection() {
           La IA no me reemplaza: me extiende.
         </p>
       </div>
-
-      <div class="hero__media">
-        <div class="card hero__photo-placeholder">
-          <!-- TODO: Reemplazar con foto o ilustración real -->
-        </div>
-      </div>
     </section>
   `
 }
+
+
+
+
+
