@@ -8,6 +8,8 @@
   background-color: var(--color-bg-main);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  padding-top: calc(var(--space-xl) + var(--space-lg));
+  padding-bottom: calc(var(--space-xl) * 2);
 }
 
 .hero::before {
@@ -152,7 +154,7 @@
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 .hero__actions .btn--primary {
