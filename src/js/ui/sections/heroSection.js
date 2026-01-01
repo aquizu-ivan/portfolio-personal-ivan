@@ -22,8 +22,8 @@ export function renderHeroSection() {
         </div>
 
         <p class="hero__note">
-          Creo sistemas visuales contemplativos y entidades digitales vivas.<br />
-          La IA no me reemplaza: me extiende.
+          <span class="hero__note-line">Creo sistemas visuales contemplativos y entidades digitales vivas.</span>
+          <span class="hero__note-line">La IA no me reemplaza: me extiende.</span>
         </p>
       </div>
     </section>

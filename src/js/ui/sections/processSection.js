@@ -23,10 +23,9 @@ export function renderProcessSection() {
       <header class="section__header js-reveal">
         <h2 id="process-title" class="section__title">Ritmo interno de una obra</h2>
         <p class="section__subtitle">
-          Más que un método, es un ritmo.<br />
-          Cada obra atraviesa estas etapas, siempre a su propio tiempo.
-        </p>
-      </header>
+          Un proceso vivo: claro, gradual, verificable.<br />
+          Cada obra atraviesa estas etapas, a su propio tiempo.
+        </p></header>
 
       <ol class="process__steps" aria-label="Pasos del ritmo interno de una obra">
         ${processSteps}

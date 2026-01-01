@@ -1,4 +1,4 @@
-﻿export function renderTechSection() {
+export function renderTechSection() {
   return `
     <section
       id="tech"
@@ -16,7 +16,7 @@
         <article class="card tech__block">
           <h3 class="tech__block-title">Arquitectura</h3>
           <p class="tech__block-description">
-            Sistemas pensados para durar, no para demostrar.
+            Arquitectura clara que resiste el crecimiento y el paso del tiempo.
           </p>
           <div class="tech__chips">
             <span class="pill tech__item">Vite</span>
@@ -28,11 +28,11 @@
         <article class="card tech__block">
           <h3 class="tech__block-title">Estabilidad y control</h3>
           <p class="tech__block-description">
-            Lo que se construye se puede observar.
+            Comportamiento observable y verificable en uso real.
           </p>
           <div class="tech__chips">
             <span class="pill tech__item">APIs REST</span>
-            <span class="pill tech__item">Estados &amp; errores</span>
+            <span class="pill tech__item">Errores por causa</span>
             <span class="pill tech__item">QA de exhibición</span>
           </div>
         </article>
@@ -40,7 +40,7 @@
         <article class="card tech__block">
           <h3 class="tech__block-title">Experiencia y mantenimiento</h3>
           <p class="tech__block-description">
-            Tecnología al servicio de la calma.
+            Sistemas mantenibles, sin fricción ni deuda innecesaria.
           </p>
           <div class="tech__chips">
             <span class="pill tech__item">CSS performante</span>

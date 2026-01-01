@@ -1,4 +1,4 @@
-﻿import { servicesData } from '../../../data/servicesData.js'
+import { servicesData } from '../../../data/servicesData.js'
 
 export function renderServicesSection() {
   const servicesList = servicesData
@@ -22,12 +22,11 @@ export function renderServicesSection() {
       aria-labelledby="services-title"
     >
       <header class="section__header js-reveal">
-        <h2 id="services-title" class="section__title">Modos de apertura del Octavo Arte</h2>
+        <h2 id="services-title" class="section__title">Criterios de diseño y construcción</h2>
         <p class="section__subtitle">
-          IAQUIZU se abre de dos maneras: como sistema aplicable y como presencia contemplativa.<br />
-          En ambos casos, la obra se demuestra: por experiencia, por estabilidad y por claridad.
-        </p>
-      </header>
+          Estos sistemas se construyen con criterios claros: operación, lectura y estabilidad demostrable.<br />
+          Cada obra sostiene su forma con estructura, decisiones y verificación.
+        </p></header>
 
       <div class="services__grid">
         ${servicesList}

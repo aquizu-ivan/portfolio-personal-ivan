@@ -1,5 +1,5 @@
 const buildMailtoLink = ({ name, email, message }) => {
-  const subject = 'Contacto — IAQUIZU'
+  const subject = 'Contacto - IAQUIZU'
   const body = `Nombre: ${name}\nEmail: ${email}\nMensaje:\n${message}\n\n—\nEnviado desde Portal IAQUIZU`
 
   const params = new URLSearchParams({
@@ -62,13 +62,21 @@ export function initContactForm() {
       setError(emailInput, emailError, 'Necesito un correo para poder responderte.')
       firstInvalid = firstInvalid || emailInput
     } else if (!emailPattern.test(emailValue)) {
-      setError(emailInput, emailError, 'El email no parece válido. Revisá que tenga el formato nombre@ejemplo.com.')
+      setError(
+        emailInput,
+        emailError,
+        'El email no parece válido. Revisá que tenga el formato nombre@ejemplo.com.'
+      )
       firstInvalid = firstInvalid || emailInput
     }
 
     const messageValue = messageInput.value.trim()
     if (messageValue.length < 10) {
-      setError(messageInput, messageError, 'Escribí al menos 10 caracteres para entender mejor lo que buscás.')
+      setError(
+        messageInput,
+        messageError,
+        'Escribí al menos 10 caracteres para entender mejor lo que buscás.'
+      )
       firstInvalid = firstInvalid || messageInput
     }
 

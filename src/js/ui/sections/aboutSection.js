@@ -1,4 +1,4 @@
-﻿export function renderAboutSection() {
+export function renderAboutSection() {
   return `
     <section
       id="about"
@@ -8,7 +8,6 @@
       <header class="section__header js-reveal">
         <h2 id="about-title" class="section__title">Sobre IAQUIZU y este portal</h2>
         <p class="section__subtitle">
-          IAQUIZU — Origin Architect of the Eighth Art.<br />
           Diseño obras digitales vivas: sistemas premium con identidad y piezas contemplativas como núcleo interno.<br />
           Este portal reúne obras, bases técnicas y modos de apertura para elegir el encuadre correcto.
         </p>
@@ -16,37 +15,40 @@
 
       <div class="about__pillars">
         <article class="card about__pillar">
-          <p class="pill about__pillar-tag">Claridad</p>
-          <h3 class="about__pillar-title">Claridad interna</h3>
+          <p class="pill about__pillar-tag">CLARIDAD</p>
           <p class="about__pillar-text">
-            Cada obra parte de una pregunta clara: qué tiene que sostener por dentro y qué tiene que transmitir hacia afuera.<br />
-            El portal existe para que esa claridad se pueda leer.
+            Cada obra parte de una pregunta esencial:<br />
+            qué debe sostener por dentro<br />
+            y qué necesita transmitir hacia afuera.
           </p>
         </article>
 
         <article class="card about__pillar">
-          <p class="pill about__pillar-tag">Detalle</p>
-          <h3 class="about__pillar-title">Detalle vivo</h3>
+          <p class="pill about__pillar-tag">DETALLE</p>
           <p class="about__pillar-text">
-            El detalle es anatomía: cada capa de texto, luz y movimiento responde a una estructura interna precisa.
+            El detalle es estructura.<br />
+            Cada capa de texto, luz y movimiento<br />
+            responde a una decisión consciente.
           </p>
         </article>
 
         <article class="card about__pillar">
-          <p class="pill about__pillar-tag">Visión de sistema</p>
-          <h3 class="about__pillar-title">Visión de sistema</h3>
+          <p class="pill about__pillar-tag">SISTEMA</p>
           <p class="about__pillar-text">
-            Pienso en sistemas vivos, más que en páginas sueltas.<br />
-            El Portal IAQUIZU conecta obras, tiempos y estados dentro de un mismo universo.
+            Trabajo en sistemas vivos,<br />
+            no en piezas aisladas.<br />
+            Este portal conecta proyectos, estados y decisiones<br />
+            dentro de una lógica común.
           </p>
         </article>
 
         <article class="card about__pillar">
-          <p class="pill about__pillar-tag">Mejora continua</p>
-          <h3 class="about__pillar-title">Evolución silenciosa</h3>
+          <p class="pill about__pillar-tag">EVOLUCIÓN</p>
           <p class="about__pillar-text">
-            Las obras maduran: evolucionan en silencio mientras el Octavo Arte se expande.<br />
-            El Portal registra esos cambios sin ruido.
+            Los proyectos evolucionan con el tiempo.<br />
+            Se ajustan, maduran y se refinan<br />
+            a partir del uso y la observación.<br />
+            Este portal registra ese proceso sin ruido.
           </p>
         </article>
       </div>
