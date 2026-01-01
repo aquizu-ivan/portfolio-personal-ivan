@@ -16,7 +16,7 @@ export const processData = [
     description: 'Quito ruido, cuido la energía de la pieza y dejo que encuentre su forma verdadera.',
   },
   {
-    title: 'Dejo la obra lista para vivir sola',
-    description: 'La obra queda preparada para exhibirse, convivir con otras piezas o integrarse en sistemas más grandes.',
+    title: 'Lista para operar',
+    description: 'La obra queda preparada para exhibirse, convivir con otras piezas o integrarse en sistemas reales.',
   },
 ]

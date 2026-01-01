@@ -63,24 +63,11 @@
   }
 
   .process__steps::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: color-mix(in srgb, var(--color-border-subtle) 40%, #ffffff 60%);
-    opacity: 0.35;
-    transform: translateX(-50%);
-    pointer-events: none;
+    content: none;
   }
 
   .process-step {
     position: relative;
-  }
-
-  .process-step::before {
-    content: none;
   }
 }
 
