@@ -1,4 +1,4 @@
-﻿import { projectsData } from '../../../data/projectsData.js'
+import { projectsData } from '../../../data/projectsData.js'
 
 const isExternalUrl = (url) =>
   typeof url === 'string' && (url.startsWith('https://') || url.startsWith('http://'))
@@ -61,6 +61,10 @@ const getProjectActionsClassNames = (project) => {
 const getProjectDetailsId = (project) => `project-details-${project.id}`
 
 const renderProjectTag = (tag) => {
+  if (!tag || !tag.trim()) {
+    return ''
+  }
+
   const [indexLine, titleLine] = (tag || '').split('\n')
 
   if (titleLine) {
@@ -374,8 +378,8 @@ const initProjectDetails = (sectionElement) => {
 
 export function renderProjectsSection() {
   const projectGroups = [
-    { key: 'aplicadas', label: 'OBRAS APLICADAS · CLIENTES' },
-    { key: 'contemplativas', label: 'OBRAS CONTEMPLATIVAS · AUTORÍA' },
+    { key: 'aplicadas', label: 'OBRAS APLICADAS' },
+    { key: 'contemplativas', label: 'OBRAS CONTEMPLATIVAS' },
   ]
 
   const renderProjectCard = (project) => {
@@ -390,6 +394,9 @@ export function renderProjectsSection() {
             <div class="spiraSigil" aria-hidden="true">~~~</div>
           </div>`
         : `<h3 class="project-card__title">${project.title}</h3>`
+    const typeMarkup = project.typeLabel
+      ? `<p class="pill project-card__type">${project.typeLabel}</p>`
+      : ''
     const metaMarkup = project.meta
       ? `<p class="project-card__meta">
           ${project.meta}
@@ -411,6 +418,7 @@ export function renderProjectsSection() {
     return `
       <article class="${cardClassName}">
         ${renderProjectTag(project.tag)}
+        ${typeMarkup}
         ${titleMarkup}
         <p class="project-card__description">
           ${project.description}
@@ -448,8 +456,8 @@ export function renderProjectsSection() {
       <header class="section__header js-reveal">
         <h2 id="projects-title" class="section__title">Obras del universo IAQUIZU</h2>
         <p class="section__subtitle">
-          Obras digitales vivas. Algunas habitan sistemas reales.<br />
-          Otras sostienen el pulso interno del Octavo Arte.
+          Obras digitales vivas. Algunas resuelven necesidades reales con UX premium y criterio técnico.<br />
+          Otras exploran presencia, ritmo y movimiento como experiencia en pantalla.
         </p>
       </header>
 
@@ -468,5 +476,6 @@ export function renderProjectsSection() {
 
   return sectionMarkup
 }
+
 
 

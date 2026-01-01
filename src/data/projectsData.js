@@ -1,12 +1,13 @@
-﻿// Obra data: liveUrl points to the deployed piece; update per obra when publishing.
+// Obra data: liveUrl points to the deployed piece; update per obra when publishing.
 export const projectsData = [
   {
     id: 'naturaleza-argentina',
     group: 'aplicadas',
-    tag: 'OBRA APLICADA\nCLIENTE',
+    tag: '',
     title: 'Naturaleza Argentina',
-    description: 'Cartografía viva del territorio: caminatas, clima y recorridos.',
-    meta: 'Una obra habitable, clara y directa.',
+    typeLabel: 'FRONTEND',
+    description: 'Cartografía web editorial del territorio argentino.<br />Lectura cuidada, jerarquía clara y micro-interacciones discretas que sostienen foco.',
+    meta: 'Arquitectura simple, estado local estable y base de accesibilidad.',
     baseLabel: 'BASE',
     baseChips: ['Vite', 'JavaScript', 'LocalStorage'],
     liveUrl: 'https://aquizu-ivan.github.io/argentina-naturaleza/',
@@ -16,10 +17,11 @@ export const projectsData = [
   {
     id: 'atlas',
     group: 'aplicadas',
-    tag: 'OBRA APLICADA\nCLIENTE',
+    tag: '',
     title: 'ATLAS',
-    description: 'Sistema backend observable para reservas reales y estados claros.',
-    meta: 'UX premium, estabilidad demostrable.',
+    typeLabel: 'FULL-STACK',
+    description: 'Sistema observable para reservas reales y estados claros.<br />Loop humano completo (usuario/admin) con UX premium y errores por causa.',
+    meta: 'Estabilidad demostrable, QA de exhibición y contratos explícitos.',
     baseLabel: 'BASE',
     baseChips: ['Node.js', 'API REST', 'Postgres (Neon)'],
     liveUrl: 'https://aquizu-ivan.github.io/atlas/',
@@ -29,10 +31,11 @@ export const projectsData = [
   {
     id: 'lumen',
     group: 'aplicadas',
-    tag: 'OBRA APLICADA\nCLIENTE',
+    tag: '',
     title: 'LUMEN',
-    description: 'Analítica viva y lectura operativa con gráficos silenciosos.',
-    meta: 'Señal única, calma y precisión.',
+    typeLabel: 'FRONTEND · DATA',
+    description: 'Analítica operativa en formato editorial.<br />Señal única, calma visual y lectura precisa con gráficos discretos.',
+    meta: 'Instrumentación clara y documentación para exhibición sin ruido.',
     baseLabel: 'BASE',
     baseChips: ['Vite', 'JavaScript', 'ECharts'],
     liveUrl: 'https://aquizu-ivan.github.io/lumen/',
@@ -42,10 +45,11 @@ export const projectsData = [
   {
     id: 'anima-prima',
     group: 'contemplativas',
-    tag: 'OBRA CONTEMPLATIVA\nAUTORÍA',
+    tag: '',
     title: 'Ánima Prima',
-    description: 'Obra contemplativa en una sola pantalla.',
-    meta: 'Manifiesto y origen interno: lectura silenciosa.',
+    typeLabel: 'EXPERIENCIA',
+    description: 'Experiencia contemplativa de una sola pantalla.<br />Movimiento mínimo, ritmo silencioso y lectura sostenida.',
+    meta: 'Presencia antes que UI: una pieza para observar.',
     baseLabel: 'BASE',
     baseChips: ['HTML/CSS', 'JavaScript', 'GitHub Pages'],
     liveUrl: 'https://aquizu-ivan.github.io/anima-prima/',
@@ -55,10 +59,11 @@ export const projectsData = [
   {
     id: 'verum-motus',
     group: 'contemplativas',
-    tag: 'OBRA CONTEMPLATIVA\nAUTORÍA',
+    tag: '',
     title: 'Verum Motus',
-    description: 'Movimiento verdadero: pulso interno y presencia.',
-    meta: 'Tres capas vivas en un motor mínimo.',
+    typeLabel: 'EXPERIENCIA',
+    description: 'Movimiento verdadero: pulso, dirección interna y presencia.<br />Tres capas vivas en un motor mínimo, sin artificio.',
+    meta: 'Interacción sutil y continuidad como regla.',
     baseLabel: 'BASE',
     baseChips: ['Three.js', 'Vite', 'JavaScript'],
     liveUrl: 'https://aquizu-ivan.github.io/verum-motus/',
@@ -68,10 +73,11 @@ export const projectsData = [
   {
     id: 'spira-demo',
     group: 'contemplativas',
-    tag: 'OBRA VIVA\nDEMO',
+    tag: '',
     title: 'Spira (DEMO)',
-    description: 'Obra viva en expansión.',
-    meta: 'Respiración condensada en un plano sostenido.',
+    typeLabel: 'EXPERIENCIA VIVA',
+    description: 'Entidad viva en expansión (demo).<br />Respiración condensada y micro-variaciones sostenidas en pantalla completa.',
+    meta: 'Un laboratorio de ritmo y presencia, sin interfaz convencional.',
     baseLabel: 'BASE',
     baseChips: ['Three.js', 'Vite', 'JavaScript'],
     liveUrl: 'https://aquizu-ivan.github.io/spira-demo-landing/',
@@ -81,5 +87,3 @@ export const projectsData = [
     variant: 'compact',
   },
 ]
-
-
