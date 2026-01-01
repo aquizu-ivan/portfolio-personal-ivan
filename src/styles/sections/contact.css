@@ -55,11 +55,18 @@
 }
 
 .contact-form input:focus-visible,
-.contact-form textarea:focus-visible {
+.contact-form textarea:focus-visible,
+.contact-form .btn:focus-visible {
   outline: none;
   border-color: var(--color-accent-primary);
-  box-shadow: 0 0 0 2px rgba(201, 155, 74, 0.28);
+  box-shadow: 0 0 0 3px rgba(201, 155, 74, 0.18);
   background-color: var(--color-bg-main);
+}
+
+.contact-form input:invalid:not(:focus):not(:placeholder-shown),
+.contact-form textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: rgba(201, 155, 74, 0.45);
+  box-shadow: 0 0 0 2px rgba(201, 155, 74, 0.12);
 }
 
 .contact-form .btn {
