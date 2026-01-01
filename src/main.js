@@ -12,6 +12,8 @@ import { domReady } from './js/ui/domReady.js'
 import { initNavbar } from './js/ui/navbar.js'
 import { initContactForm } from './js/ui/contactForm.js'
 import { initScrollReveal } from './js/ui/scrollReveal.js'
+import { initHeroEyebrowReveal } from './js/ui/heroEyebrow.js'
+import { initHeroLiveWindow } from './js/ui/heroLiveWindow.js'
 import { renderHeader } from './js/ui/sections/headerSection.js'
 import { renderHeroSection } from './js/ui/sections/heroSection.js'
 import { renderAboutSection } from './js/ui/sections/aboutSection.js'
@@ -48,4 +50,6 @@ domReady(() => {
   initNavbar()
   initContactForm()
   initScrollReveal()
+  initHeroEyebrowReveal()
+  initHeroLiveWindow()
 })
